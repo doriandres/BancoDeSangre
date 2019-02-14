@@ -3,10 +3,14 @@
     ViewBag.Title = "Inicio";
 }
 @section CSS{
-    @Styles.Render("~/Public/CSS/home.css")    
+    @Styles.Render("~/Public/CSS/home.css")  
 }
 @section JavaScript{
     @Scripts.Render("~/Public/JavaScript/pages/home/home.js")
 }
 
-<h1>Banco de Sangre</h1>
+
+<div class="container">
+    <a href="https://www.google.com" id="donador" class="btn btn1">Donador</a>
+    <a href="/account/signin" target="_blank" class="btn btn2">Funcionario</a>
+</div>

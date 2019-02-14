@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Olis";
+}
+@section JavaScript{
+    @Scripts.Render("~/Public/JavaScript/components/ajax.js")
+    @Scripts.Render("~/Public/JavaScript/pages/account/account.js")
+}
+<h2>SignIn</h2>
+
+<label>Email</label>
+<input id="emailField" type="email" />
+<label>Password</label>
+<input id="passwordField" type="password" />
+<button id="sendBtn">Send</button>
