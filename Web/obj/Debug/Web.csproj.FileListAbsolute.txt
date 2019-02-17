@@ -141,7 +141,6 @@ C:\UProjects\Diseño de Aplicaciones\BancoDeSangre\Web\bin\es\System.Web.WebPage
 C:\UProjects\Diseño de Aplicaciones\BancoDeSangre\Web\bin\es\System.Web.WebPages.Deployment.resources.dll
 C:\UProjects\Diseño de Aplicaciones\BancoDeSangre\Web\bin\es\System.Web.WebPages.Razor.resources.dll
 C:\UProjects\Diseño de Aplicaciones\BancoDeSangre\Web\bin\es\System.Web.Optimization.resources.dll
-C:\UProjects\Diseño de Aplicaciones\BancoDeSangre\Web\obj\Debug\Web.csprojAssemblyReference.cache
 C:\UProjects\Diseño de Aplicaciones\BancoDeSangre\Web\obj\Debug\Web.csproj.CoreCompileInputs.cache
 C:\UProjects\Diseño de Aplicaciones\BancoDeSangre\Web\obj\Debug\Web.csproj.CopyComplete
 C:\UProjects\Diseño de Aplicaciones\BancoDeSangre\Web\obj\Debug\BancoDeSangre.dll
