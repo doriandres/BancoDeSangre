@@ -8,10 +8,30 @@
     @RenderSection("CSS", required: false)
     @Styles.Render("~/Public/CSS/appShell.css")
     @Scripts.Render("~/Public/JavaScript/appShell.js")
-    @*@Html.ActionLink("Acerca de", "About", "Home") Create link*@
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
 </head>
 <body>
-    <header></header>
+    <header>
+        <div id="wrapper">
+            <h1>BANCO DE SANGRE CCSS</h1>
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="index.cshtml">INICIO</a></li>
+                    <li><a href="#">INICIAR SESIÓN</a></li>
+                    <li><a href="#">CAMPAÑAS</a></li>
+                    <li><a href="#">CONTACTO</a></li>
+                    <li>
+                        <a href="#">INFORMACIÓN</a>
+                        <ul>
+                            <li><a href="#">¿POR QUÉ DONAR?</a></li>
+                            <li><a href="#">¿QUIÉN PUEDE DONAR?</a></li>
+                            <li><a href="#">¿CÓMO DONAR?</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <main>@RenderBody()</main>
     <footer></footer>
     @RenderSection("JavaScript", required: false)
