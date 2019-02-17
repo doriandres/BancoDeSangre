@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BancoDeSangre.Migrations
 {
     [DbContext(typeof(DataBaseService))]
-    [Migration("20190217063712_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20190217184037_IncludingMoreEntities")]
+    partial class IncludingMoreEntities
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -34,22 +34,26 @@ namespace BancoDeSangre.Migrations
 
                     b.Property<DateTime>("EndTime");
 
+                    b.Property<double>("Latitude");
+
+                    b.Property<double>("Longitude");
+
+                    b.Property<int>("ManagerId");
+
                     b.Property<string>("Place");
 
                     b.Property<DateTime>("StartTime");
 
                     b.Property<string>("Title");
 
-                    b.Property<int>("UserId");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("ManagerId");
 
                     b.ToTable("Campaigns");
                 });
 
-            modelBuilder.Entity("BancoDeSangre.Models.User", b =>
+            modelBuilder.Entity("BancoDeSangre.Models.Manager", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -70,9 +74,9 @@ namespace BancoDeSangre.Migrations
 
             modelBuilder.Entity("BancoDeSangre.Models.Campaign", b =>
                 {
-                    b.HasOne("BancoDeSangre.Models.User", "User")
+                    b.HasOne("BancoDeSangre.Models.Manager", "Manager")
                         .WithMany("Campaigns")
-                        .HasForeignKey("UserId")
+                        .HasForeignKey("ManagerId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
