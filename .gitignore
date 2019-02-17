@@ -1,2 +1,5 @@
 bin/*
 .vs/
+Web/bin/
+
+Web/obj/
