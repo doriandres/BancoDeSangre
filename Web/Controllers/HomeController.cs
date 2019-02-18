@@ -1,4 +1,8 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Linq;
+using System.Web.Mvc;
+using BancoDeSangre.Services.DB;
+using BancoDeSangre.ViewModels.Home;
 
 namespace BancoDeSangre.Controllers
 {
@@ -7,7 +11,17 @@ namespace BancoDeSangre.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            return View();
+            using (var db = new DataBaseService())
+            {                
+                return View(new HomeViewModel
+                {
+                    Campaigns = db.Campaigns
+                                .Where(c => DateTime.Today <= c.Date)
+                                .OrderBy(c => c.Date)
+                                .ThenBy(c => c.StartTime)
+                                .ToList()
+                });
+            }
         }
     }
 }

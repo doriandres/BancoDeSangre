@@ -253,6 +253,7 @@
     <Compile Include="Models\Manager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DB\DataBaseManager.cs" />
+    <Compile Include="ViewModels\Home\HomeViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
@@ -268,8 +269,11 @@
     <Content Include="Public\img\logo.png" />
     <Content Include="Public\JavaScript\appShell.js" />
     <Content Include="Public\JavaScript\components\ajax.js" />
-    <Content Include="Public\JavaScript\pages\account\account.js" />
-    <Content Include="Public\JavaScript\pages\home\home.js" />
+    <Content Include="Public\JavaScript\views\campaign\create.js" />
+    <Content Include="Public\JavaScript\views\donor\register.js" />
+    <Content Include="Public\JavaScript\views\manager\create.js" />
+    <Content Include="Public\JavaScript\views\manager\sign-in.js" />
+    <Content Include="Public\JavaScript\views\home\home.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -289,7 +293,7 @@
     <None Include="packages.config" />
     <Content Include="Views\Manager\SignIn.cshtml" />
     <None Include="Properties\PublishProfiles\bancosangre - Web Deploy.pubxml" />
-    <Content Include="Views\Manager\CreateManager.cshtml" />
+    <Content Include="Views\Manager\Create.cshtml" />
     <Content Include="Views\Donor\Register.cshtml" />
     <Content Include="Views\Campaign\Create.cshtml" />
   </ItemGroup>

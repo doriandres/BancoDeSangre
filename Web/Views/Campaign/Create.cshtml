@@ -1,4 +1,7 @@
-﻿<h2>Crear Campaña de Donación</h2>
+﻿@section JavaScript{
+    <script type="module" src="/public/javascript/views/campaign/create.js"></script>
+}
+<h2>Crear Campaña de Donación</h2>
 <form id="signin-form" method="POST" action="/campaign/save">
     <div class="form-field">
         <label for="title-field">Título</label>
@@ -15,11 +18,6 @@
     <div class="form-field">
         <label for="longitude-field">Longitud</label>
         <input id="longitude-field" name="longitude" type="number" step=".00000000001" required />
-    </div>
-
-    <div class="form-field">
-        <label for="phonenumber-field">Número de teléfono</label>
-        <input id="phonenumber-field" name="phonenumber" type="tel" placeholder="8888-8888" required />
     </div>
     <div class="form-field">
         <label for="date-field">Fecha</label>

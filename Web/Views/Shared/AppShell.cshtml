@@ -14,6 +14,10 @@
     <header>
         <div id="wrapper">
             <h1>BANCO DE SANGRE CCSS</h1>
+            @if (Session["manager"] != null)
+            {
+                <a href="/manager/signout">Cerrar sesión</a>
+            }
             <nav>
                 <ul class="main-menu">
                     <li><a href="index.cshtml">INICIO</a></li>
