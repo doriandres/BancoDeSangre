@@ -214,6 +214,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Data\SessionManager.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -253,6 +254,9 @@
     <Compile Include="Models\Manager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DB\DataBaseManager.cs" />
+    <Compile Include="Services\DB\DBService.cs" />
+    <Compile Include="Services\ManagerService\IManagerService.cs" />
+    <Compile Include="Services\ManagerService\ManagerDBService.cs" />
     <Compile Include="ViewModels\Home\HomeViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -286,9 +290,7 @@
     <Content Include="Views\Shared\AppShell.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Views\Manager\SignIn.cshtml" />

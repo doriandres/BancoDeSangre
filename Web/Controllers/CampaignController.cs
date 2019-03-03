@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Web.Mvc;
+using BancoDeSangre.App_Data;
 using BancoDeSangre.Models;
 using BancoDeSangre.Services.DB;
 
@@ -14,7 +15,11 @@ namespace BancoDeSangre.Controllers
         [HttpGet]
         public ActionResult Create()
         {
-            return Session["manager"] == null ? RedirectToAction("Index", "Home") : (ActionResult)View();
+            if (Session.IsSignedIn()) // Only signed in Managers can create Campaigns
+            {
+                return View();
+            }
+            return RedirectToAction("Index", "Home");
         }
 
         /// <summary>
@@ -25,7 +30,10 @@ namespace BancoDeSangre.Controllers
         [HttpPost]
         public ActionResult Save(Campaign campaign)
         {
-            if (Session["manager"] == null) return Json(new { saved = false });
+            if (!Session.IsSignedIn())
+            {
+                return Json(new { saved = false });
+            }
 
             using (var db = new DataBaseService())
             {

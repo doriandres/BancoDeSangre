@@ -12,15 +12,17 @@ namespace BancoDeSangre.Controllers
         public ActionResult Index()
         {
             using (var db = new DataBaseService())
-            {                
-                return View(new HomeViewModel
+            {
+                var model = new HomeViewModel
                 {
                     Campaigns = db.Campaigns
-                                .Where(c => DateTime.Today <= c.Date)
-                                .OrderBy(c => c.Date)
-                                .ThenBy(c => c.StartTime)
-                                .ToList()
-                });
+                        .Where(c => DateTime.Today <= c.Date)
+                        .OrderBy(c => c.Date)
+                        .ThenBy(c => c.StartTime)
+                        .ToList()
+                };
+
+                return View(model);
             }
         }
     }

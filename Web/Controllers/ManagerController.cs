@@ -1,12 +1,20 @@
-﻿using System.Linq;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using BancoDeSangre.App_Data;
 using BancoDeSangre.Models;
 using BancoDeSangre.Services.DB;
+using BancoDeSangre.Services.ManagerService;
 
 namespace BancoDeSangre.Controllers
 {
     public class ManagerController : Controller
     {
+        private IManagerService managerService;
+        public ManagerController()
+        {
+            var dataBaseService = new DataBaseService();
+            managerService = new ManagerDBService(dataBaseService);
+        }
+
         /// <summary>
         /// Shows the Sign In page
         /// </summary>
@@ -14,7 +22,14 @@ namespace BancoDeSangre.Controllers
         [HttpGet]
         public ActionResult SignIn()
         {
-            return Session["manager"] == null ? (ActionResult) View() : RedirectToAction("Index", "Home");
+            if (!Session.IsSignedIn()) // If there's not signed in manager show sign in page
+            {
+                return View();
+            }
+
+            // If the user is already signed in redirect to the home page
+            return RedirectToAction("Index", "Home");
+
         }
 
         /// <summary>
@@ -24,7 +39,7 @@ namespace BancoDeSangre.Controllers
         [HttpGet]
         public ActionResult SignOut()
         {
-            Session["manager"] = null;
+            Session.SignOut();
             return RedirectToAction("Index", "Home");
         }
 
@@ -36,31 +51,48 @@ namespace BancoDeSangre.Controllers
         /// <returns>Whether the credential or the session status is valid or not</returns>
         [HttpPost]
         public JsonResult CheckSignIn(string email, string password)
-        {            
-            using (var db = new DataBaseService())
-            {
-                var valid = false;
-                var cause = "";
-                if (Session["manager"] == null)
-                {
-                    var manager = db.Managers.FirstOrDefault(m => m.Email == email);
-                    valid = manager != null && manager.Password == password;
+        {
+            var valid = false;
+            var cause = "";
 
-                    if (!valid)
-                    {
-                        cause = manager == null ? "Email no existe" : "Credenciales inválidas";
-                    }
-                    else
-                    {
-                        Session["manager"] = manager;
-                    }
+            /**
+             * First check if the user has not signed in yet
+             * They can't access the sign in page if they have already signed in
+             * but they can open twice the sign in page to sign in from one of them
+             * and then turn their tab and try to sign in again
+             */
+            if (!Session.IsSignedIn()) 
+            {
+                // Try to find any manager matching the email
+
+                var manager = managerService.FindByEmail(email);
+
+                // The procedure is going to be valid only if any manager was found and its password matches the given password
+                valid = manager != null && manager.Password == password;
+
+                if (valid)
+                {
+                    // Set the Session Signed In Manager
+                    Session.SetSignedInManager(manager);                    
                 }
                 else
                 {
-                    cause = "Ya hay una sesión iniciada";
-                }                
-                return Json(new {valid, cause});
-            }            
+                    if (manager == null)
+                    {
+                        cause = "Email no existe";
+                    }
+                    else
+                    {
+                        cause = "Credenciales inválidas";
+                    }
+                }
+            }
+            else
+            {
+                cause = "Ya hay una sesión iniciada";
+            }
+            return Json(new { valid, cause });
+
         }
 
         /// <summary>
@@ -70,7 +102,13 @@ namespace BancoDeSangre.Controllers
         [HttpGet]
         public ActionResult Create()
         {
-            return Session["manager"] == null ?  RedirectToAction("Index", "Home") : (ActionResult)View();
+            if (Session.IsSignedIn()) // Only signed in Managers can create Managers
+            {
+                return View();
+
+            }
+            // If there's no signed in manager redirect to home page
+            return RedirectToAction("Index", "Home");
         }
 
         /// <summary>
@@ -81,17 +119,19 @@ namespace BancoDeSangre.Controllers
         [HttpPost]
         public ActionResult SaveManager(Manager manager)
         {
-            if(Session["manager"] != null) return Json(new { saved = false });
-            using (var db = new DataBaseService())
+            if (!Session.IsSignedIn()) // Only a signed in manager can Save Managers
             {
-                if (db.Managers.Any(m => m.Email == manager.Email))
-                {
-                    return Json(new { saved = false, cause = "El email ya existe" });
-                }                    
-                db.Managers.Add(manager);
-                var count = db.SaveChanges();
-                return Json(new { saved = count > 0 });
+                return Json(new { saved = false });
             }
+
+            if (managerService.FindByEmail(manager.Email) == null) // If the email is not registered yet, create the manager
+            {
+                var result = managerService.CreateManager(manager);
+                return Json(new { saved = result });
+            }
+
+            // Handle existing email response
+            return Json(new { saved = false, cause = "El email ya existe" });
         }
     }
 }
