@@ -2,3 +2,44 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
+.header-title {
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo {
+    width: 75px;
+    margin-right: 50px; 
+}
+.header-title h1 {
+    font-weight: lighter;
+    padding-bottom: 0;
+}
+.header-nav-bar {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+.header-nav-bar .nav-bar-item {
+    height: 100%;
+    background-color: #4f4f4f;
+    color: white;
+    text-align: center;
+    flex-grow: 1;
+    line-height: 50px;
+    text-decoration: none;
+    margin-left: 3px;
+    margin-right: 3px;
+    font-weight: lighter;
+}
+.nav-bar-info-item {
+    background-color: white !important;
+    color: black !important;
+}
+.nav-bar-item:not(.nav-bar-info-item):hover {
+    background-color: #00b69d;
+}
+.nav-bar-info-item span{
+    font-size: 34px;            
+}

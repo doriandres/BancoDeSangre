@@ -1,5 +1,5 @@
-﻿@{ViewBag.Title = "Inicio";}
-@model BancoDeSangre.ViewModels.Home.HomeViewModel
+﻿@*@model BancoDeSangre.ViewModels.Home.HomeViewModel*@
+@{ViewBag.Title = "Inicio";}
 @section CSS{ @Styles.Render("~/Public/CSS/home.css")}
 @section JavaScript{ @Scripts.Render("~/Public/JavaScript/pages/home/home.js")}
 
@@ -8,31 +8,31 @@
 <div class="container">
     <img src="~/Public/img/imagen1.jpg" width="516px">
 </div>
-    
-    
-    TODO: REMOVE ALL INLINE STYLES
+
+TODO: REMOVE ALL INLINE STYLES
 -->
-<div class="container" style="margin-top: 100px">
+
+@*<div class="container" style="margin-top: 100px">
     <h1>Campañas de donación</h1>
-    <br/>
+    <br />
     @foreach (var campaign in Model.Campaigns)
-    {
-        <div class="campaign-container card" style="border: 1px solid gray; padding: 30px; width: 95%">
-            <h3 class="campaign-title">@campaign.Title</h3>
+        {
+            <div class="campaign-container card" style="border: 1px solid gray; padding: 30px; width: 95%">
+                <h3 class="campaign-title">@campaign.Title</h3>
+                <br />
+                <span><b>Lugar:</b> @campaign.Place</span>
+                <br />
+                <span><b>Fecha:</b> @campaign.Date.ToString("dd/MM/yyyy")</span>
+                <br />
+                <span><b>Hora de inicio:</b> @campaign.StartTime.ToString("hh:mm tt")</span>
+                <br />
+                <span><b>Hora de finalización:</b> @campaign.EndTime.ToString("hh:mm tt")</span>
+                <br />
+                <br />
+                <p>
+                    @campaign.Description
+                </p>
+            </div>
             <br />
-            <span><b>Lugar:</b> @campaign.Place</span>
-            <br />
-            <span><b>Fecha:</b> @campaign.Date.ToString("dd/MM/yyyy")</span>
-            <br />
-            <span><b>Hora de inicio:</b> @campaign.StartTime.ToString("hh:mm tt")</span>
-            <br />
-            <span><b>Hora de finalización:</b> @campaign.EndTime.ToString("hh:mm tt")</span>
-            <br />
-            <br />
-            <p>
-                @campaign.Description
-            </p>
-        </div>
-        <br />
-    }
-</div>
+        }
+</div>*@
