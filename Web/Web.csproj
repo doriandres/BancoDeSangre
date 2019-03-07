@@ -253,10 +253,18 @@
     <Compile Include="Models\MedicalCenter.cs" />
     <Compile Include="Models\Manager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\CampaignService\CampaignDBService.cs" />
+    <Compile Include="Services\CampaignService\ICampaignService.cs" />
     <Compile Include="Services\DB\DataBaseManager.cs" />
     <Compile Include="Services\DB\DBService.cs" />
+    <Compile Include="Services\DonationService\DonationDBService.cs" />
+    <Compile Include="Services\DonationService\IDonationService.cs" />
+    <Compile Include="Services\DonorService\DonorDBService.cs" />
+    <Compile Include="Services\DonorService\IDonorService.cs" />
     <Compile Include="Services\ManagerService\IManagerService.cs" />
     <Compile Include="Services\ManagerService\ManagerDBService.cs" />
+    <Compile Include="Services\MedicalCenterService\IMedicalCenterService.cs" />
+    <Compile Include="Services\MedicalCenterService\MedicalCenterDBService.cs" />
     <Compile Include="ViewModels\Home\HomeViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
