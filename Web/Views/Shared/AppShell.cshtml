@@ -6,14 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Banco de Sangre</title>
     @RenderSection("CSS", required: false)
-    @Styles.Render("~/Public/CSS/appShell.css")
-    @Scripts.Render("~/Public/JavaScript/appShell.js")
-    @*@Html.ActionLink("Acerca de", "About", "Home") Create link*@
+    <link rel="stylesheet" href="/public/css/appShell.css" />
 </head>
 <body>
-    <header></header>
+    <header>
+        <div class="header-title">
+            <div class="header-title-item">
+                <img class="logo" src="/public/img/logo.png" />
+            </div>
+            <div class="header-title-item">
+                <h1>BANCO DE SANGRE CCSS</h1>
+            </div>
+        </div>
+        <nav class="header-nav-bar">
+            <a href="#" class="nav-bar-item">
+                INICIO
+            </a>
+            <a href="#" class="nav-bar-item">
+                INICIAR SESIÓN
+            </a>
+            <a href="#" class="nav-bar-item">
+                CAMPAÑAS
+            </a>
+            <a href="#" class="nav-bar-item">
+                CONTACTO
+            </a>
+            <a href="#" class="nav-bar-info-item nav-bar-item">
+                <b>INFORMACIÓN</b>
+            </a>
+        </nav>
+    </header>
     <main>@RenderBody()</main>
     <footer></footer>
+    <script src="/public/javascript/appShell.js"></script>
     @RenderSection("JavaScript", required: false)
 </body>
 </html>

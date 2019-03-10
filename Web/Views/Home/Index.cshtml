@@ -1,15 +1,13 @@
-﻿@{
-    // Defines the title
-    ViewBag.Title = "Inicio";
-}
-@section CSS{
-    @Styles.Render("~/Public/CSS/home.css")
-}
-@section JavaScript{
-    @Scripts.Render("~/Public/JavaScript/pages/home/home.js")
-}
+﻿@*@model BancoDeSangre.ViewModels.Home.HomeViewModel*@
+@{ViewBag.Title = "Inicio";}
+@section CSS{ @Styles.Render("~/Public/CSS/home.css")}
+@section JavaScript{ @Scripts.Render("~/Public/JavaScript/pages/home/home.js")}
 
 
+<!--
+<div class="container">
+    <img src="~/Public/img/imagen1.jpg" width="516px">
+</div>
 
 <html>
 <head>

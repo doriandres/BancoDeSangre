@@ -1,0 +1,65 @@
+﻿<h2>Registrar Donante</h2>
+<form id="signin-form" method="POST" action="/donor/save">
+    <div class="form-field">
+        <label for="email-field">Email</label>
+        <input id="email-field" name="email" type="email" placeholder="@("username@email.com")" required />
+    </div>
+    <div class="form-field">
+        <label for="phonenumber-field">Número de teléfono</label>
+        <input id="phonenumber-field" name="phonenumber" type="tel" placeholder="8888-8888" required />
+    </div>
+    <div class="form-field">
+        <label for="id-field">Cédula</label>
+        <input id="id-field" name="id" type="number" required />
+    </div>
+    <div class="form-field">
+        <label for="name-field">Nombre</label>
+        <input id="name-field" name="name" type="text" required />
+    </div>
+    <div class="form-field">
+        <label for="lastname-field">Apellido</label>
+        <input id="lastname-field" name="lastname" type="text" required />
+    </div>
+    <div class="form-field">
+        <label for="secondlastname-field">Segundo Apellido</label>
+        <input id="secondlastname-field" name="secondlastname" type="text" required />
+    </div>
+    <div class="form-field">
+        <label for="borndate-field">Fecha de nacimiento</label>
+        <input id="borndate-field" name="borndate" type="date" required />
+    </div>
+    <div class="form-field">
+        <label>Género</label>
+        <br />
+        <input id="male" name="gender" type="radio" value="M" checked />
+        <label for="male">Masculino</label>
+        <br />
+        <input id="female" name="gender" type="radio" value="F" />
+        <label for="female">Femenino</label>
+    </div>
+    <div class="form-field">
+        <label for="height-field">Altura</label>
+        <input id="height-field" name="height" type="number" step=".01" required />
+    </div>
+    <div class="form-field">
+        <label for="weight-field">Peso</label>
+        <input id="weight-field" name="weight" type="number" step=".01" required />
+    </div>
+    <div class="form-field">
+        <label for="bloodtype-field">Tipo de sangre</label>
+        <select id="bloodtype-field" name="bloodtype" required>
+            <option value="" disabled selected>Seleccione tipe de sangre</option>
+            <option value="AP">A+</option>
+            <option value="OP">O+</option>
+            <option value="BP">B+</option>
+            <option value="ABP">AB+</option>
+            <option value="AN">A-</option>
+            <option value="ON">O-</option>
+            <option value="BN">B-</option>
+            <option value="ABN">AB-</option>
+        </select>
+    </div>
+    <div class="form-field">
+        <input type="submit" value="Registrar donante" />
+    </div>
+</form>

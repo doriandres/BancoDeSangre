@@ -1,0 +1,25 @@
+﻿@section JavaScript{
+    <script type="module" src="/public/javascript/views/manager/create.js"></script>
+}
+<h2>Crear Administrador</h2>
+<form id="create-manager-form" method="POST" action="/manager/savemanager">
+    <div class="form-field">
+        <label for="email-field">Email</label>
+        <input id="email-field" name="email" type="email" placeholder="@("nombre@email.com")" required />
+    </div>
+    <div class="form-field">
+        <label for="name-field">Nombre</label>
+        <input id="name-field" name="name" type="text" required />
+    </div>
+    <div class="form-field">
+        <label for="lastname-field">Apellido</label>
+        <input id="lastname-field" name="lastname" type="text" required />
+    </div>
+    <div class="form-field">
+        <label for="password-field">Contraseña</label>
+        <input id="password-field" name="password" type="password" required />
+    </div>
+    <div class="form-field">
+        <input type="submit" value="Crear administrador" />
+    </div>
+</form>
