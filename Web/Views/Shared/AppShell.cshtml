@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using BancoDeSangre.App_Data;
+<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -19,21 +20,42 @@
             </div>
         </div>
         <nav class="header-nav-bar">
-            <a href="#" class="nav-bar-item">
-                INICIO
-            </a>
-            <a href="#" class="nav-bar-item">
-                INICIAR SESIÓN
-            </a>
-            <a href="#" class="nav-bar-item">
-                CAMPAÑAS
-            </a>
-            <a href="#" class="nav-bar-item">
-                CONTACTO
-            </a>
-            <a href="#" class="nav-bar-info-item nav-bar-item">
-                <b>INFORMACIÓN</b>
-            </a>
+            @if (!Session.IsSignedIn())
+            {
+                <a href="#" class="nav-bar-item">
+                    INICIO
+                </a>
+                <a href="/manager/signin" class="nav-bar-item">
+                    INICIAR SESIÓN
+                </a>
+                <a href="#" class="nav-bar-item">
+                    CAMPAÑAS
+                </a>
+                <a href="#" class="nav-bar-item">
+                    CONTACTO
+                </a>
+                <a href="#" class="nav-bar-info-item nav-bar-item">
+                    <b>INFORMACIÓN</b>
+                </a>
+            }
+            else
+            {
+                <a href="#" class="nav-bar-item">
+                    NUEVO DONANTE
+                </a>
+                <a href="/manager/signin" class="nav-bar-item">
+                    NUEVO ADMIN
+                </a>
+                <a href="#" class="nav-bar-item">
+                    NUEVA CAMPAÑA
+                </a>
+                <a href="#" class="nav-bar-item">
+                    NUEVO CENTRO MEDICO
+                </a>
+                <a href="/manager/signout" class="nav-bar-info-item nav-bar-item">
+                    <b>SALIR</b>
+                </a>
+            }
         </nav>
     </header>
     <main>@RenderBody()</main>
