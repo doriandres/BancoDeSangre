@@ -165,6 +165,8 @@
     </Content>
     <Content Include="Public\CSS\appShell.css" />
     <Content Include="Public\CSS\home.css" />
+    <Content Include="Public\CSS\InfoDonar.css" />
+    <Content Include="Public\CSS\login.css" />
     <Content Include="Public\img\imagen1.jpg" />
     <Content Include="Public\img\imagen2.jpg" />
     <Content Include="Public\img\imagen3.jpg" />
@@ -191,6 +193,8 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Views\Account\SignIn.cshtml" />
+    <Content Include="Views\InfoDonar\InfoDonar.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
