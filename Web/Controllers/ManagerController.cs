@@ -65,7 +65,7 @@ namespace BancoDeSangre.Controllers
             {
                 // Try to find any manager matching the email
 
-                var manager = managerService.FindByEmail(email);
+                var manager = managerService.FindManagerByEmail(email);
 
                 // The procedure is going to be valid only if any manager was found and its password matches the given password
                 valid = manager != null && manager.Password == password;
@@ -124,7 +124,7 @@ namespace BancoDeSangre.Controllers
                 return Json(new { saved = false });
             }
 
-            if (managerService.FindByEmail(manager.Email) == null) // If the email is not registered yet, create the manager
+            if (managerService.FindManagerByEmail(manager.Email) == null) // If the email is not registered yet, create the manager
             {
                 var result = managerService.CreateManager(manager);
                 return Json(new { saved = result });

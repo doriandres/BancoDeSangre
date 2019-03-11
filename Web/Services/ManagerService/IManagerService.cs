@@ -16,6 +16,13 @@ namespace BancoDeSangre.Services.ManagerService
         /// </summary>
         /// <param name="email">Email to seek</param>
         /// <returns>Task which result is the Manager found</returns>
-        Manager FindByEmail(string email);        
+        Manager FindManagerByEmail(string email);
+
+        /// <summary>
+        /// Removes a Manager by its email
+        /// </summary>
+        /// <param name="email">Email</param>
+        /// <returns></returns>
+        bool RemoveManagerByEmail(string email);
     }
 }
