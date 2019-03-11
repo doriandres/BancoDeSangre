@@ -157,5 +157,44 @@ namespace BancoDeSangre.Controllers
                 return Json(new { saved = count > 0 });
             }
         }
+
+        /// <summary>
+        /// Saves a donation to a donor
+        /// </summary>
+        /// <param name="donation">Donation information to be saved</param>
+        /// <returns>JSON with result of the operation</returns>
+        [HttpPost]
+        public ActionResult SaveDonationToDonor(Donation donation, int donorID)
+        {
+            if (!Session.IsSignedIn())
+            {
+                return Json(new { saved = false });
+            }
+
+            using (var db = new DataBaseService())
+            {
+                var valid = true;
+                var cause = "";
+
+                //Se puede agregar una validacion sobre el tipo de sangre O- para que lo guarde como donador especial
+
+                if (donation.Date > DateTime.Today)
+                {
+                    cause = "No puede recibir donaciones en el futuro";
+                    valid = false;
+                }
+
+                if (donation.Amount > 500)
+                {
+                    cause = "No puede recibir donaciones mayores a medio litro (500 cc o 500 mL)";
+                    valid = false;
+                }
+
+                db.Donations.Add(donation);
+                db.Donors.Find(donorID).Donations.Add(donation);//Busca al donador con el ID y agrega la donacion a la lista
+                var count = db.SaveChanges();
+                return Json(new { saved = count > 0 });
+            }
+        }
     }
 }
