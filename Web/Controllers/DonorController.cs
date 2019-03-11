@@ -190,6 +190,7 @@ namespace BancoDeSangre.Controllers
                     valid = false;
                 }
 
+                donation.Donor = db.Donors.Find(donorID); //Le asigna a la donacion el donador respectivo
                 db.Donations.Add(donation);
                 db.Donors.Find(donorID).Donations.Add(donation);//Busca al donador con el ID y agrega la donacion a la lista
                 var count = db.SaveChanges();
