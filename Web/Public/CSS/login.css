@@ -12,7 +12,7 @@ body {
 .container {
     width: 450px;
     margin: 70px auto;
-    padding-top: 40px;
+    padding-top: 20px;
 }
 
 .registrarse, .iniciarSesion {

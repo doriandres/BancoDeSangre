@@ -4,70 +4,18 @@
 }
 @section JavaScript{
     <script type="module" src="/public/javascript/views/manager/sign-in.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $(".iniciarSesion-form").hide();
-            $(".iniciarSesion").css("background", "none");
-
-            $(".iniciarSesion").click(function () {
-                $(".registrarse-form").hide();
-                $(".iniciarSesion-form").show();
-                $(".registrarse").css("background", "none")
-                $(".iniciarSesion").css("background", "#fff");
-            });
-
-            $(".registrarse").click(function () {
-                $(".registrarse-form").show();
-                $(".iniciarSesion-form").hide();
-                $(".registrarse").css("background", "#fff")
-                $(".iniciarSesion").css("background", "none");
-            });
-
-            $(".btn").click(function () {
-                $(".input").val("");
-            });
-        });
-    </script>
 }
 
 @section CSS{
     <link rel="stylesheet" type="text/css" href="~/Public/CSS/login.css">
 }
 
-@*<h2>Iniciar Sesión</h2>
-<form id="signin-form" method="POST" action="/manager/checksignin">
-    <div class="form-field">
-        <label for="email-field">Email</label>
-        <input id="email-field" name="email" type="email" placeholder="@("nombre@email.com")" required />
-    </div>
-    <div class="form-field">
-        <label for="password-field">Contraseña</label>
-        <input id="password-field" name="password" type="password" required />
-    </div>
-    <div class="form-field">
-        <input type="submit" value="Iniciar Sesión" />
-    </div>
-</form>*@
-
-<div class="container">
-    <div class="registrarse">Registrarse</div>
-    <div class="iniciarSesion">Iniciar Sesión</div>
-
-    <div class="registrarse-form">
-        <input type="text" placeholder="Correo Electrónico" class="input"><br>
-        <input type="text" placeholder="Nombre" class="input"><br>
-        <input type="text" placeholder="Apellidos" class="input"><br>
-        <input type="date" placeholder="Fecha de Nacimiento" class="input"><br>
-        <input type="tel" placeholder="Telefono" class="input"><br>
-        <input type="text" placeholder="Tipo de Sangre" class="input"><br>
-        <input type="password" placeholder="Contraseña" class="input"><br>
-        <div class="btn">Crear Usuario</div>
-    </div>
-
-    <div class="iniciarSesion-form">
-        <input type="text" placeholder="Email" class="input"><br>
-        <input type="password" placeholder="Contraseña" class="input"><br>
-        <div class="btn">Iniciar Sesión</div>
-    </div>
+<div class="container">    
+    <form id="signin-form" method="POST" action="/manager/checksignin">
+        <div class="iniciarSesion-form">
+            <input id="email-field" name="email" type="text" placeholder="Email" class="input" required><br>
+            <input id="password-field" name="password" type="password" placeholder="Contraseña" class="input" required><br>
+            <input type="submit" class="btn" value="Iniciar Sesión"/>
+        </div>
+    </form>
 </div>
