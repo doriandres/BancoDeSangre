@@ -220,6 +220,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CampaignController.cs" />
     <Compile Include="Controllers\DonorController.cs" />
+    <Compile Include="Controllers\InfoController.cs" />
     <Compile Include="Controllers\ManagerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Enums\MeasurementUnit.cs" />
@@ -308,6 +309,8 @@
     <Content Include="Views\Manager\Create.cshtml" />
     <Content Include="Views\Donor\Register.cshtml" />
     <Content Include="Views\Campaign\Create.cshtml" />
+    <Content Include="Views\Campaign\List.cshtml" />
+    <Content Include="Views\Info\Contact.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -19,7 +19,7 @@ namespace BancoDeSangre.Controllers
         /// <summary>
         /// Shows the create a donor page
         /// </summary>
-        /// <returns>Can only create a donor if Manager is signed in, else is returned to Index</returns>
+        /// <returns>Can only create a donor if Manager is signed in, else is returned to Contact</returns>
         [HttpGet]
         public ActionResult Create()
         {

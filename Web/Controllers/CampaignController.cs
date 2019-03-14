@@ -65,5 +65,10 @@ namespace BancoDeSangre.Controllers
                 return Json(new { saved = count > 0 });
             }
         }
+
+        public ActionResult List()
+        {
+            return View();
+        }
     }
 }
