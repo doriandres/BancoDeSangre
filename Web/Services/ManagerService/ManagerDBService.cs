@@ -2,11 +2,10 @@
 using BancoDeSangre.Models;
 using BancoDeSangre.Services.DB;
 
-
 namespace BancoDeSangre.Services.ManagerService
 {
     public class ManagerDBService : DBService , IManagerService
-    {
+    {        
         public ManagerDBService(DataBaseService dataBase) : base(dataBase)
         {
         }
@@ -14,14 +13,21 @@ namespace BancoDeSangre.Services.ManagerService
         public bool CreateManager(Manager manager)
         {
             dataBase.Managers.Add(manager);
-            var countChanges = dataBase.SaveChanges(); // Saves the Manager to Data Base
+            var countChanges = dataBase.SaveChanges();
             return countChanges > 0;
         }
 
-        public Manager FindByEmail(string email)
+        public Manager FindManagerByEmail(string email)
         {
-            return dataBase.Managers.FirstOrDefault(manager => manager.Email == email);
+            return dataBase.Managers.FirstOrDefault(m => m.Email == email);
         }
 
+        public bool RemoveManagerByEmail(string email)
+        {
+            var rowsToRemove = dataBase.Managers.Where(manager => manager.Email == email);
+            dataBase.Managers.RemoveRange(rowsToRemove);
+            var countChanges = dataBase.SaveChanges();
+            return countChanges > 0;
+        }
     }
 }

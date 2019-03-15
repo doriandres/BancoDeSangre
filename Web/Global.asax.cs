@@ -1,8 +1,6 @@
 ﻿using System.Web;
 using System.Web.Mvc;
-using System.Web.Optimization;
 using System.Web.Routing;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace BancoDeSangre
 {
@@ -13,7 +11,6 @@ namespace BancoDeSangre
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles);   
         }
     }
 }
