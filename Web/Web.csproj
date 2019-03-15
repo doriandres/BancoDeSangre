@@ -274,6 +274,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Public\CSS\appShell.css" />
+    <Content Include="Public\CSS\contact.css" />
     <Content Include="Public\CSS\home.css" />
     <Content Include="Public\CSS\InfoDonar.css" />
     <Content Include="Public\CSS\login.css" />
@@ -308,6 +309,7 @@
     <Content Include="Views\Manager\Create.cshtml" />
     <Content Include="Views\Donor\Register.cshtml" />
     <Content Include="Views\Campaign\Create.cshtml" />
+    <Content Include="Views\Contact\Contact.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
