@@ -297,7 +297,11 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Public\CSS\appShell.css" />
+<<<<<<< HEAD
     <Content Include="Public\CSS\createCampaign.css" />
+=======
+    <Content Include="Public\CSS\contact.css" />
+>>>>>>> 5d086603c80c1b5ae49554c68f0813004d3d237f
     <Content Include="Public\CSS\home.css" />
     <Content Include="Public\CSS\InfoDonar.css" />
     <Content Include="Public\CSS\login.css" />
