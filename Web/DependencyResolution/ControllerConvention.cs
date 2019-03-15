@@ -15,6 +15,8 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System.Linq;
+
 namespace BancoDeSangre.DependencyResolution {
     using System;
     using System.Web.Mvc;
@@ -35,7 +37,13 @@ namespace BancoDeSangre.DependencyResolution {
 
         public void ScanTypes(TypeSet types, Registry registry)
         {
-            throw new NotImplementedException();
+            types.AllTypes().ToList().ForEach(type =>
+            {
+                if (type.CanBeCastTo<Controller>() && !type.IsAbstract)
+                {
+                    registry.For(type).LifecycleIs(new UniquePerRequestLifecycle());
+                }
+            });
         }
 
         #endregion

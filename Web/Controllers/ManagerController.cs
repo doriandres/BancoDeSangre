@@ -8,6 +8,7 @@ namespace BancoDeSangre.Controllers
     public class ManagerController : Controller
     {
         private IManagerService managerService;
+
         public ManagerController(IManagerService managerService)
         {
             this.managerService = managerService;

@@ -1,13 +1,19 @@
-﻿using System;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using BancoDeSangre.App_Data;
 using BancoDeSangre.Models;
-using BancoDeSangre.Services.DB;
+using BancoDeSangre.Services.CampaignService;
 
 namespace BancoDeSangre.Controllers
 {
     public class CampaignController : Controller
     {
+        private ICampaignService campaignService;
+
+        public CampaignController(ICampaignService campaignService)
+        {
+            this.campaignService = campaignService;
+        }
+
         /// <summary>
         /// Show the create campaign page
         /// </summary>
@@ -19,6 +25,7 @@ namespace BancoDeSangre.Controllers
             {
                 return View();
             }
+
             return RedirectToAction("Index", "Home");
         }
 
@@ -35,37 +42,24 @@ namespace BancoDeSangre.Controllers
                 return Json(new { saved = false });
             }
 
-            using (var db = new DataBaseService())
+            if (!campaignService.IsValidCampaign(campaign, out var cause))
             {
-                var valid = true;
-                var cause = "";
-
-                if (campaign.Date < DateTime.Today)
-                {
-                    cause = "La fecha seleccionada ya pasó";
-                    valid = false;
-                }
-
-                if (campaign.Date == DateTime.Today && campaign.StartTime < DateTime.Now)
-                {
-                    cause = "La hora de inicio es antes que la hora actual";
-                    valid = false;
-                }
-                if (campaign.EndTime < campaign.StartTime)
-                {
-                    cause = "La hora de finalización es antes que la hora de inicio";
-                    valid = false;
-                }
-
-                if (!valid) return Json(new {saved = false, cause});
-
-                campaign.ManagerId = ((Manager) Session["manager"]).Id;
-                db.Campaigns.Add(campaign);
-                var count = db.SaveChanges();
-                return Json(new { saved = count > 0 });
+                return Json(new { saved = false, cause });
             }
+
+            campaign.ManagerId = Session.GetSignedInManager().Id;
+
+            var saved = campaignService.CreateCampaign(campaign);
+
+            return Json(new { saved });
+
         }
 
+        /// <summary>
+        /// Shows the list of Campaigns
+        /// </summary>
+        /// <returns>List of campaigns view</returns>
+        [HttpGet]
         public ActionResult List()
         {
             return View();

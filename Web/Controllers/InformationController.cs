@@ -2,14 +2,14 @@
 
 namespace BancoDeSangre.Controllers
 {
-    public class HomeController : Controller
+    public class InformationController : Controller
     {
         /// <summary>
-        /// Shows the Index page
+        /// Shows the Contact Information
         /// </summary>
-        /// <returns>Home Page</returns>
+        /// <returns>Contact view</returns>
         [HttpGet]
-        public ActionResult Index()
+        public ActionResult Contact()
         {
             return View();
         }

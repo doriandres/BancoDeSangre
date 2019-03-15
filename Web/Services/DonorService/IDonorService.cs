@@ -17,5 +17,13 @@ namespace BancoDeSangre.Services.DonorService
         /// <param name="id">ID of the desired donor</param>
         /// <returns>The found donor</returns>
         Donor FindByID(int id);
+
+        /// <summary>
+        /// Validates a Donor
+        /// </summary>
+        /// <param name="donor">Donor to validate</param>
+        /// <param name="cause">Invalid cause</param>
+        /// <returns>Results</returns>
+        bool IsValidDonor(Donor donor, out string cause);
     }
 }

@@ -231,11 +231,14 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\StructuremapMvc.cs" />
+    <Compile Include="Controllers\BloodRequestController.cs" />
     <Compile Include="Controllers\CampaignController.cs" />
+    <Compile Include="Controllers\DonationController.cs" />
     <Compile Include="Controllers\DonorController.cs" />
-    <Compile Include="Controllers\InfoController.cs" />
+    <Compile Include="Controllers\InformationController.cs" />
     <Compile Include="Controllers\ManagerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MedicalCenterController.cs" />
     <Compile Include="DependencyResolution\ControllerConvention.cs" />
     <Compile Include="DependencyResolution\DefaultRegistry.cs" />
     <Compile Include="DependencyResolution\IoC.cs" />
@@ -329,7 +332,7 @@
     <Content Include="Views\Donor\Register.cshtml" />
     <Content Include="Views\Campaign\Create.cshtml" />
     <Content Include="Views\Campaign\List.cshtml" />
-    <Content Include="Views\Info\Contact.cshtml" />
+    <Content Include="Views\Information\Contact.cshtml" />
     <Content Include="Views\Donor\Create.cshtml" />
   </ItemGroup>
   <PropertyGroup>

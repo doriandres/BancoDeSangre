@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using BancoDeSangre.Models;
 using BancoDeSangre.Services.DB;
 
@@ -18,6 +19,68 @@ namespace BancoDeSangre.Services.DonorService
         public Donor FindByID(int id)
         {
             return dataBase.Donors.FirstOrDefault(donor => donor.Id == id);
+        }
+
+        public bool IsValidDonor(Donor donor, out string cause)
+        {
+            var valid = true;
+            cause = null;
+
+            if (donor.Name.Trim().Length == 0)
+            {
+                cause = "Debe ingresar un nombre";
+                valid = false;
+            }
+
+            if (donor.LastName.Trim().Length == 0)
+            {
+                cause = "Debe ingresar un apellido";
+                valid = false;
+            }
+
+            if (donor.PhoneNumber < 20000000)
+            {
+                cause = "Debe ingresar un n\u00famero de tel\u00E9fono v\u00E1lido";
+                valid = false;
+            }
+
+            if ((DateTime.Today.Year - donor.BornDate.Year) < 18)
+            {
+                cause = "No puede recibir donaciones de menores de edad";
+                valid = false;
+            }
+
+            if (donor.Email.Trim().Length == 0)
+            {
+                cause = "Debe ingresar un correo";
+                valid = false;
+            }
+
+            if (donor.Gender.Trim().Length == 0)
+            {
+                cause = "Debe ingresar un g\u00E9nero";
+                valid = false;
+            }
+
+            if (donor.Height < 0)
+            {
+                cause = "Debe ingresar una altura v\u00e1lida";
+                valid = false;
+            }
+
+            if (donor.Weight < 50)
+            {
+                cause = "No se permiten donaciones en pacientes con pesos menores a 50 kg";
+                valid = false;
+            }
+
+            if (donor.Id < 100000000 & donor.Id > 999999999)
+            {
+                cause = "Debe ingresar un n\u00famero de identificaci\00f3n v\u00e1lido";
+                valid = false;
+            }
+
+            return valid;
         }
     }
 }
