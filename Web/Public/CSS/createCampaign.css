@@ -1,0 +1,51 @@
+.container {
+    width: 450px;
+    margin: 25px auto;
+    padding-top: 20px;
+
+}
+
+#form-group {
+    padding-bottom: 30px;
+    font-weight: bold;
+}
+
+#form-group label{
+    display: block;
+    padding-bottom: 5px;
+}
+
+#form-group input, textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 2px solid #e9eaea;
+    color: #3e3e40;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.5s ease;
+    }
+
+.btn  {
+    width: 100%;
+    background: #34b3a0;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-bottom: 30px;
+    border: none;
+}
+
+.header {
+    text-align:center;
+}
+
+.btn:hover {
+    background-color: #309c8c;
+
+
+}
