@@ -10,10 +10,10 @@ namespace BancoDeSangre.Controllers
     public class DonorController : Controller
     {
         private IDonorService donorService;
-        public DonorController()
-        {
-            var dataBaseService = new DataBaseService();
-            donorService = new DonorDBService(dataBaseService);
+
+        public DonorController(IDonorService donorService)
+        {            
+            this.donorService = donorService;
         }
 
         /// <summary>

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Web.Mvc;
-using BancoDeSangre.Services.DB;
-using BancoDeSangre.ViewModels.Home;
+﻿using System.Web.Mvc;
 
 namespace BancoDeSangre.Controllers
 {
