@@ -297,6 +297,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Public\CSS\appShell.css" />
+    <Content Include="Public\CSS\createCampaign.css" />
     <Content Include="Public\CSS\contact.css" />
     <Content Include="Public\CSS\home.css" />
     <Content Include="Public\CSS\InfoDonar.css" />
