@@ -1,1 +1,44 @@
-﻿<h1>Contacto</h1>
+﻿@section CSS {
+    <link rel="stylesheet" type="text/css" href="~/Public/CSS/contact.css">
+}
+
+<div class="container">
+    <div class="wrapper">
+        <div class="info">
+            <h3>Contacto Banco de Sangre CCSS</h3>
+            <ul>
+                <li>Central Telefonica CCSS</li>
+                <li>(506) 2539-0000</li>
+                <li>Extensiones 6221 o 6222</li>
+            </ul>
+        </div>
+        <div class="contact">
+            <h3>Contactenos</h3>
+            <form>
+                <p>
+                    <label>Nombre</label>
+                    <input type="text" name="Nombre">
+                </p>
+                <p>
+                    <label>Apellidos</label>
+                    <input type="text" name="Apellidos">
+                </p>
+                <p>
+                    <label>Correo</label>
+                    <input type="email" name="Correo" required>
+                </p>
+                <p>
+                    <label>Telefono</label>
+                    <input type="text" name="Telefono">
+                </p>
+                <p class="full">
+                    <label>Mensaje</label>
+                    <textarea name="Mensaje" rows="5"></textarea>
+                </p>
+                <p class="full">
+                    <button>ENVIAR</button>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
