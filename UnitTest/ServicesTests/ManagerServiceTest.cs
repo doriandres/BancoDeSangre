@@ -11,6 +11,7 @@ namespace UnitTest.ServicesTests
         [TestMethod]
         public void Create_Manager_Test()
         {
+
             // Arrange
             using (var dbService = new DataBaseService())
             {
@@ -25,11 +26,16 @@ namespace UnitTest.ServicesTests
 
                 // Act
                 var result = managerService.CreateManager(manager);
+                {
 
-                // Assert
-                Assert.IsTrue(result, "Manager was not saved");                
+
+                    // Assert
+                    Assert.IsTrue(result, "Manager was not saved");
+                }
+
             }
         }
+
 
         [TestMethod]
         public void Find_By_Email_Test()
@@ -46,9 +52,11 @@ namespace UnitTest.ServicesTests
                 Assert.IsNotNull(foundManager, "Manager was not found");
             }
         }
+    
+
 
         [TestMethod]
-        public void Remove_By_Email_Test()
+        public void DataBaseService()
         {
             // Arrange
             using (var dbService = new DataBaseService())
@@ -64,3 +72,4 @@ namespace UnitTest.ServicesTests
         }
     }
 }
+

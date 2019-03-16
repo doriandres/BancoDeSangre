@@ -1,0 +1,17 @@
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTestPersona\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTestPersona\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTestPersona\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTestPersona\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTestPersona\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTestPersona\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTestPersona\bin\Debug\UnitTestPersona.dll
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTestPersona\bin\Debug\UnitTestPersona.pdb
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTestPersona\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTestPersona\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTestPersona\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTestPersona\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTestPersona\obj\Debug\UnitTestPersona.csprojAssemblyReference.cache
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTestPersona\obj\Debug\UnitTestPersona.csproj.CoreCompileInputs.cache
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTestPersona\obj\Debug\UnitTestPersona.csproj.CopyComplete
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTestPersona\obj\Debug\UnitTestPersona.dll
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTestPersona\obj\Debug\UnitTestPersona.pdb
