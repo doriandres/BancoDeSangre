@@ -1,0 +1,4 @@
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTestProject3\obj\Debug\UnitTest2.csprojAssemblyReference.cache
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTestProject3\obj\Debug\UnitTest2.csproj.CoreCompileInputs.cache
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTestProject3\obj\Debug\UnitTestProject3.dll
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTestProject3\obj\Debug\UnitTestProject3.pdb

@@ -2,6 +2,8 @@
 using BancoDeSangre.Services.DB;
 using BancoDeSangre.Services.ManagerService;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Threading.Tasks;
+
 
 namespace UnitTest.ServicesTests
 {
@@ -12,7 +14,8 @@ namespace UnitTest.ServicesTests
         public void Create_Manager_Test()
         {
             // Arrange
-            using (var dbService = new DataBaseService())
+            var dbService = new DataBaseService();
+
             {
                 IManagerService managerService = new ManagerDBService(dbService);
                 var manager = new Manager
@@ -28,6 +31,7 @@ namespace UnitTest.ServicesTests
 
                 // Assert
                 Assert.IsTrue(result, "Manager was not saved");
+
             }
         }
 
@@ -35,7 +39,7 @@ namespace UnitTest.ServicesTests
         public void Find_By_Email_Test()
         {
             // Arrange
-            using (var dbService = new DataBaseService())
+            var dbService = new DataBaseService();
             {
                 IManagerService managerService = new ManagerDBService(dbService);
 
@@ -51,7 +55,7 @@ namespace UnitTest.ServicesTests
         public void Remove_By_Email_Test()
         {
             // Arrange
-            using (var dbService = new DataBaseService())
+            var dbService = new DataBaseService();
             {
                 IManagerService managerService = new ManagerDBService(dbService);
 
@@ -64,3 +68,7 @@ namespace UnitTest.ServicesTests
         }
     }
 }
+
+    
+
+

@@ -1,0 +1,17 @@
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest3\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest3\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest3\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest3\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest3\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest3\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest3\bin\Debug\UnitTest3.dll
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest3\bin\Debug\UnitTest3.pdb
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest3\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest3\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest3\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest3\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest3\obj\Debug\UnitTest3.csprojAssemblyReference.cache
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest3\obj\Debug\UnitTest3.csproj.CoreCompileInputs.cache
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest3\obj\Debug\UnitTest3.csproj.CopyComplete
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest3\obj\Debug\UnitTest3.dll
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest3\obj\Debug\UnitTest3.pdb
