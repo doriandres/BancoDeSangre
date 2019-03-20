@@ -1,5 +1,6 @@
 ﻿using BancoDeSangre.Models;
 using BancoDeSangre.Services.DB;
+using BancoDeSangre.Services.DonorService;
 using BancoDeSangre.Services.ManagerService;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -63,52 +64,55 @@ namespace UnitTest.ServicesTests
             }
         }
         [TestMethod]
-        public void Donor_add_Tests()
+        public void Create_Medical_Center_Name()
         {
 
             //Arrange 
-            var donationservice = new DonationDBService();
-            Donation donation = new Donation();
-
+            using (var dbService = new DataBaseService())
+            {
+                IMedicalCenterService medicalCenter = new MedicalCenterDBService(dbService);
 
             // Act
-            var resultado = donationservice.Equals(donation);
+            var resultado = medicalCenter.CreateMedicalCenter("medicalCenter");
 
 
-            // Assert
-            Assert.IsFalse(resultado);
-
+                // Assert
+                Assert.IsTrue(resultado, "MedicalCenter");
+            }
         }
 
         [TestMethod]
-        public void Manager_Service_Tests()
+        public void Create_Medical_Center_id()
         {
             //Arrange
-            var managerservice = new ManagerDBService();
-            Manager manager = new Manager();
+            using (var dbService = new DataBaseService())
+            {
+                IMedicalCenterService medicalCenter = new MedicalCenterDBService(dbService);
 
-            // Act
+                // Act
+                bool resultado = medicalCenter.FindByID();
+               
 
-            var resultado = manager.GetType();
-
-            // Assert
-            Assert.IsFalse();
+                // Assert
+                Assert.IsTrue(resultado, "id");
+            }
         }
         [TestMethod]
-        public void Medical_Center_Test()
+        public void Valid_Donor()
         {
             //Arrange
-            var medicalcenter = new MedicalCenterDBService();
-            MedicalCenter save = new MedicalCenter();
+            using (var dbService = new DataBaseService())
+            {
+                IDonorService countChanges = new DonorDBService(dbService);
 
-            //Act
+                // Act
+                var resultado = countChanges.IsValidDonor();
 
-            var resultado = MedicalCenter.Empty();
 
-            //Asset
-            Assert.Fail();
+                // Assert
+                Assert.IsTrue(resultado, "Debe ingresar un nombre");
+            }
         }
-
 
     }
 }

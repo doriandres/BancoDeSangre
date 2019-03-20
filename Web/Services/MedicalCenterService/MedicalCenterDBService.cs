@@ -2,10 +2,14 @@
 using BancoDeSangre.Models;
 using BancoDeSangre.Services.DB;
 
-namespace BancoDeSangre.Services.MedicalCenterService
+namespace BancoDeSangre.Services.ManagerService
 {
     public class MedicalCenterDBService : DBService, IMedicalCenterService
     {
+        public MedicalCenterDBService()
+        {
+        }
+
         public MedicalCenterDBService(DataBaseService dbservice) : base(dbservice) { }
 
         public bool CreateMedicalCenter(MedicalCenter medicalCenter)
