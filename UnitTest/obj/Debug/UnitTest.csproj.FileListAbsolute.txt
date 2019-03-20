@@ -189,3 +189,7 @@ C:\UProjects\Diseño de Aplicaciones\BancoDeSangre\UnitTest\obj\Debug\UnitTest.c
 C:\UProjects\Diseño de Aplicaciones\BancoDeSangre\UnitTest\obj\Debug\UnitTest.csproj.CopyComplete
 C:\UProjects\Diseño de Aplicaciones\BancoDeSangre\UnitTest\obj\Debug\UnitTest.dll
 C:\UProjects\Diseño de Aplicaciones\BancoDeSangre\UnitTest\obj\Debug\UnitTest.pdb
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest\obj\Debug\UnitTest.csprojAssemblyReference.cache
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest\obj\Debug\UnitTest.csproj.CoreCompileInputs.cache
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest\obj\Debug\UnitTest.dll
+C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest\obj\Debug\UnitTest.pdb

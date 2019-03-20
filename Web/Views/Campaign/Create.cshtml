@@ -1,42 +1,53 @@
 ﻿@section JavaScript{
     <script type="module" src="/public/javascript/views/campaign/create.js"></script>
 }
-<h2>Crear Campaña de Donación</h2>
-<form id="signin-form" method="POST" action="/campaign/save">
-    <div class="form-field">
-        <label for="title-field">Título</label>
-        <input id="title-field" name="title" type="text" required />
+
+@section CSS{
+    <link rel="stylesheet" type="text/css" href="~/Public/CSS/createCampaign.css">
+}
+<div class="container">
+    <div id="form-group">
+        <div class="header"><h2>Nueva Campaña de Donación</h2></div>
+        <br />
+        <form id="signin-form" method="POST" action="/campaign/save">
+            <div id="form-group">
+                <div class="form-field">
+                    <label for="title-field">Título:</label>
+                    <input id="title-field" name="title" type="text" required />
+                </div>
+                <div class="form-field">
+                    <label for="place-field">Lugar:</label>
+                    <input id="place-field" name="place" type="text" required />
+                </div>
+                <div class="form-field">
+                    <label for="latitude-field">Latitud:</label>
+                    <input id="latitude-field" name="latitude" type="number" step=".00000000001" required />
+                </div>
+                <div class="form-field">
+                    <label for="longitude-field">Longitud:</label>
+                    <input id="longitude-field" name="longitude" type="number" step=".00000000001" required />
+                </div>
+                <div class="form-field">
+                    <label for="date-field">Fecha:</label>
+                    <input id="date-field" name="date" type="date" required />
+                </div>
+                <div class="form-field">
+                    <label for="starttime-field">Hora de inicio:</label>
+                    <input id="starttime-field" name="starttime" type="time" required />
+                </div>
+                <div class="form-field">
+                    <label for="endtime-field">Hora de finalización:</label>
+                    <input id="endtime-field" name="endtime" type="time" required />
+                </div>
+                <div class="form-field">
+                    <label for="description-field">Descripción:</label>
+                    <textarea id="description-field" name="description" required></textarea>
+                </div>
+            </div>
+            <div class="form-field">
+                <input type="submit" class="btn" value="Crear campaña de donación" />
+            </div>
+        </form>
     </div>
-    <div class="form-field">
-        <label for="place-field">Lugar</label>
-        <input id="place-field" name="place" type="text" required />
-    </div>
-    <div class="form-field">
-        <label for="latitude-field">Latitud</label>
-        <input id="latitude-field" name="latitude" type="number" step=".00000000001" required />
-    </div>
-    <div class="form-field">
-        <label for="longitude-field">Longitud</label>
-        <input id="longitude-field" name="longitude" type="number" step=".00000000001" required />
-    </div>
-    <div class="form-field">
-        <label for="date-field">Fecha</label>
-        <input id="date-field" name="date" type="date" required />
-    </div>
-    <div class="form-field">
-        <label for="starttime-field">Hora de inicio</label>
-        <input id="starttime-field" name="starttime" type="time" required />
-    </div>
-    <div class="form-field">
-        <label for="endtime-field">Hora de finalización</label>
-        <input id="endtime-field" name="endtime" type="time" required />
-    </div>
-    <div class="form-field">
-        <label for="description-field">Descripción</label>
-        <br/>
-        <textarea id="description-field" name="description" required ></textarea>
-    </div>    
-    <div class="form-field">
-        <input type="submit" value="Crear campaña de donación" />
-    </div>
-</form>
+</div><!--container end-->
+

@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@media(min-width:768px) {
+    .full-container {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-around;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        border: 2px solid #6e6e6e;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 3%;
+    }
+
+    .column {
+        flex: 25%;
+    }
+}
+
+body {
+    color: black;
+    font-family: arial;
+    font-size: 16px;
+    line-height: 25px;
+    margin: 50px;
+    background-color: white;
+}
+
+.individual-container {
+    width: 450px;
+    margin: auto auto;
+}
+
+.box {
+    background-color: #e9eaea;
+    border: 1.5px #6e6e6e solid;
+    padding: 20px 20px 15px 25px;
+    text-align: justify;
+    margin: 30px;
+}
+
+.box-image img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding: 1.5px;
+    border: 1px solid #6e6e6e;
+    background-color: #e9eaea;
+    border-radius: 5px;
+}
+
+.header h3 {
+    text-align: center;
+    border: 1px #6e6e6e solid;
+    color: white;
+}
+
+.bold {
+    display: inline;
+    font-weight: bold;
+}
+
+.more-info {
+    list-style-image: url('../img/cropped-bullet-point-1.png')
+}
+
+.date {
+    list-style-image: url('../img/date.png');
+}
+
+.location {
+    list-style-image: url('../img/location.png');
+}
+
+.desc {
+    list-style-image: url('../img/description.png');
+}
+
+.start-time {
+    list-style-image: url('../img/clock.png')
+}
+
+.light-sea-green {
+    background-color: #38c3c5;
+}
+
+.dark-tangerine {
+    background-color: #c0d552;
+}
