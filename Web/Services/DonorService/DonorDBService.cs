@@ -82,5 +82,25 @@ namespace BancoDeSangre.Services.DonorService
 
             return valid;
         }
+
+        bool IDonorService.CreateDonor(Donor donor)
+        {
+            throw new NotImplementedException();
+        }
+
+        Donor IDonorService.FindByID(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        bool IDonorService.IsValidDonor(Donor donor, out string cause)
+        {
+            throw new NotImplementedException();
+        }
+
+        bool IDonorService.IsValidDonor(object cause)
+        {
+            return true;
+        }
     }
 }

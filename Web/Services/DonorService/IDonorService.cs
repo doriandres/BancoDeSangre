@@ -25,5 +25,6 @@ namespace BancoDeSangre.Services.DonorService
         /// <param name="cause">Invalid cause</param>
         /// <returns>Results</returns>
         bool IsValidDonor(Donor donor, out string cause);
+        bool IsValidDonor(object cause);
     }
 }

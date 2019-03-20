@@ -5,11 +5,12 @@
 @section CSS{
     <link rel="stylesheet" type="text/css" href="~/Public/CSS/createCampaign.css">
 }
-    <div class="container">
-        <div id="form-group">
-            <div class="header"><h2>Nueva Campaña de Donación</h2></div>
-            <br />
-            <form id="signin-form" method="POST" action="/campaign/save">
+<div class="container">
+    <div id="form-group">
+        <div class="header"><h2>Nueva Campaña de Donación</h2></div>
+        <br />
+        <form id="signin-form" method="POST" action="/campaign/save">
+            <div id="form-group">
                 <div class="form-field">
                     <label for="title-field">Título:</label>
                     <input id="title-field" name="title" type="text" required />
@@ -42,9 +43,11 @@
                     <label for="description-field">Descripción:</label>
                     <textarea id="description-field" name="description" required></textarea>
                 </div>
-        </div>
-        <div class="form-field">
-            <input type="submit" class="btn" value="Crear campaña de donación" />
-        </div>
-    </div><!--container end-->
-</form>
+            </div>
+            <div class="form-field">
+                <input type="submit" class="btn" value="Crear campaña de donación" />
+            </div>
+        </form>
+    </div>
+</div><!--container end-->
+

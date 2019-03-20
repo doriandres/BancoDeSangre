@@ -1,5 +1,7 @@
 ﻿using BancoDeSangre.Models;
+using BancoDeSangre.Services.CampaignService;
 using BancoDeSangre.Services.DB;
+using BancoDeSangre.Services.DonorService;
 using BancoDeSangre.Services.ManagerService;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -27,7 +29,7 @@ namespace UnitTest.ServicesTests
                 var result = managerService.CreateManager(manager);
 
                 // Assert
-                Assert.IsTrue(result, "Manager was not saved");                
+                Assert.IsTrue(result, "Manager was not saved");
             }
         }
 
@@ -62,5 +64,102 @@ namespace UnitTest.ServicesTests
                 Assert.IsTrue(result, "Manager was not removed");
             }
         }
+        [TestMethod]
+        public void Create_Medical_Center_Name()
+        {
+
+            //Arrange 
+            using (var dbService = new DataBaseService())
+            {
+                IMedicalCenterService medicalCenterService = new MedicalCenterDBService(dbService);
+
+                
+                var medicalCenter = new MedicalCenter
+                {
+                    Email = "carit@info.com",
+                    Name = "carit",
+                    PhoneNumber = 88888,
+                    Place = "Sn Jose"
+
+                };
+
+                // Act
+                var resultado = medicalCenterService.CreateMedicalCenter(medicalCenter);
+
+                // Assert
+                Assert.IsTrue(resultado, "MedicalCenter");
+            }
+        }
+
+        [TestMethod]
+        public void Create_Medical_Center_id()
+        {
+            //Arrange
+            using (var dbService = new DataBaseService())
+            {
+                IMedicalCenterService medicalCenter = new MedicalCenterDBService(dbService);
+                var medicalCenterid = new MedicalCenter
+                {
+                    Email = "carit@info.com",
+                    Name = "carit",
+                    PhoneNumber = 88888,
+                    Place = "Sn Jose"
+
+
+                };
+                // Act
+                var resultado = medicalCenter.CreateMedicalCenter(medicalCenterid);
+
+
+                // Assert
+                Assert.IsTrue(resultado, "id");
+            }
+        }
+        [TestMethod]
+        public void Valid_Donor()
+        {
+            //Arrange
+            using (var dbService = new DataBaseService())
+            {
+                IDonorService countChanges = new DonorDBService(dbService);
+                var dataBase = new Donor
+                {
+                    Name = "Carit",
+                    Id = 88,
+                };
+
+                // Act
+
+                var resultado = countChanges.IsValidDonor(false);
+
+
+                // Assert
+                Assert.IsTrue(resultado, "Debe ingresar un nombre");
+            }
+        }
+
+        [TestMethod]
+        public void Create_Campaign_Test()
+        {
+            //Arrange
+            using (var dbService = new DataBaseService())
+            {
+                ICampaignService countChanges = new CampaignDBService(dbService);
+                var testManager = new Manager();//Se crea un manager de prueba para la campaña
+                var dataBase = new Campaign();
+                dataBase.Manager = testManager;//Se agrega el manager a la campaña para evitar error de FK en la DB
+              
+
+                // Act
+
+               var resultado = countChanges.CreateCampaign(dataBase);
+
+                // Assert
+                Assert.IsTrue(resultado);
+            }
+        }
+
     }
+
+    
 }
