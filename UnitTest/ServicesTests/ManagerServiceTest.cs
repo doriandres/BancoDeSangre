@@ -1,5 +1,7 @@
 ﻿using BancoDeSangre.Models;
+using BancoDeSangre.Services.CampaignService;
 using BancoDeSangre.Services.DB;
+using BancoDeSangre.Services.DonorService;
 using BancoDeSangre.Services.ManagerService;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -27,7 +29,7 @@ namespace UnitTest.ServicesTests
                 var result = managerService.CreateManager(manager);
 
                 // Assert
-                Assert.IsTrue(result, "Manager was not saved");                
+                Assert.IsTrue(result, "Manager was not saved");
             }
         }
 
@@ -63,52 +65,99 @@ namespace UnitTest.ServicesTests
             }
         }
         [TestMethod]
-        public void Donor_add_Tests()
+        public void Create_Medical_Center_Name()
         {
 
             //Arrange 
-            var donationservice = new DonationDBService();
-            Donation donation = new Donation();
+            using (var dbService = new DataBaseService())
+            {
+                IMedicalCenterService medicalCenterService = new MedicalCenterDBService(dbService);
 
+                
+                var medicalCenter = new MedicalCenter
+                {
+                    Email = "carit@info.com",
+                    Name = "carit",
+                    PhoneNumber = 88888,
+                    Place = "Sn Jose"
 
-            // Act
-            var resultado = donationservice.Equals(donation);
+                };
 
+                // Act
+                var resultado = medicalCenterService.CreateMedicalCenter(medicalCenter);
 
-            // Assert
-            Assert.IsFalse(resultado);
-
+                // Assert
+                Assert.IsTrue(resultado, "MedicalCenter");
+            }
         }
 
         [TestMethod]
-        public void Manager_Service_Tests()
+        public void Create_Medical_Center_id()
         {
             //Arrange
-            var managerservice = new ManagerDBService();
-            Manager manager = new Manager();
+            using (var dbService = new DataBaseService())
+            {
+                IMedicalCenterService medicalCenter = new MedicalCenterDBService(dbService);
+                var medicalCenterid = new MedicalCenter
+                {
+                    Email = "carit@info.com",
+                    Name = "carit",
+                    PhoneNumber = 88888,
+                    Place = "Sn Jose"
 
-            // Act
 
-            var resultado = manager.GetType();
+                };
+                // Act
+                var resultado = medicalCenter.CreateMedicalCenter(medicalCenterid);
 
-            // Assert
-            Assert.IsFalse();
+
+                // Assert
+                Assert.IsTrue(resultado, "id");
+            }
         }
         [TestMethod]
-        public void Medical_Center_Test()
+        public void Valid_Donor()
         {
             //Arrange
-            var medicalcenter = new MedicalCenterDBService();
-            MedicalCenter save = new MedicalCenter();
+            using (var dbService = new DataBaseService())
+            {
+                IDonorService countChanges = new DonorDBService(dbService);
+                var dataBase = new Donor
+                {
+                    Name = "carit",
+                    Id = 88,
+                };
 
-            //Act
+                // Act
 
-            var resultado = MedicalCenter.Empty();
+                var resultado = countChanges.IsValidDonor(false);
 
-            //Asset
-            Assert.Fail();
+
+                // Assert
+                Assert.IsTrue(resultado, "Debe ingresar un nombre");
+            }
         }
 
+        [TestMethod]
+        public void Create_Campaign_Test()
+        {
+            //Arrange
+            using (var dbService = new DataBaseService())
+            {
+                ICampaignService countChanges = new CampaignDBService(dbService);
+                var dataBase = new Campaign();
+              
+
+                // Act
+
+               var resultado = countChanges.CreateCampaign(dataBase);
+
+                // Assert
+                Assert.IsTrue(resultado);
+            }
+        }
 
     }
+
+    
 }
