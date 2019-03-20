@@ -22,7 +22,7 @@ namespace BancoDeSangre.DependencyResolution
     using BancoDeSangre.Services.DonationService;
     using BancoDeSangre.Services.DonorService;
     using BancoDeSangre.Services.ManagerService;
-    using BancoDeSangre.Services.MedicalCenterService;
+    using BancoDeSangre.Services.ManagerService;
     using StructureMap;
 
     public class DefaultRegistry : Registry

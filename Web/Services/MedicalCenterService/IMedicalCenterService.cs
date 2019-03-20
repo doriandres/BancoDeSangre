@@ -1,6 +1,6 @@
 ﻿using BancoDeSangre.Models;
 
-namespace BancoDeSangre.Services.MedicalCenterService
+namespace BancoDeSangre.Services.ManagerService
 {
     public interface IMedicalCenterService
     {
