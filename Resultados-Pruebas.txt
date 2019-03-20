@@ -1,0 +1,145 @@
+﻿[19/3/2019 7:23:12 p. m. Informational] ------ Detección de pruebas iniciada ------
+[19/3/2019 7:23:29 p. m. Warning] No hay ninguna prueba disponible en C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest\UnitTest.csproj C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\Web\Web.csproj. Asegúrese de que los ejecutores y programas de detección de pruebas están registrados y de que la configuración de la versión de la plataforma y el marco es correcta y vuelva a intentarlo.
+[19/3/2019 7:23:29 p. m. Informational] ========== Detección de pruebas finalizada: 0 encontradas (0:00:16,7940553) ==========
+[19/3/2019 7:23:56 p. m. Informational] ------ Detección de pruebas iniciada ------
+[19/3/2019 7:23:59 p. m. Warning] No hay ninguna prueba disponible en C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest\UnitTest.csproj C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\Web\Web.csproj. Asegúrese de que los ejecutores y programas de detección de pruebas están registrados y de que la configuración de la versión de la plataforma y el marco es correcta y vuelva a intentarlo.
+[19/3/2019 7:23:59 p. m. Informational] ========== Detección de pruebas finalizada: 3 encontradas (0:00:03,1512659) ==========
+[19/3/2019 7:23:59 p. m. Informational] ------ Ejecución de pruebas iniciada ------
+[19/3/2019 7:24:03 p. m. Informational] ========== Ejecución de pruebas finalizada: 3 ejecutadas (0:00:04,5504025) ==========
+[19/3/2019 7:33:47 p. m. Informational] ------ Detección de pruebas iniciada ------
+[19/3/2019 7:33:48 p. m. Warning] No hay ninguna prueba disponible en C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest\UnitTest.csproj. Asegúrese de que los ejecutores y programas de detección de pruebas están registrados y de que la configuración de la versión de la plataforma y el marco es correcta y vuelva a intentarlo.
+[19/3/2019 7:33:49 p. m. Informational] ========== Detección de pruebas finalizada: 0 encontradas (0:00:01,5361233) ==========
+[19/3/2019 7:33:49 p. m. Informational] ------ Ejecución de pruebas iniciada ------
+[19/3/2019 7:33:52 p. m. Informational] ========== Ejecución de pruebas finalizada: 3 ejecutadas (0:00:03,5079996) ==========
+[19/3/2019 7:37:44 p. m. Informational] ------ Detección de pruebas iniciada ------
+[19/3/2019 7:37:45 p. m. Warning] No hay ninguna prueba disponible en C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest\UnitTest.csproj. Asegúrese de que los ejecutores y programas de detección de pruebas están registrados y de que la configuración de la versión de la plataforma y el marco es correcta y vuelva a intentarlo.
+[19/3/2019 7:37:46 p. m. Informational] ========== Detección de pruebas finalizada: 0 encontradas (0:00:01,7759868) ==========
+[19/3/2019 7:37:46 p. m. Informational] ------ Ejecución de pruebas iniciada ------
+[19/3/2019 7:37:49 p. m. Informational] ========== Ejecución de pruebas finalizada: 3 ejecutadas (0:00:03,6539138) ==========
+[19/3/2019 8:11:24 p. m. Informational] ------ Detección de pruebas iniciada ------
+[19/3/2019 8:11:26 p. m. Warning] No hay ninguna prueba disponible en C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest\UnitTest.csproj. Asegúrese de que los ejecutores y programas de detección de pruebas están registrados y de que la configuración de la versión de la plataforma y el marco es correcta y vuelva a intentarlo.
+[19/3/2019 8:11:26 p. m. Informational] ========== Detección de pruebas finalizada: 0 encontradas (0:00:01,697872) ==========
+[19/3/2019 8:11:26 p. m. Informational] ------ Ejecución de pruebas iniciada ------
+[19/3/2019 8:11:29 p. m. Informational] ========== Ejecución de pruebas finalizada: 3 ejecutadas (0:00:03,2321547) ==========
+[19/3/2019 8:11:45 p. m. Informational] ------ Ejecución de pruebas iniciada ------
+[19/3/2019 8:11:49 p. m. Informational] ========== Ejecución de pruebas finalizada: 3 ejecutadas (0:00:03,404342) ==========
+[19/3/2019 8:13:45 p. m. Informational] ------ Detección de pruebas iniciada ------
+[19/3/2019 8:13:47 p. m. Warning] No hay ninguna prueba disponible en C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest\UnitTest.csproj. Asegúrese de que los ejecutores y programas de detección de pruebas están registrados y de que la configuración de la versión de la plataforma y el marco es correcta y vuelva a intentarlo.
+[19/3/2019 8:13:47 p. m. Informational] ========== Detección de pruebas finalizada: 0 encontradas (0:00:01,7829827) ==========
+[19/3/2019 8:13:47 p. m. Informational] ------ Ejecución de pruebas iniciada ------
+[19/3/2019 8:13:51 p. m. Informational] ========== Ejecución de pruebas finalizada: 3 ejecutadas (0:00:03,5182218) ==========
+[19/3/2019 8:15:52 p. m. Informational] ------ Detección de pruebas iniciada ------
+[19/3/2019 8:15:53 p. m. Warning] No hay ninguna prueba disponible en C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest\UnitTest.csproj. Asegúrese de que los ejecutores y programas de detección de pruebas están registrados y de que la configuración de la versión de la plataforma y el marco es correcta y vuelva a intentarlo.
+[19/3/2019 8:15:54 p. m. Informational] ========== Detección de pruebas finalizada: 0 encontradas (0:00:01,5306532) ==========
+[19/3/2019 8:15:54 p. m. Informational] ------ Ejecución de pruebas iniciada ------
+[19/3/2019 8:15:57 p. m. Informational] ========== Ejecución de pruebas finalizada: 3 ejecutadas (0:00:03,4034901) ==========
+[19/3/2019 8:28:08 p. m. Informational] ------ Detección de pruebas iniciada ------
+[19/3/2019 8:28:09 p. m. Warning] No hay ninguna prueba disponible en C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest\UnitTest.csproj. Asegúrese de que los ejecutores y programas de detección de pruebas están registrados y de que la configuración de la versión de la plataforma y el marco es correcta y vuelva a intentarlo.
+[19/3/2019 8:28:09 p. m. Informational] ========== Detección de pruebas finalizada: 0 encontradas (0:00:01,5802254) ==========
+[19/3/2019 8:28:09 p. m. Informational] ------ Ejecución de pruebas iniciada ------
+[19/3/2019 8:28:13 p. m. Informational] ========== Ejecución de pruebas finalizada: 3 ejecutadas (0:00:03,490119) ==========
+[19/3/2019 8:32:24 p. m. Informational] ------ Detección de pruebas iniciada ------
+[19/3/2019 8:32:26 p. m. Warning] No hay ninguna prueba disponible en C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest\UnitTest.csproj. Asegúrese de que los ejecutores y programas de detección de pruebas están registrados y de que la configuración de la versión de la plataforma y el marco es correcta y vuelva a intentarlo.
+[19/3/2019 8:32:26 p. m. Informational] ========== Detección de pruebas finalizada: 0 encontradas (0:00:01,6320516) ==========
+[19/3/2019 8:32:26 p. m. Informational] ------ Ejecución de pruebas iniciada ------
+[19/3/2019 8:32:29 p. m. Informational] ========== Ejecución de pruebas finalizada: 3 ejecutadas (0:00:03,3840751) ==========
+[19/3/2019 8:41:25 p. m. Informational] ------ Detección de pruebas iniciada ------
+[19/3/2019 8:41:27 p. m. Warning] No hay ninguna prueba disponible en C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest\UnitTest.csproj. Asegúrese de que los ejecutores y programas de detección de pruebas están registrados y de que la configuración de la versión de la plataforma y el marco es correcta y vuelva a intentarlo.
+[19/3/2019 8:41:27 p. m. Informational] ========== Detección de pruebas finalizada: 0 encontradas (0:00:01,6747487) ==========
+[19/3/2019 8:41:27 p. m. Informational] ------ Ejecución de pruebas iniciada ------
+[19/3/2019 8:41:30 p. m. Informational] ========== Ejecución de pruebas finalizada: 3 ejecutadas (0:00:03,6559112) ==========
+[19/3/2019 8:57:30 p. m. Informational] ------ Detección de pruebas iniciada ------
+[19/3/2019 8:57:32 p. m. Warning] No hay ninguna prueba disponible en C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest\UnitTest.csproj C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\Web\Web.csproj. Asegúrese de que los ejecutores y programas de detección de pruebas están registrados y de que la configuración de la versión de la plataforma y el marco es correcta y vuelva a intentarlo.
+[19/3/2019 8:57:32 p. m. Informational] ========== Detección de pruebas finalizada: 0 encontradas (0:00:02,069177) ==========
+[19/3/2019 8:57:32 p. m. Informational] ------ Ejecución de pruebas iniciada ------
+[19/3/2019 8:57:36 p. m. Informational] ========== Ejecución de pruebas finalizada: 3 ejecutadas (0:00:04,0516865) ==========
+[19/3/2019 9:02:39 p. m. Informational] ------ Detección de pruebas iniciada ------
+[19/3/2019 9:02:40 p. m. Warning] No hay ninguna prueba disponible en C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest\UnitTest.csproj. Asegúrese de que los ejecutores y programas de detección de pruebas están registrados y de que la configuración de la versión de la plataforma y el marco es correcta y vuelva a intentarlo.
+[19/3/2019 9:02:40 p. m. Informational] ========== Detección de pruebas finalizada: 0 encontradas (0:00:01,6023389) ==========
+[19/3/2019 9:02:40 p. m. Informational] ------ Ejecución de pruebas iniciada ------
+[19/3/2019 9:02:44 p. m. Informational] ========== Ejecución de pruebas finalizada: 3 ejecutadas (0:00:03,4852726) ==========
+[19/3/2019 9:25:45 p. m. Informational] ------ Ejecución de pruebas iniciada ------
+[19/3/2019 9:25:50 p. m. Informational] ========== Ejecución de pruebas finalizada: 3 ejecutadas (0:00:04,9571715) ==========
+[19/3/2019 9:28:05 p. m. Informational] ------ Detección de pruebas iniciada ------
+[19/3/2019 9:28:07 p. m. Warning] No hay ninguna prueba disponible en C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest\UnitTest.csproj. Asegúrese de que los ejecutores y programas de detección de pruebas están registrados y de que la configuración de la versión de la plataforma y el marco es correcta y vuelva a intentarlo.
+[19/3/2019 9:28:07 p. m. Informational] ========== Detección de pruebas finalizada: 0 encontradas (0:00:02,0398366) ==========
+[19/3/2019 9:28:07 p. m. Informational] ------ Ejecución de pruebas iniciada ------
+[19/3/2019 9:28:12 p. m. Informational] ========== Ejecución de pruebas finalizada: 3 ejecutadas (0:00:04,6093688) ==========
+[19/3/2019 9:40:14 p. m. Informational] ------ Detección de pruebas iniciada ------
+[19/3/2019 9:40:16 p. m. Warning] No hay ninguna prueba disponible en C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest\UnitTest.csproj C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\Web\Web.csproj. Asegúrese de que los ejecutores y programas de detección de pruebas están registrados y de que la configuración de la versión de la plataforma y el marco es correcta y vuelva a intentarlo.
+[19/3/2019 9:40:17 p. m. Informational] ========== Detección de pruebas finalizada: 0 encontradas (0:00:02,1963375) ==========
+[19/3/2019 9:40:17 p. m. Informational] ------ Ejecución de pruebas iniciada ------
+[19/3/2019 9:40:20 p. m. Informational] ========== Ejecución de pruebas finalizada: 3 ejecutadas (0:00:03,7209196) ==========
+[19/3/2019 10:39:42 p. m. Informational] ------ Ejecución de pruebas iniciada ------
+[19/3/2019 10:39:47 p. m. Informational] ========== Ejecución de pruebas finalizada: 1 ejecutadas (0:00:04,7707804) ==========
+[19/3/2019 10:45:10 p. m. Informational] ------ Detección de pruebas iniciada ------
+[19/3/2019 10:45:13 p. m. Warning] No hay ninguna prueba disponible en C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest\UnitTest.csproj C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\Web\Web.csproj. Asegúrese de que los ejecutores y programas de detección de pruebas están registrados y de que la configuración de la versión de la plataforma y el marco es correcta y vuelva a intentarlo.
+[19/3/2019 10:45:13 p. m. Informational] ========== Detección de pruebas finalizada: 0 encontradas (0:00:02,6225742) ==========
+[19/3/2019 10:45:17 p. m. Informational] ------ Detección de pruebas iniciada ------
+[19/3/2019 10:45:20 p. m. Warning] No hay ninguna prueba disponible en C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest\UnitTest.csproj C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\Web\Web.csproj. Asegúrese de que los ejecutores y programas de detección de pruebas están registrados y de que la configuración de la versión de la plataforma y el marco es correcta y vuelva a intentarlo.
+[19/3/2019 10:45:20 p. m. Informational] ========== Detección de pruebas finalizada: 0 encontradas (0:00:02,3950734) ==========
+[19/3/2019 10:45:20 p. m. Informational] ------ Detección de pruebas iniciada ------
+[19/3/2019 10:45:22 p. m. Warning] No hay ninguna prueba disponible en C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest\UnitTest.csproj C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\Web\Web.csproj. Asegúrese de que los ejecutores y programas de detección de pruebas están registrados y de que la configuración de la versión de la plataforma y el marco es correcta y vuelva a intentarlo.
+[19/3/2019 10:45:22 p. m. Informational] ========== Detección de pruebas finalizada: 0 encontradas (0:00:02,1558656) ==========
+[19/3/2019 10:46:43 p. m. Informational] ------ Detección de pruebas iniciada ------
+[19/3/2019 10:46:46 p. m. Warning] No hay ninguna prueba disponible en C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\Web\Web.csproj. Asegúrese de que los ejecutores y programas de detección de pruebas están registrados y de que la configuración de la versión de la plataforma y el marco es correcta y vuelva a intentarlo.
+[19/3/2019 10:46:46 p. m. Informational] ========== Detección de pruebas finalizada: 0 encontradas (0:00:02,3407021) ==========
+[19/3/2019 10:46:56 p. m. Informational] ------ Detección de pruebas iniciada ------
+[19/3/2019 10:46:57 p. m. Informational] ========== Detección de pruebas finalizada: 3 encontradas (0:00:01,7581095) ==========
+[19/3/2019 10:47:05 p. m. Informational] ------ Ejecución de pruebas iniciada ------
+[19/3/2019 10:47:14 p. m. Informational] ========== Ejecución de pruebas finalizada: 3 ejecutadas (0:00:08,3866679) ==========
+[19/3/2019 11:03:13 p. m. Informational] ------ Detección de pruebas iniciada ------
+[19/3/2019 11:03:15 p. m. Warning] No hay ninguna prueba disponible en C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest\UnitTest.csproj. Asegúrese de que los ejecutores y programas de detección de pruebas están registrados y de que la configuración de la versión de la plataforma y el marco es correcta y vuelva a intentarlo.
+[19/3/2019 11:03:15 p. m. Informational] ========== Detección de pruebas finalizada: 0 encontradas (0:00:01,7208794) ==========
+[19/3/2019 11:03:15 p. m. Informational] ------ Ejecución de pruebas iniciada ------
+[19/3/2019 11:03:23 p. m. Informational] ========== Ejecución de pruebas finalizada: 3 ejecutadas (0:00:07,7440169) ==========
+[19/3/2019 11:06:28 p. m. Informational] ------ Detección de pruebas iniciada ------
+[19/3/2019 11:06:30 p. m. Warning] No hay ninguna prueba disponible en C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest\UnitTest.csproj. Asegúrese de que los ejecutores y programas de detección de pruebas están registrados y de que la configuración de la versión de la plataforma y el marco es correcta y vuelva a intentarlo.
+[19/3/2019 11:06:30 p. m. Informational] ========== Detección de pruebas finalizada: 0 encontradas (0:00:01,6491147) ==========
+[19/3/2019 11:06:30 p. m. Informational] ------ Ejecución de pruebas iniciada ------
+[19/3/2019 11:06:37 p. m. Informational] ========== Ejecución de pruebas finalizada: 3 ejecutadas (0:00:07,2270599) ==========
+[19/3/2019 11:06:48 p. m. Informational] ------ Detección de pruebas iniciada ------
+[19/3/2019 11:06:51 p. m. Warning] No hay ninguna prueba disponible en C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest\UnitTest.csproj. Asegúrese de que los ejecutores y programas de detección de pruebas están registrados y de que la configuración de la versión de la plataforma y el marco es correcta y vuelva a intentarlo.
+[19/3/2019 11:06:51 p. m. Informational] ========== Detección de pruebas finalizada: 6 encontradas (0:00:03,0482607) ==========
+[19/3/2019 11:06:51 p. m. Informational] ------ Ejecución de pruebas iniciada ------
+[19/3/2019 11:07:00 p. m. Informational] ========== Ejecución de pruebas finalizada: 6 ejecutadas (0:00:08,4272703) ==========
+[19/3/2019 11:15:26 p. m. Informational] ------ Detección de pruebas iniciada ------
+[19/3/2019 11:15:29 p. m. Warning] No hay ninguna prueba disponible en C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest\UnitTest.csproj. Asegúrese de que los ejecutores y programas de detección de pruebas están registrados y de que la configuración de la versión de la plataforma y el marco es correcta y vuelva a intentarlo.
+[19/3/2019 11:15:29 p. m. Informational] ========== Detección de pruebas finalizada: 6 encontradas (0:00:02,7057471) ==========
+[19/3/2019 11:15:29 p. m. Informational] ------ Ejecución de pruebas iniciada ------
+[19/3/2019 11:15:39 p. m. Informational] ========== Ejecución de pruebas finalizada: 6 ejecutadas (0:00:09,9535081) ==========
+[19/3/2019 11:15:51 p. m. Informational] ------ Detección de pruebas iniciada ------
+[19/3/2019 11:15:53 p. m. Warning] No hay ninguna prueba disponible en C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest\UnitTest.csproj. Asegúrese de que los ejecutores y programas de detección de pruebas están registrados y de que la configuración de la versión de la plataforma y el marco es correcta y vuelva a intentarlo.
+[19/3/2019 11:15:53 p. m. Informational] ========== Detección de pruebas finalizada: 6 encontradas (0:00:02,7884075) ==========
+[19/3/2019 11:15:53 p. m. Informational] ------ Ejecución de pruebas iniciada ------
+[19/3/2019 11:16:01 p. m. Informational] ========== Ejecución de pruebas finalizada: 6 ejecutadas (0:00:07,8080038) ==========
+[19/3/2019 11:17:11 p. m. Informational] ------ Detección de pruebas iniciada ------
+[19/3/2019 11:17:14 p. m. Warning] No hay ninguna prueba disponible en C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest\UnitTest.csproj. Asegúrese de que los ejecutores y programas de detección de pruebas están registrados y de que la configuración de la versión de la plataforma y el marco es correcta y vuelva a intentarlo.
+[19/3/2019 11:17:14 p. m. Informational] ========== Detección de pruebas finalizada: 6 encontradas (0:00:02,7454345) ==========
+[19/3/2019 11:17:14 p. m. Informational] ------ Ejecución de pruebas iniciada ------
+[19/3/2019 11:17:21 p. m. Informational] ========== Ejecución de pruebas finalizada: 6 ejecutadas (0:00:07,7000223) ==========
+[19/3/2019 11:21:00 p. m. Informational] ------ Detección de pruebas iniciada ------
+[19/3/2019 11:21:02 p. m. Warning] No hay ninguna prueba disponible en C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest\UnitTest.csproj. Asegúrese de que los ejecutores y programas de detección de pruebas están registrados y de que la configuración de la versión de la plataforma y el marco es correcta y vuelva a intentarlo.
+[19/3/2019 11:21:02 p. m. Informational] ========== Detección de pruebas finalizada: 6 encontradas (0:00:02,6889457) ==========
+[19/3/2019 11:21:02 p. m. Informational] ------ Ejecución de pruebas iniciada ------
+[19/3/2019 11:21:10 p. m. Informational] ========== Ejecución de pruebas finalizada: 6 ejecutadas (0:00:08,041578) ==========
+[19/3/2019 11:22:12 p. m. Informational] ------ Detección de pruebas iniciada ------
+[19/3/2019 11:22:14 p. m. Warning] No hay ninguna prueba disponible en C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest\UnitTest.csproj. Asegúrese de que los ejecutores y programas de detección de pruebas están registrados y de que la configuración de la versión de la plataforma y el marco es correcta y vuelva a intentarlo.
+[19/3/2019 11:22:14 p. m. Informational] ========== Detección de pruebas finalizada: 6 encontradas (0:00:02,809415) ==========
+[19/3/2019 11:22:14 p. m. Informational] ------ Ejecución de pruebas iniciada ------
+[19/3/2019 11:22:22 p. m. Informational] ========== Ejecución de pruebas finalizada: 6 ejecutadas (0:00:07,7521142) ==========
+[19/3/2019 11:34:44 p. m. Informational] ------ Detección de pruebas iniciada ------
+[19/3/2019 11:34:46 p. m. Warning] No hay ninguna prueba disponible en C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest\UnitTest.csproj. Asegúrese de que los ejecutores y programas de detección de pruebas están registrados y de que la configuración de la versión de la plataforma y el marco es correcta y vuelva a intentarlo.
+[19/3/2019 11:34:46 p. m. Informational] ========== Detección de pruebas finalizada: 7 encontradas (0:00:02,5725832) ==========
+[19/3/2019 11:34:46 p. m. Informational] ------ Ejecución de pruebas iniciada ------
+[19/3/2019 11:34:55 p. m. Informational] ========== Ejecución de pruebas finalizada: 7 ejecutadas (0:00:08,3897186) ==========
+[19/3/2019 11:40:35 p. m. Informational] ------ Detección de pruebas iniciada ------
+[19/3/2019 11:40:36 p. m. Warning] No hay ninguna prueba disponible en C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest\UnitTest.csproj. Asegúrese de que los ejecutores y programas de detección de pruebas están registrados y de que la configuración de la versión de la plataforma y el marco es correcta y vuelva a intentarlo.
+[19/3/2019 11:40:36 p. m. Informational] ========== Detección de pruebas finalizada: 0 encontradas (0:00:01,6330666) ==========
+[19/3/2019 11:40:36 p. m. Informational] ------ Ejecución de pruebas iniciada ------
+[19/3/2019 11:40:45 p. m. Informational] ========== Ejecución de pruebas finalizada: 7 ejecutadas (0:00:08,7843115) ==========
+[19/3/2019 11:40:50 p. m. Informational] ------ Detección de pruebas iniciada ------
+[19/3/2019 11:40:53 p. m. Warning] No hay ninguna prueba disponible en C:\Users\BETO-PC\Documents\GitHub\BancoDeSangre\UnitTest\UnitTest.csproj. Asegúrese de que los ejecutores y programas de detección de pruebas están registrados y de que la configuración de la versión de la plataforma y el marco es correcta y vuelva a intentarlo.
+[19/3/2019 11:40:53 p. m. Informational] ========== Detección de pruebas finalizada: 7 encontradas (0:00:02,556665) ==========
+[19/3/2019 11:40:53 p. m. Informational] ------ Ejecución de pruebas iniciada ------
+[19/3/2019 11:41:01 p. m. Informational] ========== Ejecución de pruebas finalizada: 7 ejecutadas (0:00:08,3926515) ==========

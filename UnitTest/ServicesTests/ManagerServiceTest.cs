@@ -1,4 +1,5 @@
 ﻿using BancoDeSangre.Models;
+using BancoDeSangre.Services.CampaignService;
 using BancoDeSangre.Services.DB;
 using BancoDeSangre.Services.DonorService;
 using BancoDeSangre.Services.ManagerService;
@@ -28,7 +29,7 @@ namespace UnitTest.ServicesTests
                 var result = managerService.CreateManager(manager);
 
                 // Assert
-                Assert.IsTrue(result, "Manager was not saved");                
+                Assert.IsTrue(result, "Manager was not saved");
             }
         }
 
@@ -70,11 +71,20 @@ namespace UnitTest.ServicesTests
             //Arrange 
             using (var dbService = new DataBaseService())
             {
-                IMedicalCenterService medicalCenter = new MedicalCenterDBService(dbService);
+                IMedicalCenterService medicalCenterService = new MedicalCenterDBService(dbService);
 
-            // Act
-            var resultado = medicalCenter.CreateMedicalCenter("medicalCenter");
+                
+                var medicalCenter = new MedicalCenter
+                {
+                    Email = "carit@info.com",
+                    Name = "carit",
+                    PhoneNumber = 88888,
+                    Place = "Sn Jose"
 
+                };
+
+                // Act
+                var resultado = medicalCenterService.CreateMedicalCenter(medicalCenter);
 
                 // Assert
                 Assert.IsTrue(resultado, "MedicalCenter");
@@ -88,10 +98,18 @@ namespace UnitTest.ServicesTests
             using (var dbService = new DataBaseService())
             {
                 IMedicalCenterService medicalCenter = new MedicalCenterDBService(dbService);
+                var medicalCenterid = new MedicalCenter
+                {
+                    Email = "carit@info.com",
+                    Name = "carit",
+                    PhoneNumber = 88888,
+                    Place = "Sn Jose"
 
+
+                };
                 // Act
-                bool resultado = medicalCenter.FindByID();
-               
+                var resultado = medicalCenter.CreateMedicalCenter(medicalCenterid);
+
 
                 // Assert
                 Assert.IsTrue(resultado, "id");
@@ -104,9 +122,15 @@ namespace UnitTest.ServicesTests
             using (var dbService = new DataBaseService())
             {
                 IDonorService countChanges = new DonorDBService(dbService);
+                var dataBase = new Donor
+                {
+                    Name = "carit",
+                    Id = 88,
+                };
 
                 // Act
-                var resultado = countChanges.IsValidDonor();
+
+                var resultado = countChanges.IsValidDonor(false);
 
 
                 // Assert
@@ -114,5 +138,26 @@ namespace UnitTest.ServicesTests
             }
         }
 
+        [TestMethod]
+        public void Create_Campaign_Test()
+        {
+            //Arrange
+            using (var dbService = new DataBaseService())
+            {
+                ICampaignService countChanges = new CampaignDBService(dbService);
+                var dataBase = new Campaign();
+              
+
+                // Act
+
+               var resultado = countChanges.CreateCampaign(dataBase);
+
+                // Assert
+                Assert.IsTrue(resultado);
+            }
+        }
+
     }
+
+    
 }
