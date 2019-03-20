@@ -124,7 +124,7 @@ namespace UnitTest.ServicesTests
                 IDonorService countChanges = new DonorDBService(dbService);
                 var dataBase = new Donor
                 {
-                    Name = "carit",
+                    Name = "Carit",
                     Id = 88,
                 };
 
@@ -145,7 +145,9 @@ namespace UnitTest.ServicesTests
             using (var dbService = new DataBaseService())
             {
                 ICampaignService countChanges = new CampaignDBService(dbService);
+                var testManager = new Manager();//Se crea un manager de prueba para la campaña
                 var dataBase = new Campaign();
+                dataBase.Manager = testManager;//Se agrega el manager a la campaña para evitar error de FK en la DB
               
 
                 // Act

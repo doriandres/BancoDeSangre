@@ -100,7 +100,7 @@ namespace BancoDeSangre.Services.DonorService
 
         bool IDonorService.IsValidDonor(object cause)
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }
