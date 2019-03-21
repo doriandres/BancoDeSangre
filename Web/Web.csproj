@@ -344,6 +344,7 @@
     <Content Include="Views\Information\Contact.cshtml" />
     <Content Include="Views\Donor\Create.cshtml" />
     <Content Include="Views\Information\InfoDonar.cshtml" />
+    <Content Include="Views\Information\InfoDonar.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,9 +1,7 @@
 bin/*
 .vs/
 Web/bin/
-
 Web/obj/
-*.cache
 obj/*
 *.dll
 *.pdb
