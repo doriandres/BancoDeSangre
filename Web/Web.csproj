@@ -227,7 +227,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Data\SessionManager.cs" />
-    <Compile Include="App_Start\ControllerFactory.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\StructuremapMvc.cs" />

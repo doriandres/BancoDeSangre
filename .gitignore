@@ -5,3 +5,6 @@ Web/bin/
 Web/obj/
 *.cache
 obj/*
+*.dll
+*.pdb
+*.cache
