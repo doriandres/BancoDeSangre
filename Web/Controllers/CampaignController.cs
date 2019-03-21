@@ -2,6 +2,7 @@
 using BancoDeSangre.App_Data;
 using BancoDeSangre.Models;
 using BancoDeSangre.Services.CampaignService;
+using BancoDeSangre.ViewModels.Campaign;
 
 namespace BancoDeSangre.Controllers
 {
@@ -62,7 +63,10 @@ namespace BancoDeSangre.Controllers
         [HttpGet]
         public ActionResult List()
         {
-            return View();
+            var campaigns = campaignService.FindAll();
+            var campaignListViewModel = new CampaignListViewModel();
+            campaignListViewModel.Campaigns = campaigns;
+            return View(campaignListViewModel);
         }
     }
 }

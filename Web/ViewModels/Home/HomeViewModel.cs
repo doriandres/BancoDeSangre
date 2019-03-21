@@ -5,6 +5,6 @@ namespace BancoDeSangre.ViewModels.Home
 {
     public class HomeViewModel
     {
-        public List<Campaign> Campaigns { set; get; }
+        public List<Models.Campaign> Campaigns { set; get; }
     }
 }
