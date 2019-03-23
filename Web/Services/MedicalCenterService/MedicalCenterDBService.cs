@@ -6,7 +6,7 @@ namespace BancoDeSangre.Services.ManagerService
 {
     public class MedicalCenterDBService : DBService, IMedicalCenterService
     {
-        public MedicalCenterDBService(DataBaseService dataBaseService) : base(dataBaseService)
+        public MedicalCenterDBService(IDataBaseService dataBaseService) : base(dataBaseService)
         {
         }
 

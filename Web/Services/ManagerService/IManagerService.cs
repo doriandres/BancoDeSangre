@@ -12,6 +12,13 @@ namespace BancoDeSangre.Services.ManagerService
         bool CreateManager(Manager manager);
 
         /// <summary>
+        /// Finds a Manager by its ID
+        /// </summary>
+        /// <param name="id">Manager ID</param>
+        /// <returns>Task which result is the Manager found</returns>
+        Manager FindManagerById(int id);
+
+        /// <summary>
         /// Finds a Manager by its email
         /// </summary>
         /// <param name="email">Email to seek</param>

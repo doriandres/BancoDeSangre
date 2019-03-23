@@ -17,9 +17,9 @@ namespace BancoDeSangre.Controllers
 
 
         /// <summary>
-        /// Show the create campaign page
+        /// Show the Campaigns menu
         /// </summary>
-        /// <returns>Create campaign page only if user is signed in else redirects to home page</returns>
+        /// <returns>Create campaigns menu page only if user is signed in else redirects to home page</returns>
         [HttpGet]
         public ActionResult Menu()
         {
@@ -59,17 +59,18 @@ namespace BancoDeSangre.Controllers
                 return Json(new { saved = false });
             }
 
-            if (!campaignService.IsValidCampaign(campaign, out var cause))
-            {
-                return Json(new { saved = false, cause });
-            }
-
             campaign.ManagerId = Session.GetSignedInManager().Id;
 
-            var saved = campaignService.CreateCampaign(campaign);
+            if (!campaignService.IsValidCampaign(campaign, out var cause))
+            {
+                return Json(new { saved = false, cause = cause });
+            }
+            else
+            {
+                var saved = campaignService.CreateCampaign(campaign);
 
-            return Json(new { saved });
-
+                return Json(new { saved });
+            }                      
         }
 
         /// <summary>

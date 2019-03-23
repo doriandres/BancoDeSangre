@@ -314,7 +314,9 @@
     <Content Include="Public\img\logo.png" />
     <Content Include="Public\JavaScript\appShell.js" />
     <Content Include="Public\JavaScript\components\ajax.js" />
+    <Content Include="Public\JavaScript\components\datepicker.js" />
     <Content Include="Public\JavaScript\components\modal.js" />
+    <Content Include="Public\JavaScript\components\timepicker.js" />
     <Content Include="Public\JavaScript\views\campaign\create.js" />
     <Content Include="Public\JavaScript\views\campaign\list.js" />
     <Content Include="Public\JavaScript\views\donor\register.js" />
@@ -351,6 +353,8 @@
     <Content Include="Views\Donor\Menu.cshtml" />
     <Content Include="Views\Donation\Menu.cshtml" />
     <Content Include="Views\MedicalCenter\Menu.cshtml" />
+    <Content Include="Views\Campaign\PartilalViews\MenuOptions.cshtml" />
+    <Content Include="Views\Campaign\PartilalViews\CampaignList.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

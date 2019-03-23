@@ -15,7 +15,7 @@ import modal from './../../components/modal.js';
                     signInForm.reset();
                     window.location = "/";
                 } else {
-                    modal("Ocurrió un error", response.cause || "En este momento no podemos procesar su solicitud");
+                    modal("Ocurrió un error", !response.cause ? "No se puede procesar su solicitud en este momento"  : response.cause );
                     submitBtn.classList.remove("disabled");
                 }
             }
