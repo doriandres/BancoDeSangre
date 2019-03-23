@@ -346,6 +346,11 @@
     <Content Include="Views\Donor\Create.cshtml" />
     <Content Include="Views\Information\InfoDonar.cshtml" />
     <Content Include="Views\Information\InfoDonar.cshtml" />
+    <Content Include="Views\Campaign\Menu.cshtml" />
+    <Content Include="Views\Manager\Menu.cshtml" />
+    <Content Include="Views\Donor\Menu.cshtml" />
+    <Content Include="Views\Donation\Menu.cshtml" />
+    <Content Include="Views\MedicalCenter\Menu.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

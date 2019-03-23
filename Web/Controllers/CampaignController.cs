@@ -15,6 +15,22 @@ namespace BancoDeSangre.Controllers
             this.campaignService = campaignService;
         }
 
+
+        /// <summary>
+        /// Show the create campaign page
+        /// </summary>
+        /// <returns>Create campaign page only if user is signed in else redirects to home page</returns>
+        [HttpGet]
+        public ActionResult Menu()
+        {
+            if (Session.IsSignedIn()) // Only signed in Managers can create Campaigns
+            {
+                return View();
+            }
+
+            return RedirectToAction("Index", "Home");
+        }
+
         /// <summary>
         /// Show the create campaign page
         /// </summary>
