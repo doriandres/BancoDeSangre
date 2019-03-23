@@ -89,6 +89,9 @@
         main {
             flex: 1 0 auto;
         }
+
+
+
     </style>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" defer></script>
@@ -99,13 +102,13 @@
     <header>
         <nav class="nav-extended white">
             <div class="nav-wrapper">
-                <a href="#" class="brand-logo center grey-text text-darken-2">Banco de Sangre</a>
+                <a href="#" class="flow-text brand-logo center grey-text text-darken-2"><h5>Banco de Sangre</h5></a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="#" class="grey-text text-darken-2">Campañas</a></li>
                     <li><a href="#" class="grey-text text-darken-2">Contacto</a></li>
                     <li><a href="#" class="grey-text text-darken-2">¿Cómo donar?</a></li>
-                    <li><a class="waves-effect waves-light btn  teal accent-3"> <i class="material-icons right">sentiment_very_dissatisfied</i> Iniciar Sesión</a></li>
+                    <li><a class="waves-effect waves-light btn  teal accent-3"> <i class="material-icons right">person</i> Iniciar Sesión</a></li>
                 </ul>
             </div>
             <div class="nav-content">
@@ -126,9 +129,12 @@
             <li><a class="waves-effect waves-light btn">Iniciar Sesión</a></li>
         </ul>
     </header>
-<main>
-    @RenderBody()
-</main>
+    <main>
+        @RenderBody()
+        <div class="row">
+            <div class="col s12 m7"><img class="responsive-img" id="imagenHome" src="https://assets3.thrillist.com/v1/image/1854794/size/tl-horizontal_main_2x.jpg" alt="Alternate Text" /></div>
+        </div>
+    </main>
     <footer>
         <footer class="page-footer grey darken-2">
             <div class="container">
