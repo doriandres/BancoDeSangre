@@ -1,5 +1,5 @@
 ﻿
-@{
+@*@{
     ViewBag.Title = "Iniciar Sesión";
 }
 @section JavaScript{
@@ -18,4 +18,28 @@
             <input type="submit" class="btn" value="Iniciar Sesión"/>
         </div>
     </form>
+</div>*@
+
+<div class="container">
+    <div class="row">
+        <div class="card col s12 m6 offset-m3">
+            <div class="card-content">
+                <span class="card-title">Iniciar Sesión</span>
+                <div class="row">
+                    <div class="input-field col s10 offset-m1">
+                        <input placeholder="user@email.com" value="" id="first_name2" type="email" class="validate" required>
+                        <label class="active" for="first_name2">Correo</label>
+                    </div>
+                    <div class="input-field col s10 offset-m1">
+                        <input placeholder="Contraseña" value="" id="first_name2" type="password" class="validate" required>
+                        <label class="active" for="first_name2">Contraseña</label>
+                    </div>
+                    <div class="input-field col s10 offset-m1">
+                        <a class="waves-effect waves-light btn teal accent-3">Iniciar Sesión</a>
+                    </div>
+                </div>               
+            </div>
+        </div>
+    </div>
 </div>
+

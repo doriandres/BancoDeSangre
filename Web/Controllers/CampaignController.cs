@@ -2,7 +2,7 @@
 using BancoDeSangre.App_Data;
 using BancoDeSangre.Models;
 using BancoDeSangre.Services.CampaignService;
-using BancoDeSangre.ViewModels.Campaign;
+using BancoDeSangre.ViewModels.CampaignViewModels;
 
 namespace BancoDeSangre.Controllers
 {

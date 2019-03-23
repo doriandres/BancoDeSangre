@@ -287,8 +287,7 @@
     <Compile Include="Services\ManagerService\ManagerDBService.cs" />
     <Compile Include="Services\MedicalCenterService\IMedicalCenterService.cs" />
     <Compile Include="Services\MedicalCenterService\MedicalCenterDBService.cs" />
-    <Compile Include="ViewModels\Campaign\CampaignListViewModel.cs" />
-    <Compile Include="ViewModels\Home\HomeViewModel.cs" />
+    <Compile Include="ViewModels\CampaignViewModels\CampaignListViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />

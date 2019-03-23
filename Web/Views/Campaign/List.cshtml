@@ -1,4 +1,4 @@
-﻿@model BancoDeSangre.ViewModels.Campaign.CampaignListViewModel
+﻿@model BancoDeSangre.ViewModels.CampaignViewModels.CampaignListViewModel
 @section JavaScript{
     <script type="module" src="~/public/javascript/views/campaign/list.js"></script>
 }
@@ -25,11 +25,11 @@
                                         </div><br>
                                         <ul>
                                             <li class="date">
-                                                <div class="bold">Fecha:</div> @campaign.Date.ToString("dd/mm/yyyy")
+                                                <div class="bold">Fecha:</div> @campaign.Date.ToString("dd/MM/yyyy")
                                             </li>
                                             <li class="start-time">
-                                                <div class="bold">Inicia: </div>@campaign.StartTime.ToString("hh:mm t")
-                                                <div class="bold"> &nbsp; Finaliza:</div> @campaign.EndTime.ToString("hh:mm t")
+                                                <div class="bold">Inicia: </div>@campaign.StartTime.ToString("hh:mm tt")
+                                                <div class="bold"> &nbsp; Finaliza:</div> @campaign.EndTime.ToString("hh:mm tt")
                                             </li>
                                             <li class="location">
                                                 <div class="bold">Lugar:</div> @campaign.Place
