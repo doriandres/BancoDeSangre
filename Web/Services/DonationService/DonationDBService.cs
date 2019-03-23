@@ -7,7 +7,7 @@ namespace BancoDeSangre.Services.DonationService
 {
     public class DonationDBService : DBService, IDonationService
     {
-        public DonationDBService(DataBaseService dbservice) : base(dbservice) { }
+        public DonationDBService(IDataBaseService dbservice) : base(dbservice) { }
 
         public bool CreateDonation(Donation donation)
         {

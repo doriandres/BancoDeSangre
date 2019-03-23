@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using BancoDeSangre.Models;
 using BancoDeSangre.Services.DB;
+using BancoDeSangre.Services.ManagerService;
 
 namespace BancoDeSangre.Services.CampaignService
 {
     public class CampaignDBService : DBService, ICampaignService
     {
-        public CampaignDBService(DataBaseService dataBase) : base(dataBase)
+        private IManagerService managerService;
+        public CampaignDBService(IDataBaseService dataBase, IManagerService managerService) : base(dataBase)
         {
+            this.managerService = managerService;
         }
 
         public bool CreateCampaign(Campaign campaign)
@@ -49,6 +52,18 @@ namespace BancoDeSangre.Services.CampaignService
             if (campaign.EndTime < campaign.StartTime)
             {
                 cause = "La hora de finalización es antes que la hora de inicio";
+                valid = false;
+            }
+
+            if (campaign.EndTime < campaign.StartTime)
+            {
+                cause = "La hora de finalización es antes que la hora de inicio";
+                valid = false;
+            }
+
+            if (campaign.ManagerId == 0 || managerService.FindManagerById(campaign.ManagerId) == null)
+            {
+                cause = "Administrador inválido";
                 valid = false;
             }
 

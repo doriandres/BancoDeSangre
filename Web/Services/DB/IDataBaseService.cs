@@ -11,5 +11,6 @@ namespace BancoDeSangre.Services.DB
         DbSet<MedicalCenter> MedicalCenters { get; }
         DbSet<Donation> Donations { get; }
         DbSet<BloodRequest> BloodRequests { get; }
+        int SaveChanges();
     }
 }

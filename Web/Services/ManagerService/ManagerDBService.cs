@@ -6,7 +6,7 @@ namespace BancoDeSangre.Services.ManagerService
 {
     public class ManagerDBService : DBService , IManagerService
     {        
-        public ManagerDBService(DataBaseService dataBase) : base(dataBase)
+        public ManagerDBService(IDataBaseService dataBase) : base(dataBase)
         {
         }
 
@@ -29,5 +29,11 @@ namespace BancoDeSangre.Services.ManagerService
             var countChanges = dataBase.SaveChanges();
             return countChanges > 0;
         }
+
+        public Manager FindManagerById(int id)
+        {
+            return dataBase.Managers.FirstOrDefault(m => m.Id == id);
+        }
+
     }
 }
