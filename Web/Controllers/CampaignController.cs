@@ -63,7 +63,7 @@ namespace BancoDeSangre.Controllers
 
             if (!campaignService.IsValidCampaign(campaign, out var cause))
             {
-                return Json(new { saved = false, cause });
+                return Json(new { saved = false, cause = cause });
             }
             else
             {

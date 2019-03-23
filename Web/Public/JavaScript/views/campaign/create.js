@@ -22,8 +22,8 @@ import timepicker from "./../../components/timepicker.js";
                     campaignForm.reset();
                     window.location = "/campaign/list";
                 }  else {
-                    modal("Ocurrio un error", response.cause || "No se puede procesar su solicitud en este momento");                    
-                    submitBtn.classList.remove("disabled");s
+                    modal("Ocurrio un error", !response.cause ? "No se puede procesar su solicitud en este momento" : response.cause);
+                    submitBtn.classList.remove("disabled");
                 }
             }
         });
