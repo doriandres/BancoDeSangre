@@ -314,6 +314,7 @@
     <Content Include="Public\img\logo.png" />
     <Content Include="Public\JavaScript\appShell.js" />
     <Content Include="Public\JavaScript\components\ajax.js" />
+    <Content Include="Public\JavaScript\components\modal.js" />
     <Content Include="Public\JavaScript\views\campaign\create.js" />
     <Content Include="Public\JavaScript\views\campaign\list.js" />
     <Content Include="Public\JavaScript\views\donor\register.js" />

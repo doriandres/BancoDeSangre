@@ -21,50 +21,57 @@
         main {
             flex: 1 0 auto;
         }
-    </style>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" defer></script>
-    <!--Let browser know website is optimized for mobile-->
+    </style>    
 </head>
 
 <body>
-    <header>
-        <nav class="nav-extended white">
-            <div class="nav-wrapper">
-                <a href="/" class="brand-logo center grey-text text-darken-2">Banco de Sangre</a>                
-                <ul id="nav-mobile" class="right">
-                    <li><a href="/campaign/list" class="grey-text text-darken-2">Campañas</a></li>
-                    <li><a href="/information/contact" class="grey-text text-darken-2">Contacto</a></li>
-                    <li><a href="/information/infodonar" class="grey-text text-darken-2">¿Cómo donar?</a></li>
-                    <li><a href="/manager/signin" class="waves-effect waves-light btn  teal accent-3">Iniciar Sesión</a></li>
+<header>
+    <nav class="nav-extended white">
+        <div class="nav-wrapper">
+            <a href="/" class="brand-logo center grey-text text-darken-2">Banco de Sangre</a>                
+            <ul id="nav-mobile" class="right">
+                <li><a href="/campaign/list" class="grey-text text-darken-2">Campañas</a></li>
+                <li><a href="/information/contact" class="grey-text text-darken-2">Contacto</a></li>
+                <li><a href="/information/infodonar" class="grey-text text-darken-2">¿Cómo donar?</a></li>
+                <li><a href="/manager/signin" class="waves-effect waves-light btn  teal accent-3">Iniciar Sesión</a></li>
+            </ul>
+        </div>
+        @if (Session.IsSignedIn())
+        {
+            <div class="nav-content">
+                <ul class="tabs tabs-transparent">
+                    <li class="tab"><a href="/campaign/menu" class="teal-text text-accent-4">Campañas</a></li>
+                    <li class="tab"><a href="/manager/menu" class="teal-text text-accent-4">Administradores</a></li>
+                    <li class="tab"><a href="/donor/menu" class="teal-text text-accent-4">Donantes</a></li>
+                    <li class="tab"><a href="/medicalcenter/menu" class="teal-text text-accent-4">Centros Médicos</a></li>
+                    <li class="tab"><a href="/donations/menu" class="teal-text text-accent-4">Donaciones</a></li>
                 </ul>
             </div>
-            @if (Session.IsSignedIn())
-            {
-                <div class="nav-content">
-                    <ul class="tabs tabs-transparent">
-                        <li class="tab"><a href="/campaign/menu" class="teal-text text-accent-4">Campañas</a></li>
-                        <li class="tab"><a href="/manager/menu" class="teal-text text-accent-4">Administradores</a></li>
-                        <li class="tab"><a href="/donor/menu" class="teal-text text-accent-4">Donantes</a></li>
-                        <li class="tab"><a href="/medicalcenter/menu" class="teal-text text-accent-4">Centros Médicos</a></li>
-                        <li class="tab"><a href="/donations/menu" class="teal-text text-accent-4">Donaciones</a></li>
-                    </ul>
-                </div>
-            }
-        </nav>
-    </header>
-    <main>
-        @RenderBody()
-    </main>
-
-    <footer class="page-footer grey darken-2">
-        <div class="footer-copyright">
-            <div class="container center-align">
-            © 2019 Universidad Latinoamericana de Ciencia y Tecnología                
-            </div>
+        }
+    </nav>
+</header>
+<main>
+    @RenderBody()
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h4 class="modal-title"></h4>
+            <p class="modal-body"></p>
         </div>
-    </footer>
+        <div class="modal-footer">
+            <a href="javascript:void(0)" class="modal-close waves-effect waves-green btn-flat">Entendido</a>
+        </div>
+    </div>
+</main>
+
+<footer class="page-footer grey darken-2">
+    <div class="footer-copyright">
+        <div class="container center-align">
+            © 2019 Universidad Latinoamericana de Ciencia y Tecnología                
+        </div>
+    </div>
+</footer>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="/public/javascript/appShell.js"></script>
 @RenderSection("JavaScript", required: false)
 </html>
