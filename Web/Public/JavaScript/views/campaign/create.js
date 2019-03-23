@@ -20,7 +20,7 @@ import timepicker from "./../../components/timepicker.js";
             onResponse: response => {
                 if (response.saved) {
                     campaignForm.reset();
-                    window.location = "/";
+                    window.location = "/campaign/list";
                 }  else {
                     modal("Ocurrio un error", response.cause || "No se puede procesar su solicitud en este momento");                    
                     submitBtn.classList.remove("disabled");s
