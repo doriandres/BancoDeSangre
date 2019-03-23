@@ -1,53 +1,66 @@
-﻿@section JavaScript{
+﻿<div class="row">
+    <div class="col s12 l3">
+        @{
+            Html.RenderPartial("PartilalViews/MenuOptions");
+        }
+    </div>
+    <div class="col s12 l9">
+        <div class="container">
+            <div class="row">
+                <div class="card">
+                    <div class="card-content container">
+                        <span class="card-title center">Crear Campaña</span>
+                        <div class="row">
+                            <form class="col s12" id="signin-form" method="POST" action="/campaign/save">
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="title-field" name="title" type="text" required />
+                                        <label for="title-field">Título</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="place-field" name="place" type="text" required />
+                                        <label for="place-field">Lugar</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="date-field" name="date" type="date" class="datepicker" required />
+                                        <label for="date-field">Fecha</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s6">
+                                        <input id="starttime-field" name="starttime" type="time" class="timepicker" required />
+                                        <label for="starttime-field">Hora de inicio</label>
+                                    </div>
+                                    <div class="input-field col s6">
+                                        <input id="endtime-field" name="endtime" type="time" class="timepicker" required />
+                                        <label for="endtime-field">Hora de finalización</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <textarea id="description-field" name="description" class="materialize-textarea" required></textarea>
+                                        <label for="description-field">Descripción</label>
+                                    </div>
+                                </div>
+                                <div class="input-field col s12 white-text">
+                                    <input id="submit" type="submit" hidden />
+                                    <a id="submit-btn" class="waves-effect waves-light btn teal accent-3" href="javascript:void(0)">
+                                        <label class="white-text" for="submit">Crear Campaña</label>
+                                    </a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section JavaScript{
     <script type="module" src="/public/javascript/views/campaign/create.js"></script>
 }
-
-@section CSS{
-    <link rel="stylesheet" type="text/css" href="~/Public/CSS/createCampaign.css">
-}
-<div class="container">
-    <div id="form-group">
-        <div class="header"><h2>Nueva Campaña de Donación</h2></div>
-        <br />
-        <form id="signin-form" method="POST" action="/campaign/save">
-            <div id="form-group">
-                <div class="form-field">
-                    <label for="title-field">Título:</label>
-                    <input id="title-field" name="title" type="text" required />
-                </div>
-                <div class="form-field">
-                    <label for="place-field">Lugar:</label>
-                    <input id="place-field" name="place" type="text" required />
-                </div>
-                <div class="form-field">
-                    <label for="latitude-field">Latitud:</label>
-                    <input id="latitude-field" name="latitude" type="number" step=".00000000001" required />
-                </div>
-                <div class="form-field">
-                    <label for="longitude-field">Longitud:</label>
-                    <input id="longitude-field" name="longitude" type="number" step=".00000000001" required />
-                </div>
-                <div class="form-field">
-                    <label for="date-field">Fecha:</label>
-                    <input id="date-field" name="date" type="date" required />
-                </div>
-                <div class="form-field">
-                    <label for="starttime-field">Hora de inicio:</label>
-                    <input id="starttime-field" name="starttime" type="time" required />
-                </div>
-                <div class="form-field">
-                    <label for="endtime-field">Hora de finalización:</label>
-                    <input id="endtime-field" name="endtime" type="time" required />
-                </div>
-                <div class="form-field">
-                    <label for="description-field">Descripción:</label>
-                    <textarea id="description-field" name="description" required></textarea>
-                </div>
-            </div>
-            <div class="form-field">
-                <input type="submit" class="btn" value="Crear campaña de donación" />
-            </div>
-        </form>
-    </div>
-</div><!--container end-->
-
