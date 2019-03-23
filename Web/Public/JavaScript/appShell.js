@@ -1,1 +1,1 @@
-﻿// AppShell.js
+﻿var [modalSingleton] = M.Modal.init(document.querySelectorAll('.modal'));

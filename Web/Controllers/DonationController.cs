@@ -12,6 +12,17 @@ namespace BancoDeSangre.Controllers
         {
             this.donationService = donationService;
         }
+        [HttpGet]
+        public ActionResult Menu()
+        {
+            if (Session.IsSignedIn()) // Only signed in Managers can create Managers
+            {
+                return View();
+
+            }
+            // If there's no signed in manager redirect to home page
+            return RedirectToAction("Index", "Home");
+        }
 
         /// <summary>
         /// Saves a donation to a donor

@@ -1,73 +1,4 @@
-﻿@*@using BancoDeSangre.App_Data;
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>@ViewBag.Title - Banco de Sangre</title>
-        @RenderSection("CSS", required: false)
-        <link rel="stylesheet" href="/public/css/appShell.css" />
-    </head>
-    <body>
-        <header>
-            <div class="header-title">
-                <div class="header-title-item">
-                    <img class="logo" src="/public/img/logo.png" />
-                </div>
-                <div class="header-title-item">
-                    <h1>BANCO DE SANGRE CCSS</h1>
-                </div>
-            </div>
-            <nav class="header-nav-bar">
-                @if (!Session.IsSignedIn())
-                {
-                    <a href="/" class="nav-bar-item">
-                        INICIO
-                    </a>
-                    <a href="/manager/signin" class="nav-bar-item">
-                        INICIAR SESIÓN
-                    </a>
-                    <a href="/campaign/list" class="nav-bar-item">
-                        CAMPAÑAS
-                    </a>
-                    <a href="/information/contact" class="nav-bar-item">
-                        CONTACTO
-                    </a>
-                    <a href="javascript:void(0)" class="nav-bar-info-item nav-bar-item">
-                        <b>INFORMACIÓN</b>
-                    </a>
-
-                }
-                else
-                {
-                    <a href="#" class="nav-bar-item">
-                        NUEVO DONANTE
-                    </a>
-                    <a href="/manager/signin" class="nav-bar-item">
-                        NUEVO ADMIN
-                    </a>
-                    <a href="/campaign/create" class="nav-bar-item">
-                        NUEVA CAMPAÑA
-                    </a>
-                    <a href="#" class="nav-bar-item">
-                        NUEVO CENTRO MEDICO
-                    </a>
-                    <a href="/manager/signout" class="nav-bar-info-item nav-bar-item">
-                        <b>SALIR</b>
-                    </a>
-                }
-            </nav>
-        </header>
-        <main>@RenderBody()</main>
-        <footer></footer>
-        <script src="/public/javascript/appShell.js"></script>
-        @RenderSection("JavaScript", required: false)
-    </body>
-    </html>*@
-
-
-
+﻿@using BancoDeSangre.App_Data
 <!DOCTYPE html>
 <html>
 
@@ -79,6 +10,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    @RenderSection("CSS", required: false)
     <style>
         body {
             display: flex;
@@ -89,79 +21,64 @@
         main {
             flex: 1 0 auto;
         }
-
-
-
     </style>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" defer></script>
-    <!--Let browser know website is optimized for mobile-->
 </head>
 
 <body>
-    <header>
-        <nav class="nav-extended white">
-            <div class="nav-wrapper">
-                <a href="#" class="flow-text brand-logo center grey-text text-darken-2"><h5>Banco de Sangre</h5></a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="#" class="grey-text text-darken-2">Campañas</a></li>
-                    <li><a href="#" class="grey-text text-darken-2">Contacto</a></li>
-                    <li><a href="#" class="grey-text text-darken-2">¿Cómo donar?</a></li>
-                    <li><a class="waves-effect waves-light btn  teal accent-3"> <i class="material-icons right">person</i> Iniciar Sesión</a></li>
-                </ul>
-            </div>
+<header>
+    <nav class="nav-extended white">
+        <div class="nav-wrapper">
+            <a href="/" class="brand-logo center grey-text text-darken-2">Banco de Sangre</a>
+            <ul id="nav-mobile" class="right">
+                <li><a href="/campaign/list" class="grey-text text-darken-2">Campañas</a></li>
+                <li><a href="/information/contact" class="grey-text text-darken-2">Contacto</a></li>
+                <li><a href="/information/infodonar" class="grey-text text-darken-2">¿Cómo donar?</a></li>
+                @if (!Session.IsSignedIn())
+                {
+                    <li><a href="/manager/signin" class="waves-effect waves-light btn  teal accent-3">Iniciar Sesión</a></li>
+                }
+                else
+                {
+                    <li><a href="/manager/signout" class="waves-effect waves-light btn-flat  teal-text text-accent-3">Cerrar Sesión</a></li>
+                }
+            </ul>
+        </div>
+        @if (Session.IsSignedIn())
+        {
             <div class="nav-content">
                 <ul class="tabs tabs-transparent">
-                    <li class="tab"><a href="#" class="teal-text text-accent-4">Campañas</a></li>
-                    <li class="tab"><a href="#" class="teal-text text-accent-4">Administradores</a></li>
-                    <li class="tab"><a href="#" class="teal-text text-accent-4">Donantes</a></li>
-                    <li class="tab"><a href="#" class="teal-text text-accent-4">Centros Médicos</a></li>
-                    <li class="tab"><a href="#" class="teal-text text-accent-4">Historial de donaciones</a></li>
+                    <li class="tab"><a href="/campaign/menu" class="teal-text text-accent-4">Campañas</a></li>
+                    <li class="tab"><a href="/manager/menu" class="teal-text text-accent-4">Administradores</a></li>
+                    <li class="tab"><a href="/donor/menu" class="teal-text text-accent-4">Donantes</a></li>
+                    <li class="tab"><a href="/medicalcenter/menu" class="teal-text text-accent-4">Centros Médicos</a></li>
+                    <li class="tab"><a href="/donations/menu" class="teal-text text-accent-4">Donaciones</a></li>
                 </ul>
             </div>
-        </nav>
-
-        <ul class="sidenav" id="mobile-demo">
-            <li><a href="#" class="grey-text text-darken-2">Campañas</a></li>
-            <li><a href="#" class="grey-text text-darken-2">Contacto</a></li>
-            <li><a href="#" class="grey-text text-darken-2">¿Cómo donar?</a></li>
-            <li><a class="waves-effect waves-light btn">Iniciar Sesión</a></li>
-        </ul>
-    </header>
-    <main>
-        @RenderBody()
-        <div class="row">
-            <div class="col s12 m7"><img class="responsive-img" id="imagenHome" src="https://assets3.thrillist.com/v1/image/1854794/size/tl-horizontal_main_2x.jpg" alt="Alternate Text" /></div>
+        }
+    </nav>
+</header>
+<main>
+    @RenderBody()
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h4 class="modal-title"></h4>
+            <p class="modal-body"></p>
         </div>
-    </main>
-    <footer>
-        <footer class="page-footer grey darken-2">
-            <div class="container">
-                <div class="row">
-                    <div class="col l6 s12">
-                        <h5 class="white-text">Banco de Sangre</h5>
-                        <p class="grey-text text-lighten-4">
-                            Algo de contenido
-                        </p>
-                    </div>
-                    <div class="col l4 offset-l2 s12">
-                        <h5 class="white-text">Redes Sociales</h5>
-                        <ul>
-                            <li><a class="grey-text text-lighten-3" href="#!">Facebook</a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!">Twitter</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-copyright">
-                <div class="container">
-                    © 2019 Ulacit
-                    <a class="grey-text text-lighten-4 right" href="#!">Tel: 2222-2222</a>
-                </div>
-            </div>
-        </footer>
-    </footer>
-</body>
+        <div class="modal-footer">
+            <a href="javascript:void(0)" class="modal-close waves-effect waves-green btn-flat">Entendido</a>
+        </div>
+    </div>
+</main>
 
+<footer class="page-footer grey darken-2">
+    <div class="footer-copyright">
+        <div class="container center-align">
+            © 2019 Universidad Latinoamericana de Ciencia y Tecnología
+        </div>
+    </div>
+</footer>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="/public/javascript/appShell.js"></script>
+@RenderSection("JavaScript", required: false)
 </html>

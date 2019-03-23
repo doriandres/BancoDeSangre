@@ -7,6 +7,18 @@ namespace BancoDeSangre.Controllers
 {
     public class MedicalCenterController : Controller
     {
+
+        [HttpGet]
+        public ActionResult Menu()
+        {
+            if (Session.IsSignedIn()) // Only signed in Managers can create Managers
+            {
+                return View();
+
+            }
+            // If there's no signed in manager redirect to home page
+            return RedirectToAction("Index", "Home");
+        }
         /// <summary>
         /// Creates a medical center
         /// </summary>
