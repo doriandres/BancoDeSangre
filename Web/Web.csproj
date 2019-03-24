@@ -288,11 +288,8 @@
     <Compile Include="Services\MedicalCenterService\IMedicalCenterService.cs" />
     <Compile Include="Services\MedicalCenterService\MedicalCenterDBService.cs" />
     <Compile Include="ViewModels\CampaignViewModels\CampaignListViewModel.cs" />
-<<<<<<< HEAD
     <Compile Include="ViewModels\ManagerViewModels\ManagerListViewModel.cs" />
-=======
     <Compile Include="ViewModels\DonorViewModels\DonorListViewModel.cs" />
->>>>>>> 5ce5d1338359bec69eeddcaa0460a6d03f3d0509
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
