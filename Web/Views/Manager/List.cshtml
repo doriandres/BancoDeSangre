@@ -1,0 +1,28 @@
+﻿@using BancoDeSangre.App_Data
+@model BancoDeSangre.ViewModels.ManagerViewModels.ManagerListViewModel
+
+@if (Session.IsSignedIn())
+{
+    <div class="row">
+        <div class="col s12 l3">
+            @{
+                Html.RenderPartial("PartialViews/MenuOptions");
+            }
+        </div>
+        <div class="col s12 l9">
+            @{
+                Html.RenderPartial("PartialViews/ManagerList");
+            }
+        </div>
+    </div>
+}
+else
+{
+    <div class="container">
+        @{
+            Html.RenderPartial("PartialViews/ManagerList");
+        }
+    </div>
+}
+
+

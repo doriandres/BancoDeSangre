@@ -1,0 +1,40 @@
+﻿@model BancoDeSangre.ViewModels.ManagerViewModels.ManagerListViewModel
+
+@for (var i = 0; i < Model.Managers.Count; i += 3)
+{
+
+    <div class="row">
+        @for (var u = 0; u < 3; u++)
+        {
+            var index = i + u;
+            if (index >= Model.Managers.Count)
+            {
+                break;
+            }
+            var manager = Model.Managers[index];
+            <div class="col s12 l4">
+                <div class="card">
+                    <div class="card-content">
+                        <p>
+                            <i class="tiny material-icons ">perm_identity</i> <b>ID: </b>@manager.Id
+                        </p>
+                        <p>
+                            <i class="tiny material-icons ">email</i> <b>Email: </b>@manager.Email
+                        </p>
+                        <p>
+                            <i class="tiny material-icons ">keyboard_arrow_right</i> <b>Nombre: </b>@manager.Name
+                        </p>
+                        <p>
+                            <i class="tiny material-icons ">keyboard_arrow_right</i> <b>Apellido: </b>@manager.LastName
+                        </p>
+                        <p>
+                            <i class="tiny material-icons ">dashboard</i> <b>Campañas: </b><!--Manager'sCampaignHere-->
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+        }
+    </div>
+}
