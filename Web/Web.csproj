@@ -323,6 +323,7 @@
     <Content Include="Public\JavaScript\views\manager\create.js" />
     <Content Include="Public\JavaScript\views\manager\sign-in.js" />
     <Content Include="Public\JavaScript\views\home\home.js" />
+    <None Include="Views\Manager\PartialViews\MenuOptions.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
