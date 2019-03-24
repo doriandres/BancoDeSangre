@@ -288,6 +288,7 @@
     <Compile Include="Services\MedicalCenterService\IMedicalCenterService.cs" />
     <Compile Include="Services\MedicalCenterService\MedicalCenterDBService.cs" />
     <Compile Include="ViewModels\CampaignViewModels\CampaignListViewModel.cs" />
+    <Compile Include="ViewModels\DonorViewModels\DonorListViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
@@ -355,6 +356,9 @@
     <Content Include="Views\MedicalCenter\Menu.cshtml" />
     <Content Include="Views\Campaign\PartilalViews\MenuOptions.cshtml" />
     <Content Include="Views\Campaign\PartilalViews\CampaignList.cshtml" />
+    <Content Include="Views\Donor\PartilaIIViews\DonorList.cshtml" />
+    <Content Include="Views\Donor\PartilaIIViews\MenuOptions.cshtml" />
+    <Content Include="Views\Donor\List.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
