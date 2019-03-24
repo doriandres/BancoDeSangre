@@ -575,12 +575,12 @@ C:\UProjects\Diseño de Aplicaciones\BancoDeSangre\UnitTest\obj\Debug\UnitTest.c
 C:\UProjects\Diseño de Aplicaciones\BancoDeSangre\UnitTest\obj\Debug\UnitTest.dll
 C:\UProjects\Diseño de Aplicaciones\BancoDeSangre\UnitTest\obj\Debug\UnitTest.pdb
 C:\Users\Katherine\Documents\Katherine Ingeniería Informática\Diseño de Aplicaciones\BancoDeSangre\UnitTest\bin\Debug\ApplicationInsights.config
-C:\Users\Katherine\Documents\Katherine Ingeniería Informática\Diseño de Aplicaciones\BancoDeSangre\UnitTest\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
-C:\Users\Katherine\Documents\Katherine Ingeniería Informática\Diseño de Aplicaciones\BancoDeSangre\UnitTest\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
-C:\Users\Katherine\Documents\Katherine Ingeniería Informática\Diseño de Aplicaciones\BancoDeSangre\UnitTest\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
 C:\Users\Katherine\Documents\Katherine Ingeniería Informática\Diseño de Aplicaciones\BancoDeSangre\UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 C:\Users\Katherine\Documents\Katherine Ingeniería Informática\Diseño de Aplicaciones\BancoDeSangre\UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 C:\Users\Katherine\Documents\Katherine Ingeniería Informática\Diseño de Aplicaciones\BancoDeSangre\UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Katherine\Documents\Katherine Ingeniería Informática\Diseño de Aplicaciones\BancoDeSangre\UnitTest\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+C:\Users\Katherine\Documents\Katherine Ingeniería Informática\Diseño de Aplicaciones\BancoDeSangre\UnitTest\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+C:\Users\Katherine\Documents\Katherine Ingeniería Informática\Diseño de Aplicaciones\BancoDeSangre\UnitTest\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
 C:\Users\Katherine\Documents\Katherine Ingeniería Informática\Diseño de Aplicaciones\BancoDeSangre\UnitTest\bin\Debug\UnitTest.dll.config
 C:\Users\Katherine\Documents\Katherine Ingeniería Informática\Diseño de Aplicaciones\BancoDeSangre\UnitTest\bin\Debug\UnitTest.dll
 C:\Users\Katherine\Documents\Katherine Ingeniería Informática\Diseño de Aplicaciones\BancoDeSangre\UnitTest\bin\Debug\UnitTest.pdb
