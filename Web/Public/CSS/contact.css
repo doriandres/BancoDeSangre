@@ -12,12 +12,11 @@ body {
 
 .container {
     max-width: 1170px;
-    margin-top: 50px;
+    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
     padding: 1em;
 }
-
 
 ul {
     list-style: none;
@@ -78,7 +77,6 @@ ul {
                 outline: 0;
                 transition: background-color 1s ease-out;
             }
-
 
 @media(min-width: 700px) {
     .wrapper {

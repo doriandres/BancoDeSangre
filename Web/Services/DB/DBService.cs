@@ -2,9 +2,9 @@
 {
     public abstract class DBService
     {
-        protected DataBaseService dataBase;
+        protected IDataBaseService dataBase;
 
-        protected DBService(DataBaseService dataBase)
+        protected DBService(IDataBaseService dataBase)
         {
             this.dataBase = dataBase;
         }

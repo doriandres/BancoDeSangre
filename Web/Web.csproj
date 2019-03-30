@@ -227,7 +227,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Data\SessionManager.cs" />
-    <Compile Include="App_Start\ControllerFactory.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\StructuremapMvc.cs" />
@@ -288,7 +287,9 @@
     <Compile Include="Services\ManagerService\ManagerDBService.cs" />
     <Compile Include="Services\MedicalCenterService\IMedicalCenterService.cs" />
     <Compile Include="Services\MedicalCenterService\MedicalCenterDBService.cs" />
-    <Compile Include="ViewModels\Home\HomeViewModel.cs" />
+    <Compile Include="ViewModels\CampaignViewModels\CampaignListViewModel.cs" />
+    <Compile Include="ViewModels\ManagerViewModels\ManagerListViewModel.cs" />
+    <Compile Include="ViewModels\DonorViewModels\DonorListViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
@@ -315,12 +316,18 @@
     <Content Include="Public\img\logo.png" />
     <Content Include="Public\JavaScript\appShell.js" />
     <Content Include="Public\JavaScript\components\ajax.js" />
+    <Content Include="Public\JavaScript\components\datepicker.js" />
+    <Content Include="Public\JavaScript\components\modal.js" />
+    <Content Include="Public\JavaScript\components\timepicker.js" />
     <Content Include="Public\JavaScript\views\campaign\create.js" />
     <Content Include="Public\JavaScript\views\campaign\list.js" />
     <Content Include="Public\JavaScript\views\donor\register.js" />
     <Content Include="Public\JavaScript\views\manager\create.js" />
     <Content Include="Public\JavaScript\views\manager\sign-in.js" />
     <Content Include="Public\JavaScript\views\home\home.js" />
+    <Content Include="Views\Manager\PartialViews\ManagerList.cshtml" />
+    <Content Include="Views\Manager\List.cshtml" />
+    <None Include="Views\Manager\PartialViews\MenuOptions.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -344,6 +351,18 @@
     <Content Include="Views\Campaign\List.cshtml" />
     <Content Include="Views\Information\Contact.cshtml" />
     <Content Include="Views\Donor\Create.cshtml" />
+    <Content Include="Views\Information\InfoDonar.cshtml" />
+    <Content Include="Views\Information\InfoDonar.cshtml" />
+    <Content Include="Views\Campaign\Menu.cshtml" />
+    <Content Include="Views\Manager\Menu.cshtml" />
+    <Content Include="Views\Donor\Menu.cshtml" />
+    <Content Include="Views\Donation\Menu.cshtml" />
+    <Content Include="Views\MedicalCenter\Menu.cshtml" />
+    <Content Include="Views\Campaign\PartilalViews\MenuOptions.cshtml" />
+    <Content Include="Views\Campaign\PartilalViews\CampaignList.cshtml" />
+    <Content Include="Views\Donor\PartilaIIViews\DonorList.cshtml" />
+    <Content Include="Views\Donor\PartilaIIViews\MenuOptions.cshtml" />
+    <Content Include="Views\Donor\List.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

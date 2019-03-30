@@ -1,0 +1,37 @@
+﻿@model BancoDeSangre.ViewModels.CampaignViewModels.CampaignListViewModel
+
+@for (var i = 0; i < Model.Campaigns.Count; i += 3)
+{
+    <div class="row">
+        @for (var u = 0; u < 3; u++)
+        {
+            var index = i + u;
+            if (index >= Model.Campaigns.Count)
+            {
+                break;
+            }
+            var campaign = Model.Campaigns[index];
+            <div class="col s12 l4">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">@campaign.Title</span>
+                        <hr />
+                        <p>
+                            <i class="material-icons ">date_range</i> <b>Fecha: </b>@campaign.Date.ToString("dd/MM/yyyy")
+                        </p>
+                        <p>
+                            <i class="material-icons ">access_time</i> <b>Horario: </b>@campaign.StartTime.ToString("hh:mm tt") - @campaign.EndTime.ToString("hh:mm tt")
+                        </p>
+                        <p>
+                            <i class="material-icons ">place</i> <b>Lugar: </b>@campaign.Place
+                        </p>
+                        <p>
+                            <i class="material-icons ">info</i> <b>Más Información: </b>@campaign.Description
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        }
+    </div>
+}

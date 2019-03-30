@@ -7,7 +7,7 @@ namespace BancoDeSangre.Services.DonorService
 {
     public class DonorDBService : DBService, IDonorService
     {
-        public DonorDBService(DataBaseService dbservice) : base(dbservice) { }
+        public DonorDBService(IDataBaseService dbservice) : base(dbservice) { }
 
         public bool CreateDonor(Donor donor)
         {
@@ -81,6 +81,26 @@ namespace BancoDeSangre.Services.DonorService
             }
 
             return valid;
+        }
+
+        bool IDonorService.CreateDonor(Donor donor)
+        {
+            throw new NotImplementedException();
+        }
+
+        Donor IDonorService.FindByID(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        bool IDonorService.IsValidDonor(Donor donor, out string cause)
+        {
+            throw new NotImplementedException();
+        }
+
+        bool IDonorService.IsValidDonor(object cause)
+        {
+            return true;
         }
     }
 }
