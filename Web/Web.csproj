@@ -327,6 +327,7 @@
     <Content Include="Public\JavaScript\views\home\home.js" />
     <Content Include="Views\Manager\PartialViews\ManagerList.cshtml" />
     <Content Include="Views\Manager\List.cshtml" />
+    <Content Include="Views\Donation\Create.cshtml" />
     <None Include="Views\Manager\PartialViews\MenuOptions.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
