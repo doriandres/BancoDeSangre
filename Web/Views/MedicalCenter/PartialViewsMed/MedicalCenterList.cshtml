@@ -1,0 +1,26 @@
+﻿@using BancoDeSangre.App_Data
+@model BancoDeSangre.ViewModels.MedicalCenterViewModels.MedicalCenterListViewModels
+
+@if (Session.IsSignedIn())
+{
+    <div class="row">
+        <div class="col s12 l3">
+            @{
+                Html.RenderPartial("PartialViewsMed/Menu");
+            }
+        </div>
+        <div class="col s12 l9">
+            @{
+                Html.RenderPartial("PartialViewsMed/MedicalCenterList");
+            }
+        </div>
+    </div>
+}
+else
+{
+    <div class="container">
+        @{
+            Html.RenderPartial("PartialViewsMed/MedicalCenterList");
+        }
+    </div>
+}
