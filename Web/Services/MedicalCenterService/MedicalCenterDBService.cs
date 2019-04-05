@@ -3,6 +3,7 @@ using System.Linq;
 using BancoDeSangre.Models;
 using BancoDeSangre.Services.DB;
 
+
 namespace BancoDeSangre.Services.ManagerService
 {
     public class MedicalCenterDBService : DBService, IMedicalCenterService

@@ -292,6 +292,7 @@
     <Compile Include="ViewModels\CampaignViewModels\CampaignListViewModel.cs" />
     <Compile Include="ViewModels\ManagerViewModels\ManagerListViewModel.cs" />
     <Compile Include="ViewModels\DonorViewModels\DonorListViewModel.cs" />
+    <Compile Include="ViewModels\MedicalCenterViewModels\MedicalCenterListViewModels.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
@@ -327,6 +328,8 @@
     <Content Include="Public\JavaScript\views\manager\create.js" />
     <Content Include="Public\JavaScript\views\manager\sign-in.js" />
     <Content Include="Public\JavaScript\views\home\home.js" />
+    <Content Include="Public\JavaScript\views\medicalcenter\list.js" />
+    <Content Include="Public\JavaScript\views\medicalcenter\register.js" />
     <Content Include="Views\Manager\PartialViews\ManagerList.cshtml" />
     <Content Include="Views\Manager\List.cshtml" />
     <Content Include="Views\Donation\Create.cshtml" />
@@ -342,6 +345,10 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\AppShell.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\MedicalCenter\PartialViewsMed\MenuOptions.cshtml" />
+    <Content Include="Views\MedicalCenter\PartialViewsMed\MedicalCenterList.cshtml" />
+    <Content Include="Views\MedicalCenter\Register.cshtml" />
+    <Content Include="Views\MedicalCenter\List.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
