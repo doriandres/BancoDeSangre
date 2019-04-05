@@ -274,6 +274,8 @@
     <Compile Include="Models\MedicalCenter.cs" />
     <Compile Include="Models\Manager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\BloodRequestService\BloodRequestDBService.cs" />
+    <Compile Include="Services\BloodRequestService\IBloodRequestService.cs" />
     <Compile Include="Services\CampaignService\CampaignDBService.cs" />
     <Compile Include="Services\CampaignService\ICampaignService.cs" />
     <Compile Include="Services\DB\DataBaseService.cs" />

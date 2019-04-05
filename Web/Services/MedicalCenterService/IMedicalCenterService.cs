@@ -1,4 +1,5 @@
 ﻿using BancoDeSangre.Models;
+using System.Collections.Generic;
 
 namespace BancoDeSangre.Services.ManagerService
 {
@@ -17,6 +18,19 @@ namespace BancoDeSangre.Services.ManagerService
         /// <param name="id">ID of the desired Medical Center</param>
         /// <returns>Found Medical Center search result</returns>
         MedicalCenter FindByID(int id);
+
+        /// <summary>
+        /// Shows all the Medical Centers as a list
+        /// </summary>
+        /// <returns>List of all Medical Centers</returns>
+        List<MedicalCenter> FindAll();
+
+        /// <summary>
+        /// Requests a tyoe of blood
+        /// </summary>
+        /// <param name="amount"></param>
+        /// <returns></returns>
+        bool RequestBlood(BloodRequest request);
 
     }
 }
