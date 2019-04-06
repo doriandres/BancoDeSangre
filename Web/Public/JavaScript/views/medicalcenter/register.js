@@ -7,7 +7,7 @@ import timepicker from "./../../components/timepicker.js";
     datepicker();
     timepicker();
 
-    var donorForm = document.querySelector("form");
+    var medicalcenterForm = document.querySelector("form");
     var request = null;
     var submitBtn = document.getElementById("submit-btn");
 
@@ -16,11 +16,11 @@ import timepicker from "./../../components/timepicker.js";
         submitBtn.classList.add("disabled");
         if (request && request.readyState < 4) return;
         request = ajax({
-            data: donorForm,
+            data: medicalcenterForm,
             onResponse: response => {
                 if (response.saved) {
-                    donorForm.reset();
-                    window.location = "/donor/list";
+                    medicalcenterForm.reset();
+                    window.location = "/medicalcenter/list";
                 } else {
                     modal("Ocurrio un error", !response.cause ? "No se puede procesar su solicitud en este momento" : response.cause);
                     submitBtn.classList.remove("disabled");
@@ -29,8 +29,8 @@ import timepicker from "./../../components/timepicker.js";
         });
     }
     if (donorForm) {
-        donorForm.addEventListener("submit", signIn);
+        medicalcenterForm.addEventListener("submit", signIn);
     } else {
-        console.warn("Could not find donor form");
+        console.warn("Could not find medical center form");
     }
 })();

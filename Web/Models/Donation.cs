@@ -15,3 +15,4 @@ namespace BancoDeSangre.Models
         public Donor Donor { get; set; }        
     }
 }
+

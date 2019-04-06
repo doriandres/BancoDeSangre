@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 
 namespace BancoDeSangre.Services.DB
-{  
+{
     public class DataBaseService : DbContext, IDataBaseService
     {
         public DbSet<Manager> Managers { get; set; }

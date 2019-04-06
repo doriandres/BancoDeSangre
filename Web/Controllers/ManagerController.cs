@@ -2,6 +2,7 @@
 using BancoDeSangre.App_Data;
 using BancoDeSangre.Models;
 using BancoDeSangre.Services.ManagerService;
+using BancoDeSangre.ViewModels.ManagerViewModels;
 
 namespace BancoDeSangre.Controllers
 {
@@ -143,6 +144,19 @@ namespace BancoDeSangre.Controllers
             var result = managerService.CreateManager(manager);
 
             return Json(new { saved = result });            
+        }
+
+        /// <summary>
+        /// Shows the complete list of managers.
+        /// </summary>
+        /// <returns>View Model for managers.</returns>
+        [HttpGet]
+        public ActionResult List()
+        {
+            var managers = managerService.FindAll();
+            var managerListViewModel = new ManagerListViewModel();
+            managerListViewModel.Managers = managers;
+            return View(managerListViewModel);
         }
     }
 }

@@ -1,25 +1,58 @@
-﻿@section JavaScript{
+﻿<div class="row">
+    <div class="col s12 l3">
+        @{
+            Html.RenderPartial("PartialViews/MenuOptions");
+        }
+    </div>
+    <div class="col s12 l9">
+        <div class="container">
+            <div class="row">
+                <div class="card">
+                    <div class="card-content container">
+                        <span class="card-title center">Crear Administrador</span>
+                        <div class="row">
+                            <form id="create-manager-form" method="POST" action="/manager/savemanager">
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <textarea id="email-field" name="email" class="materialize-textarea" required></textarea>
+                                        <label for="email-field">Email</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <textarea id="name-field" name="name" class="materialize-textarea" required></textarea>
+                                        <label for="name-field">Nombre</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <textarea id="lastname-field" name="lastname" class="materialize-textarea" required></textarea>
+                                        <label for="lastname-field">Apellido</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="password-field" name="password" type="password" class="materialize-textarea" required>
+                                        <label for="password-field">Contraseña</label>
+                                    </div>
+                                </div>
+                                <div class="center-align">
+                                    <div class="input-field col s12 white-text">
+                                        <input id="submit" type="submit" hidden />
+                                        <a id="submit-btn" class="waves-effect waves-light btn teal accent-3" href="javascript:void(0)">
+                                            <label class="white-text" for="submit">Crear Administrador</label>
+                                        </a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section JavaScript{
     <script type="module" src="/public/javascript/views/manager/create.js"></script>
 }
-<h2>Crear Administrador</h2>
-<form id="create-manager-form" method="POST" action="/manager/savemanager">
-    <div class="form-field">
-        <label for="email-field">Email</label>
-        <input id="email-field" name="email" type="email" placeholder="@("nombre@email.com")" required />
-    </div>
-    <div class="form-field">
-        <label for="name-field">Nombre</label>
-        <input id="name-field" name="name" type="text" required />
-    </div>
-    <div class="form-field">
-        <label for="lastname-field">Apellido</label>
-        <input id="lastname-field" name="lastname" type="text" required />
-    </div>
-    <div class="form-field">
-        <label for="password-field">Contraseña</label>
-        <input id="password-field" name="password" type="password" required />
-    </div>
-    <div class="form-field">
-        <input type="submit" value="Crear administrador" />
-    </div>
-</form>

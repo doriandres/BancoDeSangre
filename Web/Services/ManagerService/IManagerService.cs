@@ -1,4 +1,5 @@
 ﻿using BancoDeSangre.Models;
+using System.Collections.Generic;
 
 namespace BancoDeSangre.Services.ManagerService
 {
@@ -10,6 +11,13 @@ namespace BancoDeSangre.Services.ManagerService
         /// <param name="manager">Manager to create</param>
         /// <returns>Task which result is the Manager created</returns>
         bool CreateManager(Manager manager);
+        
+        /// <summary>
+        /// Shows all Managers
+        /// </summary>
+        /// <returns>List of Managers</returns>
+        List<Manager> FindAll();
+
 
         /// <summary>
         /// Finds a Manager by its ID

@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using BancoDeSangre.Models;
 using BancoDeSangre.Services.DB;
 
@@ -15,6 +16,11 @@ namespace BancoDeSangre.Services.ManagerService
             dataBase.Managers.Add(manager);
             var countChanges = dataBase.SaveChanges();
             return countChanges > 0;
+        }
+
+        public List<Manager> FindAll()
+        {
+            return dataBase.Managers.ToList();
         }
 
         public Manager FindManagerByEmail(string email)
