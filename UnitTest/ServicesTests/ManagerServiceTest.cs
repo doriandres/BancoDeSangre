@@ -1,6 +1,7 @@
 ﻿using BancoDeSangre.Models;
 using BancoDeSangre.Services.CampaignService;
 using BancoDeSangre.Services.DB;
+using BancoDeSangre.Services.DonationService;
 using BancoDeSangre.Services.DonorService;
 using BancoDeSangre.Services.ManagerService;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -10,7 +11,9 @@ namespace UnitTest.ServicesTests
     [TestClass]
     public class ManagerServiceTest
     {
-        [TestMethod]
+		private const bool v = true;
+
+		[TestMethod]
         public void Create_Manager_Test()
         {
             // Arrange
@@ -97,29 +100,24 @@ namespace UnitTest.ServicesTests
 			}
 		}
 
-		//[TestMethod]
-		//public void Create_Medical_Center_id()
-		//{
-		//	//Arrange
-		//	using (var dbService = new DataBaseService())
-		//	{
-		//		IMedicalCenterService medicalCenter = new MedicalCenterDBService(dbService);
-		//		var medicalCenterid = new MedicalCenter
-		//		{
-		//			Email = "carit@info.com",
-		//			Name = "carit",
-		//			PhoneNumber = 88888,
-		//			Place = "Sn Jose"
+		[TestMethod]
+		public void Create_Donation_Center()
+		{
+
+			//Arrange
+			var donationDBService = new DonationDBService(); 
 
 
-		//		};
-		//		// Act
-		//		var resultado = medicalCenter.CreateMedicalCenter(medicalCenterid);
-		//	}
-		//}
+			//Act
+			bool result = donationDBService.CreateDonation(new Donation { Donor = true });
+
+			// Assert 
+
+			Assert.IsTrue(result);
+		}
 
 
-		//        // Assert
+	
 		//        Assert.IsTrue(resultado, "id");
 		//    }
 		//}
