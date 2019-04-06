@@ -65,102 +65,111 @@ namespace UnitTest.ServicesTests
             }
         }
 
-        //[TestMethod]
-        //public void Create_Medical_Center_Name()
-        //{
+		[TestMethod]
+		public void Create_Medical_Center_Name()
+		{
 
-        //    //Arrange 
-        //    using (var dbService = new DataBaseService())
-        //    {
-        //        IMedicalCenterService medicalCenterService = new MedicalCenterDBService(dbService);
-
-                
-        //        var medicalCenter = new MedicalCenter
-        //        {
-        //            Email = "carit@info.com",
-        //            Name = "carit",
-        //            PhoneNumber = 88888,
-        //            Place = "Sn Jose"
-
-        //        };
-
-        //        // Act
-        //        var resultado = medicalCenterService.CreateMedicalCenter(medicalCenter);
-
-        //        // Assert
-        //        Assert.IsTrue(resultado, "MedicalCenter");
-        //    }
-        //}
-
-        //[TestMethod]
-        //public void Create_Medical_Center_id()
-        //{
-        //    //Arrange
-        //    using (var dbService = new DataBaseService())
-        //    {
-        //        IMedicalCenterService medicalCenter = new MedicalCenterDBService(dbService);
-        //        var medicalCenterid = new MedicalCenter
-        //        {
-        //            Email = "carit@info.com",
-        //            Name = "carit",
-        //            PhoneNumber = 88888,
-        //            Place = "Sn Jose"
+			//Arrange 
+			using (var dbService = new DataBaseService())
+			{
+				IMedicalCenterService medicalCenterService = new MedicalCenterDBService(dbService);
 
 
-        //        };
-        //        // Act
-        //        var resultado = medicalCenter.CreateMedicalCenter(medicalCenterid);
+				var medicalCenter = new MedicalCenter
+				{
+					Email = "carit@info.com",
+					Name = "carit",
+					PhoneNumber = 88888,
+					Place = "San Jose"
+
+				};
+
+				// Act
+
+				var resultado = medicalCenter.Email;
+				//var resultado = medicalCenter.Id;
 
 
-        //        // Assert
-        //        Assert.IsTrue(resultado, "id");
-        //    }
-        //}
-        //[TestMethod]
-        //public void Valid_Donor()
-        //{
-        //    //Arrange
-        //    using (var dbService = new DataBaseService())
-        //    {
-        //        IDonorService countChanges = new DonorDBService(dbService);
-        //        var dataBase = new Donor
-        //        {
-        //            Name = "Carit",
-        //            Id = 88,
-        //        };
+				// Assert
+				Assert.IsNotNull(value: resultado);
 
-        //        // Act
+				
+			}
+		}
 
-        //        var resultado = countChanges.IsValidDonor(false);
+		//[TestMethod]
+		//public void Create_Medical_Center_id()
+		//{
+		//	//Arrange
+		//	using (var dbService = new DataBaseService())
+		//	{
+		//		IMedicalCenterService medicalCenter = new MedicalCenterDBService(dbService);
+		//		var medicalCenterid = new MedicalCenter
+		//		{
+		//			Email = "carit@info.com",
+		//			Name = "carit",
+		//			PhoneNumber = 88888,
+		//			Place = "Sn Jose"
 
 
-        //        // Assert
-        //        Assert.IsTrue(resultado, "Debe ingresar un nombre");
-        //    }
-        //}
+		//		};
+		//		// Act
+		//		var resultado = medicalCenter.CreateMedicalCenter(medicalCenterid);
+		//	}
+		//}
 
-        //[TestMethod]
-        //public void Create_Campaign_Test()
-        //{
-        //    //Arrange
-        //    using (var dbService = new DataBaseService())
-        //    {
-        //        ICampaignService countChanges = new CampaignDBService(dbService);
-        //        var testManager = new Manager();//Se crea un manager de prueba para la campaña
-        //        var dataBase = new Campaign();
-        //        dataBase.Manager = testManager;//Se agrega el manager a la campaña para evitar error de FK en la DB
-              
 
-        //        // Act
+		//        // Assert
+		//        Assert.IsTrue(resultado, "id");
+		//    }
+		//}
 
-        //       var resultado = countChanges.CreateCampaign(dataBase);
 
-        //        // Assert
-        //        Assert.IsTrue(resultado);
-        //    }
-        //}
+		[TestMethod]
+		public void Valid_Donor()
+		{
+			//Arrange
+			using (var dbService = new DataBaseService())
+			{
+				IDonorService countChanges = new DonorDBService(dbService);
+				var dataBase = new Donor
+				{
+					Name = "Carit",
+					Id = 88,
+				};
 
-    }
+				// Act
+
+				var resultado = countChanges.IsValidDonor(false);
+
+
+				// Assert
+				Assert.IsTrue(resultado, "Debe ingresar un nombre");
+			}
+		}
+
+		//[TestMethod]
+		//public void Create_Campaign_Test()
+		//{
+		//    //Arrange
+		//    using (var dbService = new DataBaseService()) 
+		//    {
+		//        ICampaignService countChanges = new CampaignDBService(dbService);
+		//        var testManager = new Manager();//Se crea un manager de prueba para la campaña
+		//        var dataBase = new Campaign();
+		//        dataBase.Manager = testManager;//Se agrega el manager a la campaña para evitar error de FK en la DB
+
+
+		//        // Act
+
+		//       var resultado = countChanges.CreateCampaign(dataBase);
+
+		//        // Assert
+		//        Assert.IsTrue(resultado);
+		//    }
+		//}
+
+	}
 
     
 }
