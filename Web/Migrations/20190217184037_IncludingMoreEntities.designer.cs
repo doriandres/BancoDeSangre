@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BancoDeSangre.Migrations
 {
-    [DbContext(typeof(DataBaseService))]
+    [DbContext(typeof(IDataBaseService))]
     [Migration("20190217184037_IncludingMoreEntities")]
     partial class IncludingMoreEntities
     {

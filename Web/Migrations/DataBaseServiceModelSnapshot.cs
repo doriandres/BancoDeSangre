@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BancoDeSangre.Migrations
 {
-    [DbContext(typeof(DataBaseService))]
+    [DbContext(typeof(IDataBaseService))]
     partial class DataBaseServiceModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

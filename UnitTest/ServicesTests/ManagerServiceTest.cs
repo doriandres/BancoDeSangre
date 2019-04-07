@@ -11,7 +11,7 @@ namespace UnitTest.ServicesTests
     [TestClass]
     public class ManagerServiceTest
     {
-		private const bool v = true;
+		
 
 		[TestMethod]
         public void Create_Manager_Test()
@@ -105,22 +105,17 @@ namespace UnitTest.ServicesTests
 		{
 
 			//Arrange
-			var donationDBService = new DonationDBService(); 
+			var donationDBService = new DonationDBService();
+			{
 
+				//Act
+				var result = donationDBService.CreateDonation(new Donation { DonorId = true });
 
-			//Act
-			bool result = donationDBService.CreateDonation(new Donation { Donor = true });
+				// Assert 
 
-			// Assert 
-
-			Assert.IsTrue(result);
+				Assert.IsTrue(result);
+			}
 		}
-
-
-	
-		//        Assert.IsTrue(resultado, "id");
-		//    }
-		//}
 
 
 		[TestMethod]
@@ -145,29 +140,46 @@ namespace UnitTest.ServicesTests
 				Assert.IsTrue(resultado, "Debe ingresar un nombre");
 			}
 		}
+		[TestMethod]
+		public void Create_Manager_Test()
+		{
+			//Arrange
+		using (var dbService = new ManagerDBService());
+			{
+				IManagerService manager = new ManagerDBService(dbService);
+				var managerservice = new Manager();
 
-		//[TestMethod]
-		//public void Create_Campaign_Test()
-		//{
-		//    //Arrange
-		//    using (var dbService = new DataBaseService()) 
-		//    {
-		//        ICampaignService countChanges = new CampaignDBService(dbService);
-		//        var testManager = new Manager();//Se crea un manager de prueba para la campaña
-		//        var dataBase = new Campaign();
-		//        dataBase.Manager = testManager;//Se agrega el manager a la campaña para evitar error de FK en la DB
+				//Act
+				var resultado = new IManagerService(new Campaign { Id = true });
 
 
-		//        // Act
+				// Assert
+				Assert.IsTrue(resultado);
+			}
+		}
 
-		//       var resultado = countChanges.CreateCampaign(dataBase);
+		[TestMethod]
+		public void Create_Campaign_Test()
+		{
+			//Arrange
+			using (var dbService = new DataBaseService())
+			{
+				ICampaignService countChanges = new CampaignDBService(dbService);
+				var testManager = new Manager();//Se crea un manager de prueba para la campaña
+				var dataBase = new Campaign();
+				dataBase.Manager = testManager;//Se agrega el manager a la campaña para evitar error de FK en la DB
 
-		//        // Assert
-		//        Assert.IsTrue(resultado);
-		//    }
-		//}
+
+				// Act
+
+				var resultado = countChanges.CreateCampaign(dataBase);
+
+				// Assert
+				Assert.IsTrue(resultado);
+			}
+		}
 
 	}
 
-    
+
 }
