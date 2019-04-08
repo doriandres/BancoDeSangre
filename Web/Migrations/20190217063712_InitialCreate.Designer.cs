@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BancoDeSangre.Migrations
 {
-    [DbContext(typeof(DataBaseService))]
+    [DbContext(typeof(IDataBaseService))]
     [Migration("20190217063712_InitialCreate")]
     partial class InitialCreate
     {

@@ -265,6 +265,10 @@
     <Compile Include="Migrations\20190217184326_IncludingEntities.designer.cs">
       <DependentUpon>20190217184326_IncludingEntities.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20190403035205_InitialLocalCreate.cs" />
+    <Compile Include="Migrations\20190403035205_InitialLocalCreate.designer.cs">
+      <DependentUpon>20190403035205_InitialLocalCreate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\DataBaseServiceModelSnapshot.cs" />
     <Compile Include="Models\BloodRequest.cs" />
     <Compile Include="Models\Campaign.cs" />

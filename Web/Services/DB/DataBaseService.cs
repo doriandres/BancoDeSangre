@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 
 namespace BancoDeSangre.Services.DB
-{  
+{
     public class DataBaseService : DbContext, IDataBaseService
     {
         public DbSet<Manager> Managers { get; set; }
@@ -15,6 +15,7 @@ namespace BancoDeSangre.Services.DB
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Data Source=localhost;Initial Catalog=Banco_de_sangre;Trusted_Connection=True;");
+            //optionsBuilder.UseSqlServer(@"Server=tcp:bancosangre.database.windows.net,1433;Initial Catalog=Banco_de_sangre;Persist Security Info=False;User ID=bancosangre;Password=Windows10;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
         }
     }
 }
