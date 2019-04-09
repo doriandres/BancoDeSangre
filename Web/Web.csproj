@@ -248,6 +248,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\BloodRequestController.cs" />
     <Compile Include="Controllers\CampaignController.cs" />
+    <Compile Include="Controllers\DataBaseServiceController.cs" />
     <Compile Include="Controllers\DonationController.cs" />
     <Compile Include="Controllers\DonationsController.cs" />
     <Compile Include="Controllers\DonorController.cs" />
@@ -379,6 +380,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\BloodRequest\" />
+    <Folder Include="Views\DataBaseService\" />
     <Folder Include="Views\Default\" />
   </ItemGroup>
   <ItemGroup>
