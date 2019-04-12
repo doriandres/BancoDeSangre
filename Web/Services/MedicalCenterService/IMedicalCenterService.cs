@@ -1,7 +1,7 @@
-﻿using BancoDeSangre.Models;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using BancoDeSangre.Models;
 
-namespace BancoDeSangre.Services.ManagerService
+namespace BancoDeSangre.Services.MedicalCenterService
 {
     public interface IMedicalCenterService
     {

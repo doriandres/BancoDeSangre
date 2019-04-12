@@ -3,7 +3,7 @@ using BancoDeSangre.Models;
 
 namespace BancoDeSangre.ViewModels.MedicalCenterViewModels
 {
-    public class MedicalCenterListViewModels
+    public class MedicalCenterListViewModel
     {
         public List<MedicalCenter> MedicalCenters { get; set; }
     }

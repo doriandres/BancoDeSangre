@@ -4,6 +4,7 @@ using BancoDeSangre.Services.DB;
 using BancoDeSangre.Services.DonationService;
 using BancoDeSangre.Services.DonorService;
 using BancoDeSangre.Services.ManagerService;
+using BancoDeSangre.Services.MedicalCenterService;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTest.ServicesTests

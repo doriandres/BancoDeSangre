@@ -11,45 +11,24 @@
             {
                 break;
             }
-            var manager = Model.Managers[index];
-            for (var e = 0; e < 3; e++)
-            {
-
-                var indexCampaigns = i + e;
-                try
-                {
-                    if (indexCampaigns >= manager.Campaigns.Count)
-                    {
-                        break;
-                    }
-                    managerCampaignTitles = managerCampaignTitles + " │ " + manager.Campaigns[indexCampaigns].Title;
-                }
-                catch(Exception ex)
-                {
-                    managerCampaignTitles = "Sin campañas.";
-                }
-            }
+            var manager = Model.Managers[index];   
 
             <div class="col s12 l4">
                 <div class="card">
                     <div class="card-content">
                         <p>
-                            <i class="tiny material-icons ">perm_identity</i> <b>Admin ID: </b>@manager.Id
+                            <i class="tiny material-icons">email</i> <b>Email: </b>@manager.Email
                         </p><br>
                         <p>
-                            <i class="tiny material-icons ">email</i> <b>Email: </b>@manager.Email
+                            <i class="tiny material-icons">person</i> <b>Nombre: </b>@manager.Name
                         </p><br>
                         <p>
-                            <i class="tiny material-icons ">keyboard_arrow_right</i> <b>Nombre: </b>@manager.Name
-                        </p><br>
-                        <p>
-                            <i class="tiny material-icons ">keyboard_arrow_right</i> <b>Apellido: </b>@manager.LastName
+                            <i class="tiny material-icons">people</i> <b>Apellido: </b>@manager.LastName
                         </p>
                     </div>
 
                 </div>
             </div>
-            managerCampaignTitles = "";
         }
     </div>
 }

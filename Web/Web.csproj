@@ -315,7 +315,7 @@
     <Compile Include="ViewModels\DonationViewModels\DonationsHistoryViewModel.cs" />
     <Compile Include="ViewModels\ManagerViewModels\ManagerListViewModel.cs" />
     <Compile Include="ViewModels\DonorViewModels\DonorListViewModel.cs" />
-    <Compile Include="ViewModels\MedicalCenterViewModels\MedicalCenterListViewModels.cs" />
+    <Compile Include="ViewModels\MedicalCenterViewModels\MedicalCenterListViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
