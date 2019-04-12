@@ -1,0 +1,100 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="card">
+            <div class="card-content container">
+                <span class="card-title center">Agregar Donación</span>
+                <div class="row">
+                    <form class="col s12" id="signin-form" method="POST" action="/donation/save">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="date-field" name="date" type="date" class="datepicker" required />
+                                <label for="date-field">Fecha</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="time-field" name="time" type="time" class="timepicker" required />
+                                <label for="time-field">Hora</label>
+                            </div>
+                        </div>
+                        <div class="input-field col s12">
+                            <label for="bloodtype-field">Seleccione tipo de sangre</label>
+                            <br /><br />
+                            <p>
+                                <label>
+                                    <input class="with-gap" id="AP" name="bloodtype" type="radio" value="AP" required checked />
+                                    <span>A+</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input class="with-gap" id="BP" name="bloodtype" type="radio" value="BP" required checked />
+                                    <span>B+</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input class="with-gap" id="OP" name="bloodtype" type="radio" value="OP" required checked />
+                                    <span>O+</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input class="with-gap" id="ABP" name="bloodtype" type="radio" value="ABP" required checked />
+                                    <span>AB+</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input class="with-gap" id="AN" name="bloodtype" type="radio" value="AN" required checked />
+                                    <span>A-</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input class="with-gap" id="BN" name="bloodtype" type="radio" value="BN" required checked />
+                                    <span>B-</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input class="with-gap" id="ON" name="bloodtype" type="radio" value="ON" required checked />
+                                    <span>O-</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input class="with-gap" id="ABN" name="bloodtype" type="radio" value="ABN" required checked />
+                                    <span>AB-</span>
+                                </label>
+                            </p>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="donorid-field" name="donorid" type="number" placeholder="88888888" required />
+                                    <label for="donorid-field">Identifiación del donador</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="amount-field" name="amount" type="number" placeholder="9999" required />
+                                    <label for="amount-field">Cantidad de sangre donada</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="measurmentunit-field" name="measurmentunit" type="text" required />
+                                    <label for="measurmentunit-field">Unidad de medida</label>
+                                </div>
+                            </div>
+                            <div class="input-field col s12 white-text">
+                                <input id="submit" type="submit" hidden />
+                                <a id="submit-btn" class="waves-effect waves-light btn teal accent-3" href="javascript:void(0)">
+                                    <label class="white-text" for="submit">Registrar Donación</label>
+                                </a>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

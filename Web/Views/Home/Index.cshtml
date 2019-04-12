@@ -1,4 +1,5 @@
-﻿<div class="container section">
+﻿@using BancoDeSangre.App_Data
+<div class="container section">
     <div class="slider">
         <ul class="slides">
             <li>
@@ -70,8 +71,8 @@
     @section JavaScript
     {
         <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                M.AutoInit();
+            document.addEventListener('DOMContentLoaded', function () {                
+                @Html.Raw(!Session.IsSignedIn() ? "M.AutoInit();" : string.Empty);
                 M.Slider.init(document.querySelectorAll('.slider'));
             });
         </script>

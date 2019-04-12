@@ -1,0 +1,23 @@
+﻿@model BancoDeSangre.ViewModels.DonationViewModels.DonationsHistoryViewModel
+
+<table class="striped centered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Tipo de Sangre</th>
+            <th>Cantidad</th>
+            <th>Fecha</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var donation in Model.Donations)
+        {
+            <tr>
+                <td>@donation.Id</td>
+                <td>@donation.BloodType.ToString().Replace("P", " +").Replace("N", " -")</td>
+                <td>@donation.Amount @donation.Unit</td>
+                <td>@donation.Date.ToString("dd/MM/yyyy")</td>
+            </tr>
+        }
+    </tbody>
+</table>

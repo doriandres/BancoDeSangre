@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using BancoDeSangre.Models;
 using BancoDeSangre.Services.DB;
 using System.Linq;
@@ -48,6 +49,13 @@ namespace BancoDeSangre.Services.DonationService
             }
 
             return valid;
+        }
+
+        public List<Donation> FindAll()
+        {
+            var results = dataBase.Donations.ToList();
+            results.Reverse();
+            return results;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using BancoDeSangre.Models;
+﻿using System.Collections.Generic;
+using BancoDeSangre.Models;
 
 namespace BancoDeSangre.Services.DonationService
 {
@@ -25,5 +26,8 @@ namespace BancoDeSangre.Services.DonationService
         /// <param name="cause">Invalid cause</param>
         /// <returns>Result</returns>
         bool IsValidDonation(Donation donation, out string cause);
+
+        List<Donation> FindAll();
+
     }
 }

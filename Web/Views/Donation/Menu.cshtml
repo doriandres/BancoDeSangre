@@ -1,9 +1,8 @@
 ﻿<div class="row">
     <div class="col s12 l3">
-        <div class="collection">
-            <a href="/donation/register" class="collection-item">Registrar Donación</a>
-            <a href="/donation/history" class="collection-item">Historial de Donaciones</a>
-        </div>
+        @{
+            Html.RenderPartial("PartialViews/MenuOptions");
+        }
     </div>
     <div class="col s12 l9 valign-wrapper" style="height: 400px">
         <h5 class="center-align" style="width: 100%;">Seleccione una opción del menú</h5>

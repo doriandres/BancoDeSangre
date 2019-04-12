@@ -1,0 +1,34 @@
+﻿@model BancoDeSangre.ViewModels.DonorViewModels.DonorListViewModel
+<table class="striped centered">
+    <thead>
+    <tr>
+        <th>Correo Electrónico</th>
+        <th>Télefono</th>
+        <th>Nombre</th>
+        <th>Primer Apellido</th>
+        <th>Segundo Apellido</th>
+        <th>Nacimiento</th>
+        <th>Género</th>
+        <th>Estatura</th>
+        <th>Peso</th>
+        <th>Tipo de Sangre</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var donor in Model.Donors)
+    {
+        <tr>
+            <td>@donor.Email</td>
+            <td>@donor.PhoneNumber</td>
+            <td>@donor.Name</td>
+            <td>@donor.LastName</td>
+            <td>@donor.SecondLastName</td>
+            <td>@donor.BornDate.ToString("dd/MM/yyyy")</td>
+            <td>@donor.Gender</td>
+            <td>@donor.Height m</td>
+            <td>@donor.Weight kg</td>
+            <td>@donor.BloodType.ToString().Replace("P", " +").Replace("N"," -")</td>
+        </tr>
+    }
+    </tbody>
+</table>

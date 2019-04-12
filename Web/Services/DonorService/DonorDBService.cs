@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using BancoDeSangre.Models;
 using BancoDeSangre.Services.DB;
@@ -83,24 +84,11 @@ namespace BancoDeSangre.Services.DonorService
             return valid;
         }
 
-        bool IDonorService.CreateDonor(Donor donor)
+        public List<Donor> FindAll()
         {
-            throw new NotImplementedException();
-        }
-
-        Donor IDonorService.FindByID(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        bool IDonorService.IsValidDonor(Donor donor, out string cause)
-        {
-            throw new NotImplementedException();
-        }
-
-        bool IDonorService.IsValidDonor(object cause)
-        {
-            return true;
+            var results = dataBase.Donors.ToList();
+            results.Reverse();        
+            return results;
         }
     }
 }

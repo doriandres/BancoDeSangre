@@ -1,28 +1,14 @@
-﻿@using BancoDeSangre.App_Data
-@model BancoDeSangre.ViewModels.DonorViewModels.DonorListViewModel
+﻿@model BancoDeSangre.ViewModels.DonorViewModels.DonorListViewModel
 
-@if (Session.IsSignedIn())
-{
-    <div class="row">
-        <div class="col s12 l3">
-            @{
-                Html.RenderPartial("PartilaIIViews/MenuOptions");
-            }
-        </div>
-        <div class="col s12 l9">
-            @{
-                Html.RenderPartial("PartilaIlViews/DonorList");
-            }
-        </div>
-    </div>
-}
-else
-{
-    <div class="container">
+<div class="row">
+    <div class="col s12 l3">
         @{
-            Html.RenderPartial("PartilaIlViews/DonorList");
+            Html.RenderPartial("PartilaIIViews/MenuOptions");
         }
     </div>
-}
-
-
+    <div class="col s12 l9 valign-wrapper">
+        @{
+            Html.RenderPartial("PartilaIIViews/DonorTable", Model);
+        }
+    </div>
+</div>
