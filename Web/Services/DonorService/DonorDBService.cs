@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using BancoDeSangre.Models;
 using BancoDeSangre.Services.DB;
+using BancoDeSangre.Services.ManagerService;
 
 namespace BancoDeSangre.Services.DonorService
 {
     public class DonorDBService : DBService, IDonorService
     {
-        public DonorDBService(IDataBaseService dbservice) : base(dbservice) { }
+        private IManagerService managerService;
+        public DonorDBService(IDataBaseService dbservice, IManagerService managerService) : base(dbservice)
+        {
+            this.managerService = managerService;
+        }
 
         public bool CreateDonor(Donor donor)
         {

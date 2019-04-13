@@ -4,12 +4,17 @@ using System.Linq;
 using System.Web;
 using BancoDeSangre.Models;
 using BancoDeSangre.Services.DB;
+using BancoDeSangre.Services.ManagerService;
 
 namespace BancoDeSangre.Services.BloodRequestService
 {
     public class BloodRequestDBService : DBService, IBloodRequestService
     {
-        public BloodRequestDBService(IDataBaseService dataBase) : base(dataBase){}
+        private IManagerService managerService;
+        public BloodRequestDBService(IDataBaseService dataBase, IManagerService managerService) : base(dataBase)
+        {
+            this.managerService = managerService;
+        }
 
         public bool CreateBloodRequest(BloodRequest bloodRequest)
         {
@@ -21,6 +26,38 @@ namespace BancoDeSangre.Services.BloodRequestService
         public List<BloodRequest> FindAll()
         {
             return dataBase.BloodRequests.ToList();
+        }
+
+        public bool IsValid( BloodRequest bloodRequest, out string cause)
+        {
+            var valid = true;
+            cause = null;
+
+            if (bloodRequest.Amount == 0)
+            {
+                cause = "No puede ingresar donaciones vacias";
+                valid = false;
+            }
+
+            if (bloodRequest.MedicalCenterId == 0)
+            {
+                cause = "Debe ingresar un n\u00famero de identifiacion de centro medico v\u00E1lido";
+                valid = false;
+            }
+
+            if (bloodRequest.MedicalCenter == null)
+            {
+                cause = "Debe ingresar un centro medico v\u00E1lido";
+                valid = false;
+            }
+
+            if (bloodRequest.Id == 0)
+            {
+                cause = "Debe ingresar una ID v\u00E1lida";
+                valid = false;
+            }
+
+            return valid;
         }
     }
 }
