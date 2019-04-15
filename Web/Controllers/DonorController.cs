@@ -2,6 +2,7 @@
 using BancoDeSangre.App_Data;
 using BancoDeSangre.Models;
 using BancoDeSangre.Services.DonorService;
+using BancoDeSangre.ViewModels.DonorViewModels;
 
 namespace BancoDeSangre.Controllers
 {
@@ -25,6 +26,7 @@ namespace BancoDeSangre.Controllers
             // If there's no signed in manager redirect to home page
             return RedirectToAction("Index", "Home");
         }
+
         /// <summary>
         /// Shows the create a donor page
         /// </summary>
@@ -59,6 +61,21 @@ namespace BancoDeSangre.Controllers
 
             var saved = donorService.CreateDonor(donor);
             return Json(new { saved });
+        }
+
+        [HttpGet]
+        public ActionResult List()
+        {
+            if (!Session.IsSignedIn())
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            
+            var model = new DonorListViewModel
+            {
+                Donors = donorService.FindAll()
+            };
+            return View(model);
         }
     }
 }

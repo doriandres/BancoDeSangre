@@ -4,6 +4,7 @@ using BancoDeSangre.Services.DB;
 using BancoDeSangre.Services.DonationService;
 using BancoDeSangre.Services.DonorService;
 using BancoDeSangre.Services.ManagerService;
+using BancoDeSangre.Services.MedicalCenterService;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTest.ServicesTests
@@ -11,9 +12,9 @@ namespace UnitTest.ServicesTests
     [TestClass]
     public class ManagerServiceTest
     {
-		
 
-		[TestMethod]
+
+        [TestMethod]
         public void Create_Manager_Test()
         {
             // Arrange
@@ -68,118 +69,121 @@ namespace UnitTest.ServicesTests
             }
         }
 
-		[TestMethod]
-		public void Create_Medical_Center_Name()
-		{
+        [TestMethod]
+        public void Create_Medical_Center_Name()
+        {
 
-			//Arrange 
-			using (var dbService = new DataBaseService())
-			{
-				IMedicalCenterService medicalCenterService = new MedicalCenterDBService(dbService);
-
-
-				var medicalCenter = new MedicalCenter
-				{
-					Email = "carit@info.com",
-					Name = "carit",
-					PhoneNumber = 88888,
-					Place = "San Jose"
-
-				};
-
-				// Act
-
-				var resultado = medicalCenter.Email;
-				//var resultado = medicalCenter.Id;
+            //Arrange 
+            using (var dbService = new DataBaseService())
+            {
+                IMedicalCenterService medicalCenterService = new MedicalCenterDBService(dbService);
 
 
-				// Assert
-				Assert.IsNotNull(value: resultado);
+                var medicalCenter = new MedicalCenter
+                {
+                    Email = "carit@info.com",
+                    Name = "carit",
+                    PhoneNumber = 88888,
+                    Place = "San Jose"
 
-				
-			}
-		}
+                };
 
-		[TestMethod]
-		public void Create_Donation_Center()
-		{
+                // Act
 
-			//Arrange
-			var donationDBService = new DonationDBService();
-			{
-
-				//Act
-				var result = donationDBService.CreateDonation(new Donation { DonorId = true });
-
-				// Assert 
-
-				Assert.IsTrue(result);
-			}
-		}
+                var resultado = medicalCenter.Email;
+                //var resultado = medicalCenter.Id;
 
 
-		[TestMethod]
-		public void Valid_Donor()
-		{
-			//Arrange
-			using (var dbService = new DataBaseService())
-			{
-				IDonorService countChanges = new DonorDBService(dbService);
-				var dataBase = new Donor
-				{
-					Name = "Carit",
-					Id = 88,
-				};
-
-				// Act
-
-				var resultado = countChanges.IsValidDonor(false);
+                // Assert
+                Assert.IsNotNull(value: resultado);
 
 
-				// Assert
-				Assert.IsTrue(resultado, "Debe ingresar un nombre");
-			}
-		}
-		[TestMethod]
-		public void Create_Manager_Test()
-		{
-			//Arrange
-		using (var dbService = new ManagerDBService());
-			{
-				IManagerService manager = new ManagerDBService(dbService);
-				var managerservice = new Manager();
+            }
+        }
 
-				//Act
-				var resultado = new IManagerService(new Campaign { Id = true });
+        [TestMethod]
+        public void Create_Donation_Center()
+        {
+            using (var dbService = new DataBaseService())
+            {
+                var donationDBService = new DonationDBService(dbService);
 
+                //Act
+                //var result = donationDBService.CreateDonation(new Donation { DonorId = });
 
-				// Assert
-				Assert.IsTrue(resultado);
-			}
-		}
+                //// Assert 
 
-		[TestMethod]
-		public void Create_Campaign_Test()
-		{
-			//Arrange
-			using (var dbService = new DataBaseService())
-			{
-				ICampaignService countChanges = new CampaignDBService(dbService);
-				var testManager = new Manager();//Se crea un manager de prueba para la campaña
-				var dataBase = new Campaign();
-				dataBase.Manager = testManager;//Se agrega el manager a la campaña para evitar error de FK en la DB
+                //Assert.IsTrue(result);
+
+            }
+
+        }
 
 
-				// Act
+        [TestMethod]
+        public void Valid_Donor()
+        {
+            //Arrange
+            using (var dbService = new DataBaseService())
+            {
+                IDonorService countChanges = new DonorDBService(dbService);
+                var dataBase = new Donor
+                {
+                    Name = "Carit",
+                    Id = 88,
+                };
 
-				var resultado = countChanges.CreateCampaign(dataBase);
+                // Act
 
-				// Assert
-				Assert.IsTrue(resultado);
-			}
-		}
+                var resultado = countChanges.IsValidDonor(false);
 
-	}
+
+                // Assert
+                Assert.IsTrue(resultado, "Debe ingresar un nombre");
+            }
+        }
+
+        //[TestMethod]
+        //public void Create_Manager_Test()
+        //{
+        //	//Arrange
+        //using (var dbService = new ManagerDBService());
+        //	{
+        //		IManagerService manager = new ManagerDBService(dbService);
+        //		var managerservice = new Manager();
+
+        //		//Act
+        //		var resultado = new IManagerService(new Campaign { Id = true });
+
+
+        //		// Assert
+        //		Assert.IsTrue(resultado);
+        //	}
+        //}
+
+        [TestMethod]
+        public void Create_Campaign_Test()
+        {
+            //Arrange
+            using (var dbService = new DataBaseService())
+            {
+
+                ICampaignService countChanges = new CampaignDBService(dbService, new ManagerDBService(dbService));
+                var testManager = new Manager();//Se crea un manager de prueba para la campaña
+                var dataBase = new Campaign();
+                dataBase.Manager = testManager;//Se agrega el manager a la campaña para evitar error de FK en la DB
+
+
+                // Act
+
+                var resultado = countChanges.CreateCampaign(dataBase);
+
+                // Assert
+                Assert.IsTrue(resultado);
+            }
+        }
+
+    }
 
 
 }

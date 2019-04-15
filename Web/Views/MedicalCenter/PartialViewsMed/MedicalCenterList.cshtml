@@ -1,4 +1,35 @@
-﻿@using BancoDeSangre.App_Data
-@model BancoDeSangre.ViewModels.MedicalCenterViewModels.MedicalCenterListViewModels
+﻿@model BancoDeSangre.ViewModels.MedicalCenterViewModels.MedicalCenterListViewModel
+@for (var i = 0; i < Model.MedicalCenters.Count; i += 3)
+{
+    string managerCampaignTitles = "";
+    <div class="row">
+        @for (var u = 0; u < 3; u++)
+        {
+            var index = i + u;
+            if (index >= Model.MedicalCenters.Count)
+            {
+                break;
+            }
+            var medicalCenter = Model.MedicalCenters[index];           
 
+            <div class="col s12 l4">
+                <div class="card">
+                    <div class="card-content">
+                        <p>
+                            <i class="tiny material-icons">business</i> <b>Centro Médico: </b>@medicalCenter.Name
+                        </p><br>
+                        <p>
+                            <i class="tiny material-icons">email</i> <b>Email: </b>@medicalCenter.Email
+                        </p><br>
+                        <p>
+                            <i class="tiny material-icons">place</i> <b>Ubicación: </b>@medicalCenter.Place
+                        </p><br>
+                        <p>
+                            <i class="tiny material-icons">phone</i> <b>Teléfono: </b>@medicalCenter.PhoneNumber
+                        </p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
 }

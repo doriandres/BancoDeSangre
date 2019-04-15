@@ -2,7 +2,7 @@
 
 @for (var i = 0; i < Model.Managers.Count; i += 3)
 {
-
+    string managerCampaignTitles = "";
     <div class="row">
         @for (var u = 0; u < 3; u++)
         {
@@ -11,26 +11,20 @@
             {
                 break;
             }
-            var manager = Model.Managers[index];
+            var manager = Model.Managers[index];   
+
             <div class="col s12 l4">
                 <div class="card">
                     <div class="card-content">
                         <p>
-                            <i class="tiny material-icons ">perm_identity</i> <b>ID: </b>@manager.Id
-                        </p>
+                            <i class="tiny material-icons">email</i> <b>Email: </b>@manager.Email
+                        </p><br>
                         <p>
-                            <i class="tiny material-icons ">email</i> <b>Email: </b>@manager.Email
-                        </p>
+                            <i class="tiny material-icons">person</i> <b>Nombre: </b>@manager.Name
+                        </p><br>
                         <p>
-                            <i class="tiny material-icons ">keyboard_arrow_right</i> <b>Nombre: </b>@manager.Name
+                            <i class="tiny material-icons">people</i> <b>Apellido: </b>@manager.LastName
                         </p>
-                        <p>
-                            <i class="tiny material-icons ">keyboard_arrow_right</i> <b>Apellido: </b>@manager.LastName
-                        </p>
-                        <p>
-                            <i class="tiny material-icons ">dashboard</i> <b>Campañas: </b><!--Manager'sCampaignHere-->
-                        </p>
-
                     </div>
 
                 </div>

@@ -1,13 +1,19 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using BancoDeSangre.Models;
 using BancoDeSangre.Services.DB;
+using BancoDeSangre.Services.ManagerService;
 
 namespace BancoDeSangre.Services.DonorService
 {
     public class DonorDBService : DBService, IDonorService
     {
-        public DonorDBService(IDataBaseService dbservice) : base(dbservice) { }
+        private IManagerService managerService;
+        public DonorDBService(IDataBaseService dbservice, IManagerService managerService) : base(dbservice)
+        {
+            this.managerService = managerService;
+        }
 
         public bool CreateDonor(Donor donor)
         {
@@ -83,24 +89,11 @@ namespace BancoDeSangre.Services.DonorService
             return valid;
         }
 
-        bool IDonorService.CreateDonor(Donor donor)
+        public List<Donor> FindAll()
         {
-            throw new NotImplementedException();
-        }
-
-        Donor IDonorService.FindByID(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        bool IDonorService.IsValidDonor(Donor donor, out string cause)
-        {
-            throw new NotImplementedException();
-        }
-
-        bool IDonorService.IsValidDonor(object cause)
-        {
-            return true;
+            var results = dataBase.Donors.ToList();
+            results.Reverse();        
+            return results;
         }
     }
 }

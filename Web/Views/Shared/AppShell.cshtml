@@ -21,7 +21,6 @@
         main {
             flex: 1 0 auto;
         }
-        
     </style>
 </head>
 
@@ -29,11 +28,10 @@
     <header>
         <nav class="nav-extended white">
             <div class="nav-wrapper">
-                <a href="/" class="flow-text brand-logo center grey-text text-darken-2">Banco de Sangre</a>
+                <a href="/" class="flow-text brand-logo center grey-text text-darken-2"> <span class="red-text"><i class="large material-icons">healing</i></span> Banco de Sangre</a>
                 <ul id="nav-mobile" class="right">
                     <li><a href="/campaign/list" class="grey-text text-darken-2">Campañas</a></li>
                     <li><a href="/information/contact" class="grey-text text-darken-2">Contacto</a></li>
-                    <li><a href="/information/infodonar" class="grey-text text-darken-2">¿Cómo donar?</a></li>
                     @if (!Session.IsSignedIn())
                     {
                         <li><a href="/manager/signin" class="waves-effect waves-light btn  teal accent-3">Iniciar Sesión</a></li>
@@ -60,118 +58,23 @@
     </header>
     <main>
         @RenderBody()
-        <body>
-            <div class="container section">
-
-                <div class="slider">
-                    <ul class="slides">
-                        <li>
-                            <img src="https://image.freepik.com/foto-gratis/doctor-sujetando-estetoscopio_23-2147822716.jpg">
-                            <div class="caption left-align">
-                                <h3 class="light blue-text text-darken-4">Salvá Vidas</h3>
-                                <h6 class="light grey-text text-darken-3">La donación de sangre es un acto solidario.</h6>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="https://image.freepik.com/foto-gratis/donante-sangre-donacion-pelota-inflable-sosteniendo-mano_77569-70.jpg"> 
-                            <div class="caption right-align">
-                                <h3 class="light light-text text-lighten-4">Cumplí con los requisitos</h3>
-                                <h5 class="light grey-text text-lighten-3">Infórmese</h5>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="https://fundahnn.org/wp-content/uploads/2017/04/Edificio.jpg">
-                            <div class="caption center-align">
-                                <h3 class="light light-text text-lighten-4">Visitá</h3>
-                                <h5 class="light light-text text-lighten-4">Nuestros Centros Médicos</h5>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-
-                <div class="row">
-                    <div class="col s12 m4">
-                        <div class="card">
-                            <div class="card-content">
-                                <span class="card-title teal-text text-lighten-1">¿Por qué donar Sangre?</span>
-                                <p>
-                                    Las transfusiones de sangre y los productos sanguíneos contribuyen a salvar millones de vidas cada año.
-                                    <br>La donación de sangre es un acto solidario, desinteresado, altruista, sencillo, seguro y asistido por profesionales especializados en todo momento.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col s12 m4">
-                        <div class="card 26a69a blue darken-2">
-                            <div class="card-content white-text">
-                                <span class="card-title">¿Cómo donar Sangre?</span>
-                                <ol>
-                                    <li>Cumplir con los requisitos</li>
-                                    <li>Llenar el Formulario</li>
-                                    <li>Toma de signos vitales</li>
-                                    <li>Entrevista</li>
-                                    <li>Medición de Hemoglobina</li>
-                                    <li>Donación</li>
-                                    <li>Refrigerio</li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col s12 m4">
-                        <div class="card">
-                            <div class="card-content">
-                                <span class="card-title teal-text text-lighten-1">Salvá Vidas</span>
-                                <p>
-                                    Cada donación puede ayudar hasta a cuatro pacientes diferentes gracias a esto se obtienen cuatro componentes sanguíneos diferentes.
-                                    La sangre y sus componentes tienen una vida limitada por lo que la necesidad de sangre es constante y se requieren donaciones frecuentes.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Compiled and minified JavaScript -->
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js">
-                </script>
-
-                <script>
-
-                    document.addEventListener('DOMContentLoaded', function () {
-                        M.AutoInit();
-                    });
-
-                </script>
-                <script>
-                    document.addEventListener('DOMContentLoaded', function () {
-                        var elems = document.querySelectorAll('.slider');
-                        var instances = M.Slider.init(elems);
-                    });</script>
-
-
-
-                <div id="modal" class="modal">
-                    <div class="modal-content">
-                        <h4 class="modal-title"></h4>
-                        <p class="modal-body"></p>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="javascript:void(0)" class="modal-close waves-effect waves-green btn-flat">Entendido</a>
-                    </div>
-                </div>
-    </main>
-</body>
-
-<footer class="page-footer grey darken-2">
-    <div class="footer-copyright">
-        <div class="container center-align">
-            © 2019 Universidad Latinoamericana de Ciencia y Tecnología
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <h4 class="modal-title"></h4>
+                <p class="modal-body"></p>
+            </div>
+            <div class="modal-footer">
+                <a href="javascript:void(0)" class="modal-close waves-effect waves-green btn-flat">Entendido</a>
+            </div>
         </div>
-    </div>
-</footer>
+    </main>
+    <footer class="page-footer grey darken-2">
+        <div class="footer-copyright">
+            <div class="container center-align">
+                © 2019 Universidad Latinoamericana de Ciencia y Tecnología
+            </div>
+        </div>
+    </footer>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="/public/javascript/appShell.js"></script>

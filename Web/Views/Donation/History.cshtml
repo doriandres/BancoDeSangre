@@ -1,0 +1,13 @@
+﻿@model BancoDeSangre.ViewModels.DonationViewModels.DonationsHistoryViewModel
+<div class="row">
+    <div class="col s12 l3">
+        @{
+            Html.RenderPartial("PartialViews/MenuOptions");
+        }
+    </div>
+    <div class="col s12 l9">
+        @{
+            Html.RenderPartial("PartialViews/DonationsTable", Model);
+        }
+    </div>
+</div>

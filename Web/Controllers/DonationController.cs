@@ -2,6 +2,7 @@
 using BancoDeSangre.App_Data;
 using BancoDeSangre.Models;
 using BancoDeSangre.Services.DonationService;
+using BancoDeSangre.ViewModels.DonationViewModels;
 
 namespace BancoDeSangre.Controllers
 {
@@ -48,6 +49,22 @@ namespace BancoDeSangre.Controllers
             var saved = donationService.CreateDonation(donation);
 
             return Json(new { saved });
+        }
+
+        [HttpGet]
+        public ActionResult History()
+        {
+            if (!Session.IsSignedIn())
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
+            var model = new DonationsHistoryViewModel
+            {
+                Donations = donationService.FindAll()
+            };
+
+            return View(model);
         }
     }
 }

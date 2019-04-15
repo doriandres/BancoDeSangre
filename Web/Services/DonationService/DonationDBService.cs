@@ -1,14 +1,18 @@
 ﻿using System;
+using System.Collections.Generic;
 using BancoDeSangre.Models;
 using BancoDeSangre.Services.DB;
 using System.Linq;
+using BancoDeSangre.Services.ManagerService;
 
 namespace BancoDeSangre.Services.DonationService
 {
     public class DonationDBService : DBService, IDonationService
     {
-
-		public DonationDBService(IDataBaseService dbservice) : base(dbservice) { }
+        private IManagerService managerService;
+		public DonationDBService(IDataBaseService dbservice, IManagerService managerService) : base(dbservice) {
+            this.managerService = managerService;
+        }
 
         public bool CreateDonation(Donation donation)
         {
@@ -43,11 +47,18 @@ namespace BancoDeSangre.Services.DonationService
 
             if (donation.DonorId == 0)
             {
-                cause = "Donante inválido";
+                cause = "Donante inv\u00E1lido";
                 valid = false;
             }
 
             return valid;
+        }
+
+        public List<Donation> FindAll()
+        {
+            var results = dataBase.Donations.ToList();
+            results.Reverse();
+            return results;
         }
     }
 }

@@ -15,6 +15,8 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
+using BancoDeSangre.Services.MedicalCenterService;
+
 namespace BancoDeSangre.DependencyResolution
 {
     using BancoDeSangre.Services.CampaignService;
