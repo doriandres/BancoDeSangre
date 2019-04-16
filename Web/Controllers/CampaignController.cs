@@ -19,7 +19,7 @@ namespace BancoDeSangre.Controllers
         /// <summary>
         /// Show the Campaigns menu
         /// </summary>
-        /// <returns>Create campaigns menu page only if user is signed in else redirects to home page</returns>
+        /// <returns>Register campaigns menu page only if user is signed in else redirects to home page</returns>
         [HttpGet]
         public ActionResult Menu()
         {
@@ -34,7 +34,7 @@ namespace BancoDeSangre.Controllers
         /// <summary>
         /// Show the create campaign page
         /// </summary>
-        /// <returns>Create campaign page only if user is signed in else redirects to home page</returns>
+        /// <returns>Register campaign page only if user is signed in else redirects to home page</returns>
         [HttpGet]
         public ActionResult Create()
         {

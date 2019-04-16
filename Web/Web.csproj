@@ -347,6 +347,8 @@
     <Content Include="Public\JavaScript\components\timepicker.js" />
     <Content Include="Public\JavaScript\views\campaign\create.js" />
     <Content Include="Public\JavaScript\views\campaign\list.js" />
+    <Content Include="Public\JavaScript\views\donation\register.js" />
+    <Content Include="Public\JavaScript\views\donation\list.js" />
     <Content Include="Public\JavaScript\views\donor\register.js" />
     <Content Include="Public\JavaScript\views\manager\create.js" />
     <Content Include="Public\JavaScript\views\manager\sign-in.js" />
@@ -355,7 +357,7 @@
     <Content Include="Public\JavaScript\views\medicalcenter\register.js" />
     <Content Include="Views\Manager\PartialViews\ManagerList.cshtml" />
     <Content Include="Views\Manager\List.cshtml" />
-    <Content Include="Views\Donation\Create.cshtml" />
+    <Content Include="Views\Donation\Register.cshtml" />
     <Content Include="Views\Donor\PartilaIIViews\DonorTable.cshtml" />
     <Content Include="Views\Donation\PartialViews\MenuOptions.cshtml" />
     <Content Include="Views\Donation\PartialViews\DonationForm.cshtml" />
