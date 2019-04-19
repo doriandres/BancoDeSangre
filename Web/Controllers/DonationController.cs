@@ -26,29 +26,44 @@ namespace BancoDeSangre.Controllers
         }
 
         /// <summary>
+        /// Show the create donation page
+        /// </summary>
+        /// <returns>Register donation page only if user is signed in else redirects to home page</returns>
+        [HttpGet]
+        public ActionResult Register()
+        {
+            if (Session.IsSignedIn()) // Only signed in Managers can create donations
+            {
+                return View();
+            }
+
+            return RedirectToAction("Index", "Home");
+        }
+
+        /// <summary>
         /// Saves a donation to a donor
         /// </summary>
         /// <param name="donation">Donation information to be saved</param>
         /// <param name="donorId">Donor Id</param>
         /// <returns>JSON with result of the operation</returns>
         [HttpPost]
-        public ActionResult SaveDonationToDonor(Donation donation, int donorId)
+        public ActionResult Save(Donation donation, int donorId)
         {
             if (!Session.IsSignedIn())
             {
                 return Json(new { saved = false });
             }
 
-            donation.DonorId = donorId; //Le asigna a la donacion el donador respectivo
-
             if (!donationService.IsValidDonation(donation, out var cause))
             {
-                return Json(new { saved = false, cause });
-            }            
+                return Json(new { saved = false, cause = cause });
+            }
+            else
+            {
+                var saved = donationService.CreateDonation(donation);
 
-            var saved = donationService.CreateDonation(donation);
-
-            return Json(new { saved });
+                return Json(new { saved });
+            }
         }
 
         [HttpGet]

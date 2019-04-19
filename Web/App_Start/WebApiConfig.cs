@@ -7,7 +7,7 @@
 //{
 //    public static class WebApiConfig
 //    {
-//        public static void Register(HttpConfiguration config)
+//        public static void Save(HttpConfiguration config)
 //        {
 //            config.MapHttpAttributeRoutes();
 
