@@ -4,17 +4,11 @@
             <div class="card-content container">
                 <span class="card-title center">Agregar Donación</span>
                 <div class="row">
-                    <form class="col s12" id="signin-form" method="POST" action="/donation/save">
+                    <form class="col s12" id="signin-form" method="POST" action="/donation/Save">
                         <div class="row">
                             <div class="input-field col s12">
                                 <input id="date-field" name="date" type="date" class="datepicker" required />
-                                <label for="date-field">Fecha</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <input id="time-field" name="time" type="time" class="timepicker" required />
-                                <label for="time-field">Hora</label>
+                                <label for="date-field">Fecha de Donación</label>
                             </div>
                         </div>
                         <div class="input-field col s12">
@@ -70,19 +64,19 @@
                             </p>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input id="donorid-field" name="donorid" type="number" placeholder="88888888" required />
-                                    <label for="donorid-field">Identifiación del donador</label>
+                                    <input id="donorid-field" name="donorid" type="number"  required />
+                                    <label for="donorid-field">ID del donador</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input id="amount-field" name="amount" type="number" placeholder="9999" required />
+                                    <input id="amount-field" name="amount" type="number" placeholder="1" required />
                                     <label for="amount-field">Cantidad de sangre donada</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input id="measurmentunit-field" name="measurmentunit" type="text" required />
+                                    <input id="measurmentunit-field" name="measurmentunit" type="text" placeholder="ml" required />
                                     <label for="measurmentunit-field">Unidad de medida</label>
                                 </div>
                             </div>
