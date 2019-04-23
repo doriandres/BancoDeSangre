@@ -358,7 +358,7 @@
     <Content Include="Views\Manager\PartialViews\ManagerList.cshtml" />
     <Content Include="Views\Manager\List.cshtml" />
     <Content Include="Views\Donation\Register.cshtml" />
-    <Content Include="Views\Donor\PartilaIIViews\DonorTable.cshtml" />
+    <Content Include="Views\Donor\PartilalViews\DonorTable.cshtml" />
     <Content Include="Views\Donation\PartialViews\MenuOptions.cshtml" />
     <Content Include="Views\Donation\PartialViews\DonationForm.cshtml" />
     <Content Include="Views\Donation\History.cshtml" />
@@ -404,7 +404,7 @@
     <Content Include="Views\MedicalCenter\Menu.cshtml" />
     <Content Include="Views\Campaign\PartilalViews\MenuOptions.cshtml" />
     <Content Include="Views\Campaign\PartilalViews\CampaignList.cshtml" />
-    <Content Include="Views\Donor\PartilaIIViews\MenuOptions.cshtml" />
+    <Content Include="Views\Donor\PartilalViews\MenuOptions.cshtml" />
     <Content Include="Views\Donor\List.cshtml" />
   </ItemGroup>
   <PropertyGroup>
