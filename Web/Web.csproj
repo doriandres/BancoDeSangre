@@ -307,22 +307,27 @@
     <Compile Include="Services\DonationService\IDonationService.cs" />
     <Compile Include="Services\DonorService\DonorDBService.cs" />
     <Compile Include="Services\DonorService\IDonorService.cs" />
+    <Compile Include="Services\Email\Email.cs" />
+    <Compile Include="Services\Email\EmailService.cs" />
+    <Compile Include="Services\Email\IEmail.cs" />
+    <Compile Include="Services\Email\IEmailService.cs" />
     <Compile Include="Services\ManagerService\IManagerService.cs" />
     <Compile Include="Services\ManagerService\ManagerDBService.cs" />
     <Compile Include="Services\MedicalCenterService\IMedicalCenterService.cs" />
     <Compile Include="Services\MedicalCenterService\MedicalCenterDBService.cs" />
+    <Compile Include="ViewModels\BloodRequestViewModels\BloodRequestListViewModel.cs" />
     <Compile Include="ViewModels\CampaignViewModels\CampaignListViewModel.cs" />
-    <Compile Include="ViewModels\DonationViewModels\DonationsHistoryViewModel.cs" />
+    <Compile Include="ViewModels\DonationViewModels\DonationsListViewModel.cs" />
     <Compile Include="ViewModels\ManagerViewModels\ManagerListViewModel.cs" />
     <Compile Include="ViewModels\DonorViewModels\DonorListViewModel.cs" />
     <Compile Include="ViewModels\MedicalCenterViewModels\MedicalCenterListViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="favicon.ico" />
     <Content Include="Public\CSS\appShell.css" />
     <Content Include="Public\CSS\createCampaign.css" />
     <Content Include="Public\CSS\contact.css" />
@@ -335,6 +340,8 @@
     <Content Include="Public\img\cropped-bullet-point-1.png" />
     <Content Include="Public\img\date.png" />
     <Content Include="Public\img\description.png" />
+    <Content Include="Public\img\favicon.png" />
+    <Content Include="Public\img\icono.png" />
     <Content Include="Public\img\imagen1.jpg" />
     <Content Include="Public\img\imagen2.jpg" />
     <Content Include="Public\img\imagen3.jpg" />
@@ -350,6 +357,7 @@
     <Content Include="Public\JavaScript\views\donation\register.js" />
     <Content Include="Public\JavaScript\views\donation\list.js" />
     <Content Include="Public\JavaScript\views\donor\register.js" />
+    <Content Include="Public\JavaScript\views\information\contact.js" />
     <Content Include="Public\JavaScript\views\manager\create.js" />
     <Content Include="Public\JavaScript\views\manager\sign-in.js" />
     <Content Include="Public\JavaScript\views\home\home.js" />
@@ -361,7 +369,7 @@
     <Content Include="Views\Donor\PartilalViews\DonorTable.cshtml" />
     <Content Include="Views\Donation\PartialViews\MenuOptions.cshtml" />
     <Content Include="Views\Donation\PartialViews\DonationForm.cshtml" />
-    <Content Include="Views\Donation\History.cshtml" />
+    <Content Include="Views\Donation\List.cshtml" />
     <Content Include="Views\Donation\PartialViews\DonationsTable.cshtml" />
     <None Include="Views\Manager\PartialViews\MenuOptions.cshtml" />
     <Content Include="Web.config" />
@@ -382,6 +390,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\BloodRequest\" />
+    <Folder Include="Views\Blood\" />
     <Folder Include="Views\DataBaseService\" />
     <Folder Include="Views\Default\" />
   </ItemGroup>

@@ -1,14 +1,4 @@
-﻿  <!--Import Google Icon Font-->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-<!-- Compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-
-<!-- Compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
-
-
-<div class="col s12 l9">
+﻿<div class="col s12 l9">
     <div class="container">
         <div class="row">
             <div class="card">
@@ -22,42 +12,38 @@
                     </ul>
 
                     <div class="row">
-                        <form class="col s12">
-
+                        <form class="col s12" method="POST" action="/information/askforinfo">
                             <div class="row">
                                 <div class="input-field col s6">
-                                    <input placeholder="Nombre" id="first_name" type="text"  required>
+                                    <input placeholder="Nombre" id="first_name" name="name" type="text"  required>
                                     <label for="first_name">Nombre:</label>
                                 </div>
                                 <div class="input-field col s6">
-                                    <input placeholder="Apellidos" id="last_name" type="text"  required>
+                                    <input placeholder="Apellidos" id="last_name" name="lastName" type="text"  required>
                                     <label for="last_name">Apellidos:</label>
                                 </div>
                                 <div class="input-field col s6">
-                                    <input type="email" placeholder="Email" id="email_contact"  required>
+                                    <input type="email" placeholder="Email" id="email_contact" name="email" required>
                                     <label for="email-contact">Email:</label>
                                 </div>
                                 <div class="input-field col s6">
-                                    <input type="tel" placeholder="Teléfono" id="tel_user"  required>
+                                    <input type="tel" placeholder="Teléfono" id="tel_user" name="phone"  required>
                                     <label for="tel_user">Teléfono:</label>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <textarea  id="textarea1" class="materialize-textarea"></textarea>
+                                    <textarea  id="textarea1" class="materialize-textarea" name="message" required></textarea>
                                     <label for="textarea1">Mensaje:</label>
                                 </div>
                             </div>
-
                             <div class="input-field col s12 white-text">
-                                <input id="submit-contact" type="submit" hidden />
+                                <input id="submit-message" type="submit" hidden />
                                 <a id="submit-contact" class="waves-effect waves-light btn teal accent-3" href="javascript:void(0)">
-                                    <label class="white-text" for="submitcontact">Enviar</label>
+                                    <label class="white-text" for="submit-message">Enviar</label>
                                 </a>
                             </div>
-
-
                         </form>
                     </div>
                 </div>
@@ -65,14 +51,10 @@
         </div>
     </div>
 </div>
-
-<script>
-    $(document).ready(function () {
-        $('input#input_text, textarea#textarea2').characterCounter();
-    });
-</script>
-<script>
-    $(document).ready(function () {
+@section JavaScript
+{
+    <script>
         M.updateTextFields();
-    });
-</script>
+    </script>
+    <script src="/Public/JavaScript/views/information/contact.js" type="module"></script>   
+}

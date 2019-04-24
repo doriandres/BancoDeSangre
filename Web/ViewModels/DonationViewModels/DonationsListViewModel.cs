@@ -3,7 +3,7 @@ using BancoDeSangre.Models;
 
 namespace BancoDeSangre.ViewModels.DonationViewModels
 {
-    public class DonationsHistoryViewModel
+    public class DonationsListViewModel
     {
         public List<Donation> Donations { get; set; }
     }
