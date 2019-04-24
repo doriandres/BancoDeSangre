@@ -318,11 +318,11 @@
     <Compile Include="ViewModels\MedicalCenterViewModels\MedicalCenterListViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="favicon.ico" />
     <Content Include="Public\CSS\appShell.css" />
     <Content Include="Public\CSS\createCampaign.css" />
     <Content Include="Public\CSS\contact.css" />
