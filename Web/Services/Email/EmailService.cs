@@ -5,6 +5,7 @@ namespace BancoDeSangre.Services.Email
 {
     public class EmailService : IEmailService
     {
+        public string AppEmail => "contacto.banco.sangre@gmail.com";
         public void Send(IEmail email)
         {
             var mail = new MailMessage(email.From, email.To, email.Subject, email.MessageBody);            
@@ -15,7 +16,7 @@ namespace BancoDeSangre.Services.Email
                 UseDefaultCredentials = false,
                 Host = "smtp.gmail.com",
                 EnableSsl = true,
-                Credentials = new NetworkCredential("contacto.banco.sangre@gmail.com", "googlebancosangre")
+                Credentials = new NetworkCredential(AppEmail, "googlebancosangre")
             };            
 
             client.Send(mail);

@@ -5,7 +5,7 @@ namespace BancoDeSangre.Controllers
 {
     public class InformationController : Controller
     {
-        private IEmailService emailService;
+        private IEmailService emailService;        
         public InformationController(IEmailService emailService)
         {
             this.emailService = emailService;
@@ -23,17 +23,26 @@ namespace BancoDeSangre.Controllers
         [HttpPost]
         public ActionResult AskForInfo(string name, string lastname, string email, string phone, string message)
         {
-            var emailToSend = new Email
+            var contactEmail = new Email
             {
                 From = email,
-                To = "contacto.banco.sangre@gmail.com",
+                To = emailService.AppEmail,
                 Subject = $"{name} {lastname} nos ha contactado",
                 MessageBody = $"{name} {lastname} nos ha contactado.\n" +
                               $"Correo electrónico: {email}\n" +
                               $"Télefono: {phone}\n" +
                               $"Mensaje: {message}"
             };
-            emailService.Send(emailToSend);
+            emailService.Send(contactEmail);
+            var confirmationEmail = new Email
+            {
+                From = emailService.AppEmail,
+                To = email,
+                Subject = $"Su mensaje fue recibido exitosamente",
+                MessageBody = $"Hola {name} {lastname}\n" +
+                              $"Su mensaje ha sido recibido exitosamente."                              
+            };
+            emailService.Send(confirmationEmail);
             return Json(new {done=true});
         }
     }
