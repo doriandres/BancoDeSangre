@@ -307,6 +307,10 @@
     <Compile Include="Services\DonationService\IDonationService.cs" />
     <Compile Include="Services\DonorService\DonorDBService.cs" />
     <Compile Include="Services\DonorService\IDonorService.cs" />
+    <Compile Include="Services\Email\Email.cs" />
+    <Compile Include="Services\Email\EmailService.cs" />
+    <Compile Include="Services\Email\IEmail.cs" />
+    <Compile Include="Services\Email\IEmailService.cs" />
     <Compile Include="Services\ManagerService\IManagerService.cs" />
     <Compile Include="Services\ManagerService\ManagerDBService.cs" />
     <Compile Include="Services\MedicalCenterService\IMedicalCenterService.cs" />
@@ -350,6 +354,7 @@
     <Content Include="Public\JavaScript\views\donation\register.js" />
     <Content Include="Public\JavaScript\views\donation\list.js" />
     <Content Include="Public\JavaScript\views\donor\register.js" />
+    <Content Include="Public\JavaScript\views\information\contact.js" />
     <Content Include="Public\JavaScript\views\manager\create.js" />
     <Content Include="Public\JavaScript\views\manager\sign-in.js" />
     <Content Include="Public\JavaScript\views\home\home.js" />

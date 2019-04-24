@@ -1,4 +1,4 @@
-﻿import ajax from './../../components/ajax.js';
+﻿
 
 function hideUnusedBoxes() { //temp fix
     var box2 = document.getElementById('flexbox-2');
