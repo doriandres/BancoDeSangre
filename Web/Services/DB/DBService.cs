@@ -4,6 +4,10 @@
     {
         protected IDataBaseService dataBase;
 
+        /// <summary>
+        /// Default constructor
+        /// </summary>
+        /// <param name="dataBase"></param>
         protected DBService(IDataBaseService dataBase)
         {
             this.dataBase = dataBase;

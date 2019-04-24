@@ -9,11 +9,19 @@ namespace BancoDeSangre.Services.DonationService
 {
 	public class DonationDBService : DBService, IDonationService
 	{
+        /// <summary>
+        /// Default constructor
+        /// </summary>
 		private IManagerService managerService;
 		public DonationDBService(IDataBaseService dbservice, IManagerService managerService) : base(dbservice) {
 			this.managerService = managerService;
 		}
 
+        /// <summary>
+        /// Adds a donation to the DB
+        /// </summary>
+        /// <param name="donation">Donation to be created</param>
+        /// <returns>Result of the creation of the donation</returns>
 		public bool CreateDonation(Donation donation)
 		{
 			dataBase.Donations.Add(donation);
@@ -21,11 +29,22 @@ namespace BancoDeSangre.Services.DonationService
 			return true;
 		}
 
+        /// <summary>
+        /// Finds a donation by its ID
+        /// </summary>
+        /// <param name="id">ID of the desired donation</param>
+        /// <returns>The found donation</returns>
 		public Donation FindByID(int id)
 		{
 			return dataBase.Donations.FirstOrDefault(donation => donation.Id == id);
 		}
 
+        /// <summary>
+        /// Validates a Donation
+        /// </summary>
+        /// <param name="donation">Donation to validate</param>
+        /// <param name="cause">Invalid cause</param>
+        /// <returns>Result</returns>
 		public bool IsValidDonation(Donation donation, out string cause)
 		{
 			var valid = true;
@@ -75,6 +94,10 @@ namespace BancoDeSangre.Services.DonationService
 			return valid;
 		}
 
+        /// <summary>
+        /// Gets all registered donations in DB
+        /// </summary>
+        /// <returns>Returns donations in DB as a List</returns>
 		public List<Donation> FindAll()
 		{
 			var results = dataBase.Donations.ToList();

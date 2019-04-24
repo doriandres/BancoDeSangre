@@ -12,6 +12,10 @@ namespace BancoDeSangre.Services.DB
         public DbSet<Donation> Donations { get; set; }
         public DbSet<BloodRequest> BloodRequests { get; set; }
 
+        /// <summary>
+        /// Connects to local database
+        /// </summary>
+        /// <param name="optionsBuilder"></param>
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Data Source=localhost;Initial Catalog=Banco_de_sangre;Trusted_Connection=True;");

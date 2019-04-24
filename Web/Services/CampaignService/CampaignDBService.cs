@@ -9,12 +9,20 @@ namespace BancoDeSangre.Services.CampaignService
 {
     public class CampaignDBService : DBService, ICampaignService
     {
+        /// <summary>
+        /// Default constructor
+        /// </summary>
         private IManagerService managerService;
         public CampaignDBService(IDataBaseService dataBase, IManagerService managerService) : base(dataBase)
         {
             this.managerService = managerService;
         }
 
+        /// <summary>
+        /// Adds a Canmpaign in the DB
+        /// </summary>
+        /// <param name="campaign">Campaign to be created</param>
+        /// <returns>Result of the campaign creation</returns>
         public bool CreateCampaign(Campaign campaign)
         {
             dataBase.Campaigns.Add(campaign);
@@ -22,16 +30,31 @@ namespace BancoDeSangre.Services.CampaignService
             return true;
         }
 
+        /// <summary>
+        /// Finds a Campaign by ID
+        /// </summary>
+        /// <param name="id">Id of the desired Campaign</param>
+        /// <returns>Found Campaign</returns>
         public Campaign FindByID(int id)
         {
             return dataBase.Campaigns.FirstOrDefault(campaign => campaign.Id == id);
         }
 
+        /// <summary>
+        /// Finds all the campaigns
+        /// </summary>
+        /// <returns>Campaigns list</returns>
         public List<Campaign> FindAll()
         {
             return dataBase.Campaigns.ToList();
         }
 
+        /// <summary>
+        /// Validates a Campaign
+        /// </summary>
+        /// <param name="campaign">Campaign to validate</param>
+        /// <param name="cause">Invalid cause</param>
+        /// <returns>Result</returns>
         public bool IsValidCampaign(Campaign campaign, out string cause)
         {
             var valid = true;
