@@ -335,6 +335,8 @@
     <Content Include="Public\img\cropped-bullet-point-1.png" />
     <Content Include="Public\img\date.png" />
     <Content Include="Public\img\description.png" />
+    <Content Include="Public\img\favicon.png" />
+    <Content Include="Public\img\icono.png" />
     <Content Include="Public\img\imagen1.jpg" />
     <Content Include="Public\img\imagen2.jpg" />
     <Content Include="Public\img\imagen3.jpg" />
