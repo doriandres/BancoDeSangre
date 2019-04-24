@@ -88,6 +88,15 @@ namespace BancoDeSangre.Services.MedicalCenterService
                 valid = false;
             }
 
+            foreach (MedicalCenter mc in dataBase.MedicalCenters)
+            {
+                if (mc.Email == medicalCenter.Email)
+                {
+                    cause = "Este correo ya se encuentra registrado";
+                    valid = false;
+                }
+            }
+
             return valid;
         }
     }
