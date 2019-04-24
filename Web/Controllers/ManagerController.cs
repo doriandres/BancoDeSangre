@@ -10,11 +10,19 @@ namespace BancoDeSangre.Controllers
     {
         private IManagerService managerService;
 
+        /// <summary>
+        /// Default controller
+        /// </summary>
+        /// <param name="managerService"></param>
         public ManagerController(IManagerService managerService)
         {
             this.managerService = managerService;
         }
 
+        /// <summary>
+        /// Displays the menu options
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public ActionResult Menu()
         {

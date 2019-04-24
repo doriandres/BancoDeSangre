@@ -9,6 +9,11 @@ namespace BancoDeSangre.Controllers
     public class DonationController : Controller
     {
         private IDonationService donationService;
+
+        /// <summary>
+        /// Default constructor
+        /// </summary>
+        /// <param name="donationService"></param>
         public DonationController(IDonationService donationService)
         {
             this.donationService = donationService;
@@ -66,6 +71,10 @@ namespace BancoDeSangre.Controllers
             }
         }
 
+        /// <summary>
+        /// Displays all donations
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public ActionResult List()
         {

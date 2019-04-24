@@ -10,6 +10,10 @@ namespace BancoDeSangre.Controllers
     {
         private IBloodRequestService bloodRequestService;
 
+        /// <summary>
+        /// Default constructor
+        /// </summary>
+        /// <param name="bloodRequestService"></param>
         public BloodRequestController(IBloodRequestService bloodRequestService)
         {
             this.bloodRequestService = bloodRequestService;
@@ -32,6 +36,10 @@ namespace BancoDeSangre.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        /// <summary>
+        /// GET method Registers a blood request
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public ActionResult Register()
         {
@@ -65,6 +73,10 @@ namespace BancoDeSangre.Controllers
             return Json(new { saved });
         }
 
+        /// <summary>
+        /// Displays all blood requests
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public ActionResult List()
         {
