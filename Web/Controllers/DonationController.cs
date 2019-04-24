@@ -67,14 +67,14 @@ namespace BancoDeSangre.Controllers
         }
 
         [HttpGet]
-        public ActionResult History()
+        public ActionResult List()
         {
             if (!Session.IsSignedIn())
             {
                 return RedirectToAction("Index", "Home");
             }
 
-            var model = new DonationsHistoryViewModel
+            var model = new DonationsListViewModel
             {
                 Donations = donationService.FindAll()
             };

@@ -9,6 +9,7 @@ namespace BancoDeSangre.Services.MedicalCenterService
     public class MedicalCenterDBService : DBService, IMedicalCenterService
     {
         private IManagerService managerService;
+
         public MedicalCenterDBService(IDataBaseService dataBaseService, IManagerService managerService) : base(dataBaseService)
         {
             this.managerService = managerService;
@@ -24,13 +25,6 @@ namespace BancoDeSangre.Services.MedicalCenterService
         public MedicalCenter FindByID(int id)
         {
             return dataBase.MedicalCenters.FirstOrDefault(medicalCenter => medicalCenter.Id == id);
-        }
-
-        public bool RequestBlood(BloodRequest request)
-        {
-            dataBase.BloodRequests.Add(request);
-            var countChanges = dataBase.SaveChanges();
-            return true;
         }
 
         public List<MedicalCenter> FindAll()

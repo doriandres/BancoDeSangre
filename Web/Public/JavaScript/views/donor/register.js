@@ -11,7 +11,7 @@ import timepicker from "./../../components/timepicker.js";
     var request = null;
     var submitBtn = document.getElementById("submit-btn");
 
-    function signIn(event) {
+    function register(event) {
         event.preventDefault();
         submitBtn.classList.add("disabled");
         if (request && request.readyState < 4) return;
@@ -29,7 +29,7 @@ import timepicker from "./../../components/timepicker.js";
         });
     }
     if (donorForm) {
-        donorForm.addEventListener("submit", signIn);
+        donorForm.addEventListener("submit", register);
     } else {
         console.warn("Could not find donor form");
     }
