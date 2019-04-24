@@ -10,11 +10,21 @@ namespace BancoDeSangre.Services.MedicalCenterService
     {
         private IManagerService managerService;
 
+        /// <summary>
+        /// Default constructor
+        /// </summary>
+        /// <param name="dataBaseService"></param>
+        /// <param name="managerService"></param>
         public MedicalCenterDBService(IDataBaseService dataBaseService, IManagerService managerService) : base(dataBaseService)
         {
             this.managerService = managerService;
         }
 
+        /// <summary>
+        /// Adds a medical center to DB
+        /// </summary>
+        /// <param name="medicalCenter">Medical Center to be created</param>
+        /// <returns>Result of the creation of the Medical Center</returns>
         public bool CreateMedicalCenter(MedicalCenter medicalCenter)
         {
             dataBase.MedicalCenters.Add(medicalCenter);
@@ -22,11 +32,20 @@ namespace BancoDeSangre.Services.MedicalCenterService
             return true;
         }
 
+        /// <summary>
+        /// Finds a Medical Center by ID
+        /// </summary>
+        /// <param name="id">ID of the desired Medical Center</param>
+        /// <returns>Found Medical Center search result</returns>
         public MedicalCenter FindByID(int id)
         {
             return dataBase.MedicalCenters.FirstOrDefault(medicalCenter => medicalCenter.Id == id);
         }
 
+        /// <summary>
+        /// Shows all the Medical Centers as a list
+        /// </summary>
+        /// <returns>List of all Medical Centers</returns>
         public List<MedicalCenter> FindAll()
         {
             var results = dataBase.MedicalCenters.ToList();
@@ -34,6 +53,12 @@ namespace BancoDeSangre.Services.MedicalCenterService
             return results;
         }
 
+        /// <summary>
+        /// Checks if the Medical Center information is valid
+        /// </summary>
+        /// <param name="medicalCenter"></param>
+        /// <param name="cause"></param>
+        /// <returns></returns>
         public bool IsValid(MedicalCenter medicalCenter, out string cause)
         {
             var valid = true;
@@ -61,6 +86,15 @@ namespace BancoDeSangre.Services.MedicalCenterService
             {
                 cause = "Debe ingresar una direccion v\u00E1lida";
                 valid = false;
+            }
+
+            foreach (MedicalCenter mc in dataBase.MedicalCenters)
+            {
+                if (mc.Email == medicalCenter.Email)
+                {
+                    cause = "Este correo ya se encuentra registrado";
+                    valid = false;
+                }
             }
 
             return valid;

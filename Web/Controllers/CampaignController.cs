@@ -10,11 +10,14 @@ namespace BancoDeSangre.Controllers
     {
         private ICampaignService campaignService;
 
+        /// <summary>
+        /// Default constructor
+        /// </summary>
+        /// <param name="campaignService"></param>
         public CampaignController(ICampaignService campaignService)
         {
             this.campaignService = campaignService;
         }
-
 
         /// <summary>
         /// Show the Campaigns menu
