@@ -57,6 +57,21 @@ namespace BancoDeSangre.Services.BloodRequestService
                 valid = false;
             }
 
+            var found = false;
+            foreach (MedicalCenter medicalCenter in dataBase.MedicalCenters)
+            {
+                if(medicalCenter.Id == bloodRequest.MedicalCenterId)
+                {
+                    found = true;
+                }
+            }
+
+            if (!found)
+            {
+                cause = "El centro medico indicado no se encuentra registrado";
+                valid = false;
+            }
+
             return valid;
         }
     }

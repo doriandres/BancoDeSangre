@@ -37,15 +37,38 @@ namespace BancoDeSangre.Services.DonationService
 				valid = false;
 			}
 
-			if (donation.Amount > 500)
+			if (donation.Amount > 450)
 			{
-				cause = "No puede recibir donaciones mayores a medio litro (500 cc o 500 mL)";
+				cause = "No puede recibir donaciones mayores a medio litro (450 cc o 450 mL)";
 				valid = false;
 			}
 
-			if (donation.DonorId == 0)
+            if (donation.Amount <= 0)
+            {
+                cause = "Debe ingresar una cantidad v\u00e1lida";
+                valid = false;
+            }
+
+            if (donation.DonorId == 0)
 			{
 				cause = "Donante inv\u00E1lido";
+				valid = false;
+			}
+
+            //Goes through de donor database to check id the donor ID is registered
+			var found = false;
+			foreach (Donor donor in dataBase.Donors)
+			{
+				if(donor.Id == donation.DonorId)
+				{
+					found = true;
+				}
+			}
+
+            //If the ID of the donor is not found in the database
+			if (!found)
+			{
+				cause = "El ID del donador no existe";
 				valid = false;
 			}
 

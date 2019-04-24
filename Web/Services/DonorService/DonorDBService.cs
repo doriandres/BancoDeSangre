@@ -68,7 +68,7 @@ namespace BancoDeSangre.Services.DonorService
                 valid = false;
             }
 
-            if (donor.Height < 0)
+            if (donor.Height < 0 || donor.Height > 2.30)
             {
                 cause = "Debe ingresar una altura v\u00e1lida";
                 valid = false;
@@ -80,10 +80,25 @@ namespace BancoDeSangre.Services.DonorService
                 valid = false;
             }
 
+            if (donor.Weight > 500)
+            {
+                cause = "Debe ingresar un peso v\u00e1lido";
+                valid = false;
+            }
+
             if (donor.Id < 100000000 & donor.Id > 999999999)
             {
                 cause = "Debe ingresar un n\u00famero de identificaci\00f3n v\u00e1lido";
                 valid = false;
+            }
+
+            foreach (Donor d in dataBase.Donors)
+            {
+                if (d.Email == donor.Email)
+                {
+                    cause = "Este correo ya se encuentra registrado";
+                    valid = false;
+                }
             }
 
             return valid;
