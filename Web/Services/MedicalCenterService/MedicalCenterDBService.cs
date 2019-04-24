@@ -63,12 +63,6 @@ namespace BancoDeSangre.Services.MedicalCenterService
                 valid = false;
             }
 
-            if (medicalCenter.Id == 0)
-            {
-                cause = "Debe ingresar una ID v\u00E1lida";
-                valid = false;
-            }
-
             return valid;
         }
     }
