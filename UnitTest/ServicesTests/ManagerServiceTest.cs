@@ -73,7 +73,7 @@ namespace UnitTest.ServicesTests
 		public void Create_Medical_Center_Name()
 		{
 
-			//Arrange 
+			//Arrange
 			using (var dbService = new DataBaseService())
 			{
 				IMedicalCenterService medicalCenterService = new MedicalCenterDBService(dbService);
@@ -100,25 +100,25 @@ namespace UnitTest.ServicesTests
 
 			}
 		}
-		
 
-		[TestMethod]
-		public void Create_Donation_Center()
-		{
-			using (var dbService = new DataBaseService())
-			{
-				var donationDBService = new DonationDBService(dbService);
 
-				//Act
-				var result = donationDBService.CreateDonation(new Donation { DonorId });
+		//[TestMethod]
+		//public void Create_Donation_Center()
+		//{
+		//	using (var dbService = new DataBaseService())
+		//	{
+		//		var donationDBService = new DonationDBService(dbService);
 
-				//// Assert 
+		//		//Act
+		//		var result = donationDBService.CreateDonation(new Donation { DonorId = });
 
-				Assert.IsTrue(result);
+		//		//// Assert
 
-			}
+		//		Assert.IsTrue(result);
 
-		}
+		//	}
+
+		//}
 
 
 		[TestMethod]
