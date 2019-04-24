@@ -101,23 +101,23 @@ namespace UnitTest.ServicesTests
 		//    }
 		//}
 
-		[TestMethod]
-		public void Create_Donation_Center()
-		{
-			using (var dbService = new DataBaseService())
-			{
-				var donationDBService = new DonationDBService(dbService);
+		//[TestMethod]
+		//public void Create_Donation_Center()
+		//{
+		//	using (var dbService = new DataBaseService())
+		//	{
+		//		var donationDBService = new DonationDBService(dbService);
 
-				//Act
-				var result = donationDBService.CreateDonation(new Donation { DonorId = });
+		//		//Act
+		//		var result = donationDBService.CreateDonation(new Donation { DonorId = });
 
-				//// Assert 
+		//		//// Assert 
 
-				Assert.IsTrue(result);
+		//		Assert.IsTrue(result);
 
-			}
+		//	}
 
-		}
+		//}
 
 
 		//[TestMethod]
