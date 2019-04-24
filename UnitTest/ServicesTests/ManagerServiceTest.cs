@@ -69,37 +69,37 @@ namespace UnitTest.ServicesTests
             }
         }
 
-		[TestMethod]
-		public void Create_Medical_Center_Name()
-		{
+		//[TestMethod]
+		//public void Create_Medical_Center_Name()
+		//{
 
-			//Arrange
-			using (var dbService = new DataBaseService())
-			{
-				IMedicalCenterService medicalCenterService = new MedicalCenterDBService(dbService);
-
-
-				var medicalCenter = new MedicalCenter
-				{
-					Email = "carit@info.com",
-					Name = "carit",
-					PhoneNumber = 88888,
-					Place = "San Jose"
-
-				};
-
-				// Act
-
-				var resultado = medicalCenter.Email;
-				//var resultado = medicalCenter.Id;
+		//	//Arrange
+		//	using (var dbService = new DataBaseService())
+		//	{
+		//		IMedicalCenterService medicalCenterService = new MedicalCenterDBService(dbService);
 
 
-				// Assert
-				Assert.IsNotNull(value: resultado);
+		//		var medicalCenter = new MedicalCenter
+		//		{
+		//			Email = "carit@info.com",
+		//			Name = "carit",
+		//			PhoneNumber = 88888,
+		//			Place = "San Jose"
+
+		//		};
+
+		//		// Act
+
+		//		var resultado = medicalCenter.Email;
+		//		//var resultado = medicalCenter.Id;
 
 
-			}
-		}
+		//		// Assert
+		//		Assert.IsNotNull(value: resultado);
+
+
+		//	}
+		//}
 
 
 		//[TestMethod]
@@ -121,28 +121,28 @@ namespace UnitTest.ServicesTests
 		//}
 
 
-		[TestMethod]
-		public void Valid_Donor()
-		{
-			//Arrange
-			using (var dbService = new DataBaseService())
-			{
-				IDonorService idonorService = new DonorDBService(dataBase);
-				var dataBase = new Donor
-				{
-					Name = "Carit",
-					Id = 88,
-				};
+		//[TestMethod]
+		//public void Valid_Donor()
+		//{
+		//	//Arrange
+		//	using (var dbService = new DataBaseService())
+		//	{
+		//		IDonorService idonorService = new DonorDBService(dataBase);
+		//		var dataBase = new Donor
+		//		{
+		//			Name = "Carit",
+		//			Id = 88,
+		//		};
 
-				// Act
+		//		// Act
 
-				var resultado = idonorService;
+		//		var resultado = idonorService;
 
 
-				// Assert
-				Assert.IsNull(resultado);
-			}
-		}
+		//		// Assert
+		//		Assert.IsNull(resultado);
+		//	}
+		//}
 
 		[TestMethod]
 		public void Create_DBSService_Tests()

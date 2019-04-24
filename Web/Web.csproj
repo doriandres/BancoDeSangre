@@ -387,6 +387,7 @@
     <Content Include="Views\MedicalCenter\PartialViewsMed\MedicalCenterList.cshtml" />
     <Content Include="Views\MedicalCenter\Register.cshtml" />
     <Content Include="Views\MedicalCenter\List.cshtml" />
+    <Content Include="Views\MedicalCenter\Request.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\BloodRequest\" />
