@@ -12,7 +12,6 @@ import modal from "./../../components/modal.js";
                 if (response.saved) {
                     createManagerForm.reset();
                     modal("Información","Administrador creado existosamente!");
-                    window.location = window.location;
                 } else if (response.cause) {
                     modal("Ocurrió un error",response.cause);
                 } else {
