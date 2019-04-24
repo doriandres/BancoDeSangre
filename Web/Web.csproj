@@ -317,7 +317,7 @@
     <Compile Include="Services\MedicalCenterService\MedicalCenterDBService.cs" />
     <Compile Include="ViewModels\BloodRequestViewModels\BloodRequestListViewModel.cs" />
     <Compile Include="ViewModels\CampaignViewModels\CampaignListViewModel.cs" />
-    <Compile Include="ViewModels\DonationViewModels\DonationsHistoryViewModel.cs" />
+    <Compile Include="ViewModels\DonationViewModels\DonationsListViewModel.cs" />
     <Compile Include="ViewModels\ManagerViewModels\ManagerListViewModel.cs" />
     <Compile Include="ViewModels\DonorViewModels\DonorListViewModel.cs" />
     <Compile Include="ViewModels\MedicalCenterViewModels\MedicalCenterListViewModel.cs" />
@@ -369,7 +369,7 @@
     <Content Include="Views\Donor\PartilalViews\DonorTable.cshtml" />
     <Content Include="Views\Donation\PartialViews\MenuOptions.cshtml" />
     <Content Include="Views\Donation\PartialViews\DonationForm.cshtml" />
-    <Content Include="Views\Donation\History.cshtml" />
+    <Content Include="Views\Donation\List.cshtml" />
     <Content Include="Views\Donation\PartialViews\DonationsTable.cshtml" />
     <None Include="Views\Manager\PartialViews\MenuOptions.cshtml" />
     <Content Include="Web.config" />
