@@ -28,7 +28,7 @@ namespace BancoDeSangre.Services.BloodRequestService
             return dataBase.BloodRequests.ToList();
         }
 
-        public bool IsValid( BloodRequest bloodRequest, out string cause)
+        public bool IsValid(BloodRequest bloodRequest, out string cause)
         {
             var valid = true;
             cause = null;

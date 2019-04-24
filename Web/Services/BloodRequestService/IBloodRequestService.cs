@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BancoDeSangre.Services.BloodRequestService
 {
-    interface IBloodRequestService
+    public interface IBloodRequestService
     {
         /// <summary>
         /// Adds a blood request to DB
@@ -21,5 +21,13 @@ namespace BancoDeSangre.Services.BloodRequestService
         /// </summary>
         /// <returns>list of blood requests</returns>
         List<BloodRequest> FindAll();
+
+        /// <summary>
+        /// Checks if the BloodRequest is valid
+        /// </summary>
+        /// <param name="bloodRequest"></param>
+        /// <param name="cause"></param>
+        /// <returns>Result of the operation</returns>
+        bool IsValid(BloodRequest bloodRequest, out string cause);
     }
 }
