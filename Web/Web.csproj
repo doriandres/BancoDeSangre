@@ -311,6 +311,7 @@
     <Compile Include="Services\ManagerService\ManagerDBService.cs" />
     <Compile Include="Services\MedicalCenterService\IMedicalCenterService.cs" />
     <Compile Include="Services\MedicalCenterService\MedicalCenterDBService.cs" />
+    <Compile Include="ViewModels\BloodRequestViewModels\BloodRequestListViewModel.cs" />
     <Compile Include="ViewModels\CampaignViewModels\CampaignListViewModel.cs" />
     <Compile Include="ViewModels\DonationViewModels\DonationsHistoryViewModel.cs" />
     <Compile Include="ViewModels\ManagerViewModels\ManagerListViewModel.cs" />
@@ -382,6 +383,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\BloodRequest\" />
+    <Folder Include="Views\Blood\" />
     <Folder Include="Views\DataBaseService\" />
     <Folder Include="Views\Default\" />
   </ItemGroup>
