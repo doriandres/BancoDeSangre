@@ -99,5 +99,15 @@ namespace BancoDeSangre.Controllers
             };
             return View(model);
         }
+        [HttpGet]
+        public ActionResult Request()
+        {
+            if (Session.IsSignedIn()) // Only signed in Managers can create Medical Centers
+            {
+                return View();
+            }
+
+            return RedirectToAction("Index", "Home");
+        }
     }
 }
