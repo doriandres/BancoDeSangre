@@ -14,4 +14,6 @@ namespace BancoDeSangre.Controllers
             return View();
         }
     }
+
+
 }

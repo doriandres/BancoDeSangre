@@ -26,11 +26,12 @@ namespace BancoDeSangre.Services.MedicalCenterService
         List<MedicalCenter> FindAll();
 
         /// <summary>
-        /// Requests a tyoe of blood
+        /// Checks if the Medical Center information is valid
         /// </summary>
-        /// <param name="amount"></param>
+        /// <param name="medicalCenter"></param>
+        /// <param name="cause"></param>
         /// <returns></returns>
-        bool RequestBlood(BloodRequest request);
+        bool IsValid(MedicalCenter medicalCenter, out string cause);
 
     }
 }
