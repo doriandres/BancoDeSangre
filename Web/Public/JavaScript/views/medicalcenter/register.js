@@ -28,7 +28,7 @@ import timepicker from "./../../components/timepicker.js";
             }
         });
     }
-    if (donorForm) {
+    if (medicalcenterForm) {
         medicalcenterForm.addEventListener("submit", register);
     } else {
         console.warn("Could not find medical center form");
