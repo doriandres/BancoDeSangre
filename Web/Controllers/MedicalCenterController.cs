@@ -81,7 +81,7 @@ namespace BancoDeSangre.Controllers
         [HttpGet]
         public ActionResult Request()
         {
-            if (Session.IsSignedIn())
+            if (Session.IsSignedIn()) // Only signed in Managers can create Medical Centers
             {
                 return View();
             }
