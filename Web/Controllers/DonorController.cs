@@ -10,11 +10,19 @@ namespace BancoDeSangre.Controllers
     {
         private IDonorService donorService;
 
+        /// <summary>
+        /// Default controller
+        /// </summary>
+        /// <param name="donorService"></param>
         public DonorController(IDonorService donorService)
         {
             this.donorService = donorService;
         }
 
+        /// <summary>
+        /// Displays menu
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public ActionResult Menu()
         {
@@ -63,6 +71,10 @@ namespace BancoDeSangre.Controllers
             return Json(new { saved });
         }
 
+        /// <summary>
+        /// Displays all donors
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public ActionResult List()
         {

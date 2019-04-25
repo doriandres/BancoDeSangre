@@ -6,6 +6,11 @@ namespace BancoDeSangre.Services.Email
     public class EmailService : IEmailService
     {
         public string AppEmail => "contacto.banco.sangre@gmail.com";
+
+        /// <summary>
+        /// Sends confirmation of message received to client
+        /// </summary>
+        /// <param name="email"></param>
         public void Send(IEmail email)
         {
             var mail = new MailMessage(email.From, email.To, email.Subject, email.MessageBody);            

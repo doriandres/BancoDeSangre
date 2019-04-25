@@ -10,6 +10,10 @@ namespace BancoDeSangre.Controllers
     {
         private IMedicalCenterService medicalCenterService;
 
+        /// <summary>
+        /// Default controller
+        /// </summary>
+        /// <param name="medicalCenterService"></param>
         public MedicalCenterController(IMedicalCenterService medicalCenterService)
         {
             this.medicalCenterService = medicalCenterService;

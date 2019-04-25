@@ -10,12 +10,20 @@ namespace BancoDeSangre.Services.BloodRequestService
 {
     public class BloodRequestDBService : DBService, IBloodRequestService
     {
+        /// <summary>
+        /// Default constructor
+        /// </summary>
         private IManagerService managerService;
         public BloodRequestDBService(IDataBaseService dataBase, IManagerService managerService) : base(dataBase)
         {
             this.managerService = managerService;
         }
 
+        /// <summary>
+        /// Adds a blood request to DB
+        /// </summary>
+        /// <param name="bloodRequest">Blood request to be added</param>
+        /// <returns>Result of operation</returns>
         public bool CreateBloodRequest(BloodRequest bloodRequest)
         {
             dataBase.BloodRequests.Add(bloodRequest);
@@ -23,11 +31,21 @@ namespace BancoDeSangre.Services.BloodRequestService
             return true;
         }
 
+        /// <summary>
+        /// Returns all the blood requests as a list
+        /// </summary>
+        /// <returns>list of blood requests</returns>
         public List<BloodRequest> FindAll()
         {
             return dataBase.BloodRequests.ToList();
         }
 
+        /// <summary>
+        /// Checks if the BloodRequest is valid
+        /// </summary>
+        /// <param name="bloodRequest"></param>
+        /// <param name="cause"></param>
+        /// <returns>Result of the operation</returns>
         public bool IsValid(BloodRequest bloodRequest, out string cause)
         {
             var valid = true;
